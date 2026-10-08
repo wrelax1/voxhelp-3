@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    >
+
+    <title>VoxHelp</title>
+
+	<link rel="manifest" href="manifest.json">
+	
+	<link rel="apple-touch-icon" href="icon-192.png">
+
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="192x192"
+		href="icon-192.png"
+	>
+
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="512x512"
+		href="icon-512.png"
+	>
+
+	<meta name="theme-color" content="#202124">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<meta
+		name="apple-mobile-web-app-title"
+		content="VoxHelp 3.0"
+	>
+
+	<meta
+		name="apple-mobile-web-app-status-bar-style"
+		content="black-translucent"
+	>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="quick-bar">
+
+	<button
+		id="quickYesButton"
+		class="quick"
+		onclick="speakQuickPhrase('yes')"
+	>
+		OUI
+	</button>
+
+	<button
+		id="quickNoButton"
+		class="quick"
+		onclick="speakQuickPhrase('no')"
+	>
+		NON
+	</button>
+
+	<button
+		id="quickStopButton"
+		class="quick"
+		onclick="speakQuickPhrase('stop')"
+	>
+		STOP
+	</button>
+
+	<button
+		id="topRightButton"
+		class="quick"
+		onclick="handleTopRightButton()"
+	>
+		FR → FR
+	</button>
+
+</header>
+
+
+<main class="app">
+
+    <!-- ÉCRAN PRINCIPAL -->
+    <section id="homeScreen" class="screen active">
+
+		<div class="home-brand">
+			<img
+				src="icon-192.png"
+				alt="VoxHelp"
+				class="home-brand-logo"
+			>
+		</div>
+
+		<h1>
+			<span id="homeTitleText">
+				Je veux vous dire…
+			</span>
+			<span id="appVersion"></span>
+		</h1>
+			
+		<div class="buttons">
+
+			<button onclick="showScreen('respirationScreen')">
+				🫁<br>
+				<span id="homeRespirationButton">
+					RESPIRATION / GORGE
+				</span>
+			</button>
+
+			<button onclick="showScreen('painScreen')">
+				😣<br>
+				<span id="homePainButton">
+					J'AI MAL
+				</span>
+			</button>
+
+			<button onclick="showScreen('positionScreen')">
+				🛏️<br>
+				<span id="homePositionButton">
+					POSITIONNEMENT
+				</span>
+			</button>
+
+			<button onclick="showScreen('careScreen')">
+				👩‍⚕️<br>
+				<span id="homeCareButton">
+					INCONFORT
+				</span>
+			</button>
+
+			<button onclick="showScreen('hygieneScreen')">
+				🚻<br>
+				<span id="homeHygieneButton">
+					VIE QUOTIDIENNE
+				</span>
+			</button>
+
+			<button onclick="showScreen('environmentScreen')">
+				🏠<br>
+				<span id="homeEnvironmentButton">
+					ENVIRONNEMENT
+				</span>
+			</button>
+
+			<button onclick="showScreen('questionsScreen')">
+				❓<br>
+				<span id="homeQuestionsButton">
+					QUESTIONS<br>
+					MÉDECIN
+				</span>
+			</button>
+
+			<button onclick="showScreen('careTeamScreen')">
+				🩺<br>
+				<span id="homeCareTeamButton">
+					ÉQUIPE SOIGNANTE
+				</span>
+			</button>
+
+			<button onclick="showScreen('movementScreen')">
+				🚶<br>
+				<span id="homeMovementButton">
+					DÉPLACEMENTS
+				</span>
+			</button>
+
+			<button onclick="showScreen('planningScreen')">
+				🗓️<br>
+				<span id="homePlanningButton">
+					PLANNING / TEMPS
+				</span>
+			</button>
+
+
+			<button onclick="showScreen('talkScreen')">
+				👥<br>
+				<span id="homeTalkButton">
+					FAMILLE / AMIS
+				</span>
+			</button>
+
+			<button onclick="showScreen('emotionScreen')">
+				❤️<br>
+				<span id="homeEmotionButton">
+					ÉMOTIONS
+				</span>
+			</button>
+
+			<button onclick="openWriteScreen()">
+				⭐<br>
+				<span id="homePhrasesButton">
+					MES PHRASES
+				</span>
+			</button>
+
+			<button onclick="openVoiceScreen()">
+				⚙️<br>
+				<span id="homeVoiceButton">
+					VOIX
+				</span>
+			</button>
+
+			<button onclick="showScreen('aboutScreen')">
+				ℹ️<br>
+				<span id="homeAboutButton">
+					À PROPOS
+				</span>
+			</button>
+
+		</div>
+
+    </section>
+
+<!-- RESPIRATION -->
+<section id="respirationScreen" class="screen">
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="respirationTitle">
+        Respiration
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button
+            onclick="speakRespirationPhrase('breathing')"
+        >
+            <span id="respirationBreathingButton">
+                J'AI DU MAL<br>
+                À RESPIRER
+            </span>
+        </button>
+
+        <button
+            onclick="speakRespirationPhrase('suction')"
+        >
+            <span id="respirationSuctionButton">
+                J'AI BESOIN<br>
+                D'ÊTRE ASPIRÉ
+            </span>
+        </button>
+
+        <button
+            onclick="speakRespirationPhrase('secretions')"
+        >
+            <span id="respirationSecretionsButton">
+                SÉCRÉTIONS
+            </span>
+        </button>
+
+        <button
+            onclick="speakRespirationPhrase('tracheostomyPain')"
+        >
+            <span id="respirationTracheostomyPainButton">
+                DOULEUR AUTOUR<br>
+                DE LA TRACHÉOTOMIE
+            </span>
+        </button>
+
+        <button
+            onclick="speakRespirationPhrase('dryMouth')"
+        >
+            <span id="respirationDryMouthButton">
+                BOUCHE SÈCHE
+            </span>
+        </button>
+
+        <button
+            onclick="speakRespirationPhrase('better')"
+        >
+            <span id="respirationBetterButton">
+                ÇA VA MIEUX
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- DOULEUR -->
+<section id="painScreen" class="screen">
+
+    <button
+        class="back-button"
+        onclick="resetPain(); showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+	<h1 id="painTitle">
+		Douleur
+	</h1>
+
+    <div id="painStep1">
+
+		<h2 id="painWhereTitle">
+			Où avez-vous mal ?
+		</h2>
+
+		<div class="pain-locations">
+
+			<button onclick="selectPainLocation('head')">
+				<span id="painLocationHead">
+					TÊTE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('neck')">
+				<span id="painLocationNeck">
+					COU
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('chest')">
+				<span id="painLocationChest">
+					POITRINE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('back')">
+				<span id="painLocationBack">
+					DOS
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('abdomen')">
+				<span id="painLocationAbdomen">
+					VENTRE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftShoulder')">
+				<span id="painLocationLeftShoulder">
+					ÉPAULE GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftArm')">
+				<span id="painLocationLeftArm">
+					BRAS GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftHand')">
+				<span id="painLocationLeftHand">
+					MAIN GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftHip')">
+				<span id="painLocationLeftHip">
+					HANCHE GAUCHE
+				</span>
+			</button>
+	
+			<button onclick="selectPainLocation('buttocks')">
+				<span id="painLocationButtocks">
+					FESSES
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftLeg')">
+				<span id="painLocationLeftLeg">
+					JAMBE GAUCHE
+				</span>
+			</button>
+
+			<button onclick="selectPainLocation('leftFoot')">
+				<span id="painLocationLeftFoot">
+					PIED<br>GAUCHE
+				</span>
+			</button>
+
+		</div>
+
+    </div>
+
+	<div id="painStepDetail" class="hidden">
+
+		<h2 id="painDetailTitle">
+			Où exactement ?
+		</h2>
+
+		<div
+			id="painDetailButtons"
+			class="pain-locations"
+		></div>
+
+		<button
+			id="painDetailBackButton"
+			class="change-location"
+			onclick="changePainLocation()"
+		>
+			← CHANGER L'ENDROIT
+		</button>
+
+	</div>
+
+    <div id="painStep2" class="hidden">
+
+        <h2 id="painLocationTitle">
+            Quelle intensité ?
+        </h2>
+
+		<div class="pain-scale">
+
+			<button onclick="selectPainLevel(1)">1</button>
+			<button onclick="selectPainLevel(2)">2</button>
+			<button onclick="selectPainLevel(3)">3</button>
+			<button onclick="selectPainLevel(4)">4</button>
+			<button onclick="selectPainLevel(5)">5</button>
+			<button onclick="selectPainLevel(6)">6</button>
+			<button onclick="selectPainLevel(7)">7</button>
+			<button onclick="selectPainLevel(8)">8</button>
+			<button onclick="selectPainLevel(9)">9</button>
+
+			<button
+				class="pain-level-ten"
+				onclick="selectPainLevel(10)"
+			>
+				10
+			</button>
+
+        </div>
+
+		<button
+			id="painChangeLocationButton"
+			class="change-location"
+			onclick="changePainLocation()"
+		>
+			← CHANGER L'ENDROIT
+		</button>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================= -->
+<!-- POSITIONNEMENT -->
+<!-- ======================================= -->
+
+<section
+    id="positionScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="positionTitle">
+        Positionnement
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakPositionPhrase('bed')">
+            <span id="positionBedButton">
+                COUCHEZ-MOI
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('sitUp')">
+            <span id="positionSitUpButton">
+                REDRESSEZ-MOI
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('moveUp')">
+            <span id="positionMoveUpButton">
+                REMONTEZ-MOI
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('turnRight')">
+            <span id="positionTurnRightButton">
+                TOURNEZ-MOI
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('headUp')">
+            <span id="positionHeadUpButton">
+                MONTEZ<br>
+                LA TÊTE DU LIT
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('headDown')">
+            <span id="positionHeadDownButton">
+                BAISSEZ<br>
+                LA TÊTE DU LIT
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('legsUp')">
+            <span id="positionLegsUpButton">
+                MONTEZ<br>
+                MES JAMBES
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('legsDown')">
+            <span id="positionLegsDownButton">
+                BAISSEZ<br>
+                MES JAMBES
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('pillow')">
+            <span id="positionPillowButton">
+                OREILLER
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('blanket')">
+            <span id="positionBlanketButton">
+                COUVERTURE
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('positionHurts')">
+            <span id="positionHurtsButton">
+                CETTE POSITION<br>
+                ME FAIT MAL
+            </span>
+        </button>
+
+        <button onclick="speakPositionPhrase('comfortable')">
+            <span id="positionComfortableButton">
+                JE SUIS BIEN<br>
+                COMME ÇA
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- INCONFORT -->
+<!-- ======================================= -->
+
+<section
+    id="careScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="careTitle">
+        Inconfort
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakCarePhrase('help')">
+            <span id="careHelpButton">
+                BESOIN D'AIDE
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('unwell')">
+            <span id="careUnwellButton">
+                JE NE ME SENS<br>
+                PAS BIEN
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('better')">
+            <span id="careBetterButton">
+                ÇA VA MIEUX
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('privacy')">
+            <span id="carePrivacyButton">
+                JE VEUX<br>
+                DE L'INTIMITÉ
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('constipation')">
+            <span id="careConstipationButton">
+                CONSTIPÉ
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('gas')">
+            <span id="careGasButton">
+                GAZ
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('diarrhea')">
+            <span id="careDiarrheaButton">
+                DIARRHÉE
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('nausea')">
+            <span id="careNauseaButton">
+                NAUSÉES
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('dizziness')">
+            <span id="careDizzinessButton">
+                VERTIGES
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('weakness')">
+            <span id="careWeaknessButton">
+                FAIBLE
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('chills')">
+            <span id="careChillsButton">
+                FRISSONS
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('medicationNotEnough')">
+            <span id="careMedicationNotEnoughButton">
+                MÉDICAMENTS<br>
+                PAS EFFICACES
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('hot')">
+            <span id="careHotButton">
+                J'AI CHAUD
+            </span>
+        </button>
+
+        <button onclick="speakCarePhrase('cold')">
+            <span id="careColdButton">
+                J'AI FROID
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- VIE QUOTIDIENNE -->
+<!-- ======================================= -->
+
+<section
+    id="hygieneScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="hygieneTitle">
+        Vie quotidienne
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakHygienePhrase('change')">
+            <span id="hygieneChangeButton">
+                BESOIN<br>
+                D'ÊTRE CHANGÉ
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('urinate')">
+            <span id="hygieneUrinateButton">
+                BESOIN<br>
+                D'URINER
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('stool')">
+            <span id="hygieneStoolButton">
+                BESOIN D'ALLER<br>
+                À LA SELLE
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('hungry')">
+            <span id="hygieneHungryButton">
+                J'AI FAIM
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('thirsty')">
+            <span id="hygieneThirstyButton">
+                J'AI SOIF
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('shower')">
+            <span id="hygieneShowerButton">
+                PRENDRE<br>
+                UNE DOUCHE
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('teeth')">
+            <span id="hygieneTeethButton">
+                BROSSER<br>
+                MES DENTS
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('face')">
+            <span id="hygieneFaceButton">
+                ME LAVER<br>
+                LE VISAGE
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('shave')">
+            <span id="hygieneShaveButton">
+                ME RASER
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('comb')">
+            <span id="hygieneCombButton">
+                ME COIFFER
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('glasses')">
+            <span id="hygieneGlassesButton">
+                LUNETTES
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('hearingAid')">
+            <span id="hygieneHearingAidButton">
+                APPAREIL<br>
+                AUDITIF
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('dentures')">
+            <span id="hygieneDenturesButton">
+                DENTIER
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('tshirt')">
+            <span id="hygieneTshirtButton">
+                T-SHIRT
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('pants')">
+            <span id="hygienePantsButton">
+                PANTALON
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('sweater')">
+            <span id="hygieneSweaterButton">
+                PULL
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('shoes')">
+            <span id="hygieneShoesButton">
+                CHAUSSURES
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- ÉMOTIONS -->
+<!-- ======================================= -->
+
+<section
+    id="emotionScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="emotionTitle">
+        Émotions
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakEmotionPhrase('afraid')">
+            <span id="emotionAfraidButton">
+                J'AI PEUR
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('sad')">
+            <span id="emotionSadButton">
+                JE SUIS<br>
+                TRISTE
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('angry')">
+            <span id="emotionAngryButton">
+                JE SUIS<br>
+                EN COLÈRE
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('fedUp')">
+            <span id="emotionFedUpButton">
+                J'EN AI<br>
+                MARRE
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('discouraged')">
+            <span id="emotionDiscouragedButton">
+                JE SUIS<br>
+                DÉCOURAGÉ
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('lonely')">
+            <span id="emotionLonelyButton">
+                JE ME SENS<br>
+                SEUL
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('tired')">
+            <span id="emotionTiredButton">
+                JE SUIS<br>
+                FATIGUÉ
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('bored')">
+            <span id="emotionBoredButton">
+                JE M'ENNUIE
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('happy')">
+            <span id="emotionHappyButton">
+                JE SUIS<br>
+                CONTENT
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('better')">
+            <span id="emotionBetterButton">
+                JE ME SENS<br>
+                MIEUX
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('stay')">
+            <span id="emotionStayButton">
+                RESTEZ<br>
+                AVEC MOI
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('alone')">
+            <span id="emotionAloneButton">
+                JE VEUX<br>
+                ÊTRE SEUL
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('noTalk')">
+            <span id="emotionNoTalkButton">
+                PAS ENVIE<br>
+                DE PARLER
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- QUESTIONS SUR MON ÉTAT -->
+<!-- ======================================= -->
+
+<section
+    id="questionsScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="questionsTitle">
+        Questions
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakQuestionsPhrase('whatHappened')">
+            <span id="questionsWhatHappenedButton">
+                QU'EST-CE QUI<br>
+                M'EST ARRIVÉ ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('improving')">
+            <span id="questionsImprovingButton">
+                EST-CE QUE<br>
+                JE VAIS MIEUX ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('nextGoal')">
+            <span id="questionsNextGoalButton">
+                QUELS SONT<br>
+                MES OBJECTIFS ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('exams')">
+            <span id="questionsExamsButton">
+                QUELS EXAMENS<br>
+                VAIS-JE AVOIR ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('resultsWhen')">
+            <span id="questionsResultsWhenButton">
+                QUAND AURAI-JE<br>
+                LES RÉSULTATS ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('resultsMeaning')">
+            <span id="questionsResultsMeaningButton">
+                QUE MONTRENT<br>
+                LES RÉSULTATS ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('speakWhen')">
+            <span id="questionsSpeakWhenButton">
+                QUAND POURRAI-JE<br>
+                PARLER ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('tracheostomyHowLong')">
+            <span id="questionsTracheostomyHowLongButton">
+                COMBIEN DE TEMPS<br>
+                LA TRACHÉOTOMIE ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('eatWhen')">
+            <span id="questionsEatWhenButton">
+                QUAND POURRAI-JE<br>
+                MANGER ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('standWhen')">
+            <span id="questionsStandWhenButton">
+                QUAND POURRAI-JE<br>
+                ME LEVER ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('walkWhen')">
+            <span id="questionsWalkWhenButton">
+                QUAND POURRAI-JE<br>
+                MARCHER ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('goHome')">
+            <span id="questionsGoHomeButton">
+                QUAND POURRAI-JE<br>
+                RENTRER CHEZ MOI ?
+            </span>
+        </button>
+
+        <button onclick="speakQuestionsPhrase('explainNext')">
+            <span id="questionsExplainNextButton">
+                EXPLIQUEZ-MOI<br>
+                LA SUITE
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- ENVIRONNEMENT / INTIMITÉ / SOMMEIL -->
+<!-- ======================================= -->
+
+<section
+    id="environmentScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="environmentTitle">
+        Environnement
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakEnvironmentPhrase('closeDoor')">
+            <span id="environmentCloseDoorButton">
+                FERMEZ<br>
+                LA PORTE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('openDoor')">
+            <span id="environmentOpenDoorButton">
+                OUVREZ<br>
+                LA PORTE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('closeCurtains')">
+            <span id="environmentCloseCurtainsButton">
+                FERMEZ<br>
+                LES RIDEAUX
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('openCurtains')">
+            <span id="environmentOpenCurtainsButton">
+                OUVREZ<br>
+                LES RIDEAUX
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('lightOn')">
+            <span id="environmentLightOnButton">
+                ALLUMEZ<br>
+                LA LUMIÈRE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('lightOff')">
+            <span id="environmentLightOffButton">
+                ÉTEIGNEZ<br>
+                LA LUMIÈRE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('noise')">
+            <span id="environmentNoiseButton">
+                TROP<br>
+                DE BRUIT
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('openWindow')">
+            <span id="environmentOpenWindowButton">
+                OUVREZ<br>
+                LA FENÊTRE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('closeWindow')">
+            <span id="environmentCloseWindowButton">
+                FERMEZ<br>
+                LA FENÊTRE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('television')">
+            <span id="environmentTelevisionButton">
+                TÉLÉVISION
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('music')">
+            <span id="environmentMusicButton">
+                MUSIQUE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('phone')">
+            <span id="environmentPhoneButton">
+                AVOIR MON<br>
+                TÉLÉPHONE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('rechargePhone')">
+            <span id="environmentRechargePhoneButton">
+                RECHARGER MON<br>
+                TÉLÉPHONE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('sleep')">
+            <span id="environmentSleepButton">
+                JE VEUX<br>
+                DORMIR
+            </span>
+        </button>
+
+    </div>
+	
+</section>
+
+<!-- ======================================= -->
+<!-- ÉCRIRE UNE PHRASE -->
+<!-- ======================================= -->
+
+<section
+    id="writeScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="writeTitle">
+        Mes phrases
+    </h1>
+
+    <div class="quick-phrases">
+
+        <button onclick="addQuickText('wouldLike')">
+            <span id="writeWouldLikeButton">
+                JE VOUDRAIS…
+            </span>
+        </button>
+
+        <button onclick="addQuickText('need')">
+            <span id="writeNeedButton">
+                J'AI BESOIN DE…
+            </span>
+        </button>
+
+        <button onclick="addQuickText('want')">
+            <span id="writeWantButton">
+                JE VEUX…
+            </span>
+        </button>
+
+        <button onclick="addQuickText('dontWant')">
+            <span id="writeDontWantButton">
+                JE NE VEUX PAS…
+            </span>
+        </button>
+
+        <button onclick="addQuickText('canYou')">
+            <span id="writeCanYouButton">
+                POUVEZ-VOUS…
+            </span>
+        </button>
+
+        <button onclick="addQuickText('helpMe')">
+            <span id="writeHelpMeButton">
+                AIDEZ-MOI À…
+            </span>
+        </button>
+
+        <button onclick="addQuickText('when')">
+            <span id="writeWhenButton">
+                QUAND… ?
+            </span>
+        </button>
+
+        <button onclick="addQuickText('why')">
+            <span id="writeWhyButton">
+                POURQUOI… ?
+            </span>
+        </button>
+
+        <button onclick="addQuickText('isIt')">
+            <span id="writeIsItButton">
+                EST-CE QUE… ?
+            </span>
+        </button>
+
+        <button onclick="addQuickText('think')">
+            <span id="writeThinkButton">
+                JE PENSE QUE…
+            </span>
+        </button>
+
+    </div>
+
+    <textarea
+        id="customText"
+        class="custom-text"
+        rows="5"
+        placeholder="Écrivez ici ce que vous voulez dire..."
+    ></textarea>
+
+    <div class="write-actions">
+
+        <button
+            id="writeClearButton"
+            onclick="clearCustomText()"
+        >
+            🗑️ EFFACER
+        </button>
+
+        <button
+            id="writeSpeakButton"
+            onclick="speakCustomText()"
+        >
+            🔊 DIRE
+        </button>
+
+        <button
+            id="writeSaveButton"
+            onclick="saveFavoriteFromWrite()"
+        >
+            ⭐ ENREGISTRER
+        </button>
+
+    </div>
+
+    <h2 id="writePersonalTitle">
+        Mes phrases personnelles
+    </h2>
+
+    <div
+        id="customFavorites"
+        class="custom-favorites"
+    ></div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- ÉQUIPE SOIGNANTE -->
+<!-- ======================================= -->
+
+<section
+    id="careTeamScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="careTeamTitle">
+        Équipe soignante
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakCareTeamPhrase('nurse')">
+            <span id="careTeamNurseButton">
+                INFIRMIÈRE
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('doctor')">
+            <span id="careTeamDoctorButton">
+                MÉDECIN
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('physio')">
+            <span id="careTeamPhysioButton">
+                PHYSIO
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('ergo')">
+            <span id="careTeamErgoButton">
+                ERGO
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('logo')">
+            <span id="careTeamLogoButton">
+                LOGO
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('assistant')">
+            <span id="careTeamAssistantButton">
+                AIDE-SOIGNANTE
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('dietitian')">
+            <span id="careTeamDietitianButton">
+                DIÉTÉTICIENNE
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('neuropsychologist')">
+            <span id="careTeamNeuropsychologistButton">
+                NEUROPSY
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('psychologist')">
+            <span id="careTeamPsychologistButton">
+                PSY
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('socialWorker')">
+            <span id="careTeamSocialWorkerButton">
+                ASSISTANTE<br>
+                SOCIALE
+            </span>
+        </button>
+
+        <button onclick="speakCareTeamPhrase('hospitality')">
+            <span id="careTeamHospitalityButton">
+                AGENT<br>
+                HÔTELIER
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- DÉPLACEMENTS -->
+<!-- ======================================= -->
+
+<section
+    id="movementScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="movementTitle">
+        Déplacements
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakMovementPhrase('room')">
+            <span id="movementRoomButton">
+                ALLER DANS<br>
+                MA CHAMBRE
+            </span>
+        </button>
+
+        <button onclick="speakMovementPhrase('loggia')">
+            <span id="movementLoggiaButton">
+                ALLER À<br>
+                LA CAFÉTÉRIA
+            </span>
+        </button>
+
+        <button onclick="speakMovementPhrase('outside')">
+            <span id="movementOutsideButton">
+                ALLER<br>
+                DEHORS
+            </span>
+        </button>
+
+        <button onclick="speakMovementPhrase('home')">
+            <span id="movementHomeButton">
+                RENTRER<br>
+                CHEZ MOI
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- PLANNING / TEMPS -->
+<!-- ======================================= -->
+
+<section
+    id="planningScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningTitle">
+        Planning / Temps
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="openPlanningDate()">
+            <span id="planningDateButton">
+                DATE
+            </span>
+        </button>
+
+        <button onclick="clearPlanningNumber(); showScreen('planningNumbersScreen')">
+            <span id="planningNumbersButton">
+                CHIFFRES
+            </span>
+        </button>
+
+        <button onclick="showScreen('planningDaysScreen')">
+            <span id="planningDaysButton">
+                JOURS DE<br>
+                LA SEMAINE
+            </span>
+        </button>
+
+        <button onclick="showScreen('planningDayPartsScreen')">
+            <span id="planningDayPartsButton">
+                MOMENT DE<br>
+                LA JOURNÉE
+            </span>
+        </button>
+
+        <button onclick="showScreen('planningMonthsScreen')">
+            <span id="planningMonthsButton">
+                MOIS
+            </span>
+        </button>
+
+        <button onclick="speakPlanningRelativeDay('today')">
+            <span id="planningTodayButton">
+                AUJOURD'HUI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningRelativeDay('tomorrow')">
+            <span id="planningTomorrowButton">
+                DEMAIN
+            </span>
+        </button>
+
+        <button onclick="speakPlanningRelativeDay('yesterday')">
+            <span id="planningYesterdayButton">
+                HIER
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<section
+    id="planningDateDayScreen"
+    class="screen"
+>
+
+    <button
+        id="planningDateDayBackButton"
+        class="back-button"
+        onclick="showScreen('planningScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningDateDayTitle">
+        Quel jour ?
+    </h1>
+
+    <h2 id="planningDateDayDisplay">
+        __ . __ . ____
+    </h2>
+
+    <div class="date-keypad">
+
+        <button onclick="appendPlanningDateDigit('1')">1</button>
+        <button onclick="appendPlanningDateDigit('2')">2</button>
+        <button onclick="appendPlanningDateDigit('3')">3</button>
+
+        <button onclick="appendPlanningDateDigit('4')">4</button>
+        <button onclick="appendPlanningDateDigit('5')">5</button>
+        <button onclick="appendPlanningDateDigit('6')">6</button>
+
+        <button onclick="appendPlanningDateDigit('7')">7</button>
+        <button onclick="appendPlanningDateDigit('8')">8</button>
+        <button onclick="appendPlanningDateDigit('9')">9</button>
+
+        <button onclick="appendPlanningDateDigit('0')">0</button>
+
+        <button onclick="clearPlanningDatePart()">
+            <span id="planningDateDayClearButton">
+                EFFACER
+            </span>
+        </button>
+
+        <button onclick="validatePlanningDateDay()">
+            <span id="planningDateDayValidateButton">
+                VALIDER
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<section
+    id="planningDateMonthScreen"
+    class="screen"
+>
+
+    <button
+		id="planningDateMonthBackButton"
+        class="back-button"
+        onclick="showScreen('planningDateDayScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningDateMonthTitle">
+        Quel mois ?
+    </h1>
+
+    <h2 id="planningDateMonthDisplay">
+        __ . __ . ____
+    </h2>
+
+    <div class="date-month-keypad">
+
+        <button onclick="selectPlanningDateMonth(1)">1</button>
+        <button onclick="selectPlanningDateMonth(2)">2</button>
+        <button onclick="selectPlanningDateMonth(3)">3</button>
+
+        <button onclick="selectPlanningDateMonth(4)">4</button>
+        <button onclick="selectPlanningDateMonth(5)">5</button>
+        <button onclick="selectPlanningDateMonth(6)">6</button>
+
+        <button onclick="selectPlanningDateMonth(7)">7</button>
+        <button onclick="selectPlanningDateMonth(8)">8</button>
+        <button onclick="selectPlanningDateMonth(9)">9</button>
+
+        <button onclick="selectPlanningDateMonth(10)">10</button>
+        <button onclick="selectPlanningDateMonth(11)">11</button>
+        <button onclick="selectPlanningDateMonth(12)">12</button>
+
+        <button
+            class="date-month-clear"
+            onclick="clearPlanningDatePart()"
+        >
+            <span id="planningDateMonthClearButton">
+                EFFACER
+            </span>
+        </button>
+
+        <button
+            class="date-month-validate"
+            onclick="validatePlanningDateMonth()"
+        >
+            <span id="planningDateMonthValidateButton">
+                VALIDER
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<section
+    id="planningDateYearScreen"
+    class="screen"
+>
+
+    <button
+		id="planningDateYearBackButton"
+        class="back-button"
+        onclick="showScreen('planningDateMonthScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningDateYearTitle">
+        Quelle année ?
+    </h1>
+
+    <h2 id="planningDateYearDisplay">
+        __ . __ . ____
+    </h2>
+
+    <div class="date-keypad">
+
+        <button onclick="appendPlanningDateDigit('1')">1</button>
+        <button onclick="appendPlanningDateDigit('2')">2</button>
+        <button onclick="appendPlanningDateDigit('3')">3</button>
+
+        <button onclick="appendPlanningDateDigit('4')">4</button>
+        <button onclick="appendPlanningDateDigit('5')">5</button>
+        <button onclick="appendPlanningDateDigit('6')">6</button>
+
+        <button onclick="appendPlanningDateDigit('7')">7</button>
+        <button onclick="appendPlanningDateDigit('8')">8</button>
+        <button onclick="appendPlanningDateDigit('9')">9</button>
+
+        <button onclick="appendPlanningDateDigit('0')">0</button>
+
+        <button onclick="clearPlanningDatePart()">
+            <span id="planningDateYearClearButton">
+                EFFACER
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDate()">
+            <span id="planningDateYearSpeakButton">
+                🔊 DIRE
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<section
+    id="planningNumbersScreen"
+    class="screen"
+>
+
+    <button
+        id="planningNumbersBackButton"
+        class="back-button"
+        onclick="showScreen('planningScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningNumbersTitle">
+        Chiffres
+    </h1>
+
+    <h2 id="planningNumberDisplay">
+        —
+    </h2>
+
+    <div
+        id="planningNumbersButtons"
+        class="planning-number-keypad"
+    >
+
+        <button onclick="appendPlanningDigit('1')">
+            1
+        </button>
+
+        <button onclick="appendPlanningDigit('2')">
+            2
+        </button>
+
+        <button onclick="appendPlanningDigit('3')">
+            3
+        </button>
+
+        <button onclick="appendPlanningDigit('4')">
+            4
+        </button>
+
+        <button onclick="appendPlanningDigit('5')">
+            5
+        </button>
+
+        <button onclick="appendPlanningDigit('6')">
+            6
+        </button>
+
+        <button onclick="appendPlanningDigit('7')">
+            7
+        </button>
+
+        <button onclick="appendPlanningDigit('8')">
+            8
+        </button>
+
+        <button onclick="appendPlanningDigit('9')">
+            9
+        </button>
+
+        <button onclick="appendPlanningDigit('0')">
+            0
+        </button>
+
+        <button onclick="deletePlanningDigit()">
+            <span id="planningDeleteNumberButton">
+                ⌫ EFFACER
+            </span>
+        </button>
+
+        <button onclick="speakPlanningNumber()">
+            <span id="planningSpeakNumberButton">
+                🔊 DIRE
+            </span>
+        </button>
+
+    </div>
+</section>
+
+<section
+    id="planningDaysScreen"
+    class="screen"
+>
+
+    <button
+        id="planningDaysBackButton"
+        class="back-button"
+        onclick="showScreen('planningScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningDaysTitle">
+        Jours de la semaine
+    </h1>
+
+    <div
+        id="planningDaysButtons"
+        class="phrase-buttons"
+    >
+
+        <button onclick="speakPlanningDay('monday')">
+            <span id="planningMondayButton">
+                LUNDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDay('tuesday')">
+            <span id="planningTuesdayButton">
+                MARDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDay('wednesday')">
+            <span id="planningWednesdayButton">
+                MERCREDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDay('thursday')">
+            <span id="planningThursdayButton">
+                JEUDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDay('friday')">
+            <span id="planningFridayButton">
+                VENDREDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDay('saturday')">
+            <span id="planningSaturdayButton">
+                SAMEDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDay('sunday')">
+            <span id="planningSundayButton">
+                DIMANCHE
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<section
+    id="planningMonthsScreen"
+    class="screen"
+>
+
+    <button
+        id="planningMonthsBackButton"
+        class="back-button"
+        onclick="showScreen('planningScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningMonthsTitle">
+        Mois
+    </h1>
+
+    <div
+        id="planningMonthsButtons"
+        class="phrase-buttons"
+    >
+
+        <button onclick="speakPlanningMonth('january')">
+            <span id="planningJanuaryButton">
+                JANVIER
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('february')">
+            <span id="planningFebruaryButton">
+                FÉVRIER
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('march')">
+            <span id="planningMarchButton">
+                MARS
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('april')">
+            <span id="planningAprilButton">
+                AVRIL
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('may')">
+            <span id="planningMayButton">
+                MAI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('june')">
+            <span id="planningJuneButton">
+                JUIN
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('july')">
+            <span id="planningJulyButton">
+                JUILLET
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('august')">
+            <span id="planningAugustButton">
+                AOÛT
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('september')">
+            <span id="planningSeptemberButton">
+                SEPTEMBRE
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('october')">
+            <span id="planningOctoberButton">
+                OCTOBRE
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('november')">
+            <span id="planningNovemberButton">
+                NOVEMBRE
+            </span>
+        </button>
+
+        <button onclick="speakPlanningMonth('december')">
+            <span id="planningDecemberButton">
+                DÉCEMBRE
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<section
+    id="planningDayPartsScreen"
+    class="screen"
+>
+
+    <button
+        id="planningDayPartsBackButton"
+        class="back-button"
+        onclick="showScreen('planningScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="planningDayPartsTitle">
+        Moment de la journée
+    </h1>
+
+    <div
+        id="planningDayPartsButtons"
+        class="phrase-buttons"
+    >
+
+        <button onclick="speakPlanningDayPart('morning')">
+            <span id="planningMorningButton">
+                MATIN
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDayPart('noon')">
+            <span id="planningNoonButton">
+                MIDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDayPart('afternoon')">
+            <span id="planningAfternoonButton">
+                APRÈS-MIDI
+            </span>
+        </button>
+
+        <button onclick="speakPlanningDayPart('evening')">
+            <span id="planningEveningButton">
+                SOIR
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- FAMILLE / AMIS -->
+<!-- ======================================= -->
+
+<section
+    id="talkScreen"
+    class="screen"
+>
+
+    <button
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="talkTitle">
+        Famille / Amis
+    </h1>
+
+    <div class="phrase-buttons">
+
+        <button onclick="speakTalkPhrase('hello')">
+            <span id="talkHelloButton">
+                BONJOUR
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('seeYou')">
+            <span id="talkSeeYouButton">
+                À BIENTÔT
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('happyToSee')">
+            <span id="talkHappyToSeeButton">
+                JE SUIS CONTENT<br>
+                DE TE VOIR
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('missedYou')">
+            <span id="talkMissedYouButton">
+                TU M'AS MANQUÉ
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('loveYou')">
+            <span id="talkLoveYouButton">
+                JE T'AIME
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('thankYou')">
+            <span id="talkThankYouButton">
+                MERCI
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('sorry')">
+            <span id="talkSorryButton">
+                DÉSOLÉ
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('dontWorry')">
+            <span id="talkDontWorryButton">
+                NE T'INQUIÈTE PAS
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('stayLonger')">
+            <span id="talkStayLongerButton">
+                RESTE ENCORE<br>
+                UN PEU
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('tellMe')">
+            <span id="talkTellMeButton">
+                RACONTE-MOI
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('doingWell')">
+            <span id="talkDoingWellButton">
+                JE VAIS BIEN
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('tiredButOkay')">
+            <span id="talkTiredButOkayButton">
+                JE SUIS FATIGUÉ,<br>
+                MAIS ÇA VA
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('dontKnow')">
+            <span id="talkDontKnowButton">
+                JE NE SAIS PAS
+            </span>
+        </button>
+
+        <button onclick="speakTalkPhrase('changeSubject')">
+            <span id="talkChangeSubjectButton">
+                CHANGEONS<br>
+                DE SUJET
+            </span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- RÉGLAGE DE LA VOIX -->
+<!-- ======================================= -->
+
+<section
+    id="voiceScreen"
+    class="screen"
+>
+
+    <button
+        id="voiceBackButton"
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="voiceTitle">
+        Langues / Voix
+    </h1>
+
+    <div class="language-setting">
+
+        <h2 id="voicePatientTitle">
+            Langue du patient
+        </h2>
+
+        <p
+            id="voicePatientHelp"
+            class="language-help"
+        >
+            pour les boutons des écrans.
+        </p>
+
+        <div class="language-choice">
+
+            <button
+                data-patient-language="fr"
+                onclick="choosePatientLanguage('fr')"
+            >
+                🇫🇷<br>
+                FRANÇAIS
+            </button>
+
+            <button
+                data-patient-language="en"
+                onclick="choosePatientLanguage('en')"
+            >
+                🇬🇧<br>
+                ENGLISH
+            </button>
+
+            <button
+                data-patient-language="de"
+                onclick="choosePatientLanguage('de')"
+            >
+                🇩🇪<br>
+                DEUTSCH
+            </button>
+
+            <button
+                data-patient-language="it"
+                onclick="choosePatientLanguage('it')"
+            >
+                🇮🇹<br>
+                ITALIANO
+            </button>
+			
+			<button
+				data-patient-language="es"
+				onclick="choosePatientLanguage('es')"
+			>
+				🇪🇸<br>
+				ESPAÑOL
+			</button>
+
+			<button
+				data-patient-language="pt"
+				onclick="choosePatientLanguage('pt')"
+			>
+				🇵🇹<br>
+				PORTUGUÊS
+			</button>
+
+        </div>
+
+    </div>
+
+	<div class="language-setting">
+
+		<div class="language-choice">
+
+			<button
+				id="buttonModeTextButton"
+				onclick="chooseButtonMode('text')"
+			>
+				BOUTONS<br>
+				TEXTES
+			</button>
+
+			<button
+				id="buttonModeImageButton"
+				onclick="chooseButtonMode('image')"
+			>
+				BOUTONS<br>
+				IMAGES
+			</button>
+
+		</div>
+
+	</div>
+
+    <div class="language-setting">
+
+        <h2 id="voiceCaregiverTitle">
+            Langue du soignant
+        </h2>
+
+        <p
+            id="voiceCaregiverHelp"
+            class="language-help"
+        >
+            pour la prononciation des phrases.
+        </p>
+
+        <div class="language-choice">
+
+            <button
+                data-caregiver-language="fr"
+                onclick="chooseCaregiverLanguage('fr')"
+            >
+                🇫🇷<br>
+                FRANÇAIS
+            </button>
+
+            <button
+                data-caregiver-language="en"
+                onclick="chooseCaregiverLanguage('en')"
+            >
+                🇬🇧<br>
+                ENGLISH
+            </button>
+
+            <button
+                data-caregiver-language="de"
+                onclick="chooseCaregiverLanguage('de')"
+            >
+                🇩🇪<br>
+                DEUTSCH
+            </button>
+
+            <button
+                data-caregiver-language="it"
+                onclick="chooseCaregiverLanguage('it')"
+            >
+                🇮🇹<br>
+                ITALIANO
+            </button>
+
+        </div>
+
+        <p
+            id="caregiverVoiceStatus"
+            class="language-voice-status"
+            aria-live="polite"
+        ></p>
+
+        <button
+            id="voiceTestButton"
+            type="button"
+            class="voice-test-button"
+            onclick="testCaregiverVoice()"
+        >
+            🔊 TESTER LA VOIX
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================= -->
+<!-- À PROPOS -->
+<!-- ======================================= -->
+
+<section
+    id="aboutScreen"
+    class="screen"
+>
+
+    <button
+        id="aboutBackButton"
+        class="back-button"
+        onclick="showScreen('homeScreen')"
+    >
+        ← RETOUR
+    </button>
+
+    <h1 id="aboutTitle">
+        À propos
+    </h1>
+
+    <div class="about-content">
+
+        <p id="aboutIntroText">
+            Cette application a pour but d'aider des patients hospitalisés
+            avec trachéotomie ou aphones à exprimer leurs besoins et leurs émotions
+            auprès du personnel soignant, de leur famille et de leurs proches aidants,
+            par la simple pression de boutons très lisibles sur une tablette
+            ou un smartphone.
+        </p>
+
+        <p
+            id="aboutFreeText"
+            class="about-free"
+        >
+            Cette application est et restera gratuite.
+        </p>
+
+        <p id="aboutContactText">
+            Pour toute demande d'amélioration, contacter
+            Winfried Windegger par email :
+        </p>
+
+        <a
+            class="about-email"
+            href="mailto:wwinfried@gmail.com"
+        >
+            ✉️ wwinfried@gmail.com
+        </a>
+
+		<p class="about-copyright">
+			© 2026 Winfried Windegger — VoxHelp
+		</p>
+
+        <div class="share-app">
+
+            <h2 id="shareTitle">
+                Partager VoxHelp
+            </h2>
+
+            <p id="shareIntroText">
+                Vous souhaitez faire connaître cette application à un collègue
+                soignant ou à un proche aidant ?
+            </p>
+
+            <p id="shareInstructionsText">
+                Activez une connexion Internet, saisissez simplement son adresse
+                email puis cliquez sur <strong>PARTAGER</strong>.
+                Un message contenant le lien vers l'application et les instructions
+                pour l'installer hors connexion sera préparé.
+            </p>
+
+            <label
+                id="shareEmailLabel"
+                class="share-email-label"
+                for="shareEmail"
+            >
+                Email du destinataire
+            </label>
+
+            <input
+                id="shareEmail"
+                class="share-email-input"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="adresse@email.com"
+            >
+
+			<div class="share-recipient-language">
+
+				<p
+					id="shareRecipientLanguageLabel"
+					class="share-recipient-language-label"
+				>
+					Langue du destinataire :
+				</p>
+
+				<div class="share-language-choice">
+
+					<label>
+						<input
+							type="radio"
+							name="shareRecipientLanguage"
+							value="fr"
+							checked
+						>
+						FR
+					</label>
+
+					<label>
+						<input
+							type="radio"
+							name="shareRecipientLanguage"
+							value="de"
+						>
+						DE
+					</label>
+
+					<label>
+						<input
+							type="radio"
+							name="shareRecipientLanguage"
+							value="it"
+						>
+						IT
+					</label>
+
+					<label>
+						<input
+							type="radio"
+							name="shareRecipientLanguage"
+							value="en"
+						>
+						EN
+					</label>
+
+				</div>
+
+			</div>
+
+            <button
+                id="shareButton"
+                type="button"
+                class="share-button"
+                onclick="shareAppByEmail()"
+            >
+                ✉️ PARTAGER
+            </button>
+
+            <p
+                id="shareMessage"
+                class="share-message"
+                aria-live="polite"
+            ></p>
+
+            <div
+                id="sharePreview"
+                class="share-preview hidden"
+            >
+
+                <h2 id="sharePreviewTitle">
+                    Message prêt à envoyer
+                </h2>
+
+                <p
+                    id="sharePreviewRecipientLabel"
+                    class="share-preview-label"
+                >
+                    DESTINATAIRE
+                </p>
+
+                <div
+                    id="sharePreviewEmail"
+                    class="share-preview-field"
+                ></div>
+
+                <p
+                    id="sharePreviewSubjectLabel"
+                    class="share-preview-label"
+                >
+                    OBJET
+                </p>
+
+                <div
+                    id="sharePreviewSubject"
+                    class="share-preview-field"
+                ></div>
+
+                <p
+                    id="sharePreviewMessageLabel"
+                    class="share-preview-label"
+                >
+                    MESSAGE
+                </p>
+
+                <div
+                    id="sharePreviewBody"
+                    class="share-preview-body"
+                ></div>
+
+                <button
+                    type="button"
+                    class="share-open-button"
+                    onclick="copyAndOpenMail()"
+                >
+                    <span id="shareOpenButtonText">
+                        📋 COPIER ET OUVRIR<br>
+                        MA MESSAGERIE
+                    </span>
+                </button>
+
+                <p
+                    id="shareCopyHelp"
+                    class="share-copy-help"
+                >
+                    Si votre messagerie n'insère pas automatiquement le texte,
+                    celui-ci aura déjà été copié : il suffira de le coller.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+	<script src="app.js?v=3.0.1"></script>
+
+<script>
+(function () {
+
+    const isInstalled =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true;
+
+    const installKey = 'voxhelp-install-counted-v2.1';
+
+    if (
+        isInstalled &&
+        localStorage.getItem(installKey) !== '1'
+    ) {
+
+        fetch(
+            'https://counterapi.com/api/wrelax1.github.io/install/voxhelp-2-1'
+        )
+        .then(function (response) {
+
+            if (response.ok) {
+                localStorage.setItem(installKey, '1');
+            }
+
+        })
+        .catch(function () {
+            // VoxHelp continue à fonctionner normalement
+            // même si le compteur est indisponible.
+        });
+
+    }
+
+})();
+</script>
+
+<!-- ======================================= -->
+<!-- VOIX DE SYNTHÈSE MANQUANTE -->
+<!-- ======================================= -->
+
+<div
+    id="missingVoiceModal"
+    class="voice-warning-overlay"
+    hidden
+>
+
+    <div
+        class="voice-warning-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="missingVoiceTitle"
+    >
+
+        <h2 id="missingVoiceTitle">
+            Voix non disponible
+        </h2>
+
+        <p id="missingVoiceMessage">
+            Aucune voix de synthèse correspondant à cette langue n'est disponible sur cet appareil.
+        </p>
+
+        <div
+            id="missingVoiceStatus"
+            class="voice-warning-status"
+        ></div>
+
+		<p id="missingVoiceInstructions">
+			Pour utiliser cette langue, installez la voix de synthèse correspondante dans les paramètres de l'appareil ou demandez à votre service informatique de l'installer.
+		</p>
+
+        <div class="voice-warning-actions">
+
+            <button
+                id="missingVoiceHelpButton"
+                type="button"
+                onclick="showVoiceInstallationHelp()"
+            >
+                COMMENT INSTALLER UNE VOIX
+            </button>
+
+            <button
+                id="missingVoiceChooseButton"
+                type="button"
+                onclick="showAvailableVoiceLanguages()"
+            >
+                CHOISIR UNE AUTRE LANGUE
+            </button>
+
+        </div>
+
+        <div
+            id="availableVoiceLanguages"
+            class="available-voice-languages"
+            hidden
+        ></div>
+
+        <div
+            id="voiceInstallationHelp"
+            class="voice-installation-help"
+            hidden
+        ></div>
+
+		<button
+			id="missingVoiceCloseButton"
+			type="button"
+			onclick="closeMissingVoiceModal()"
+		>
+			✕ FERMER
+		</button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
