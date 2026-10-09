@@ -1,4 +1,4 @@
-	const APP_VERSION = "3.0";
+	const APP_VERSION = "3.1";
 
 	const LANGUAGE_STORAGE_KEYS = {
 		patient: "maVoixPatientLanguage",
@@ -24,7 +24,13 @@
 		"de",
 		"it",
 		"es",
-		"pt"
+		"pt",
+		"sq",
+		"ar",
+		"bs",
+		"tr",
+		"uk",
+		"ru"
 	];
 
 	const LANGUAGE_LOCALES = {
@@ -33,7 +39,13 @@
 		de: "de-DE",
 		it: "it-IT",
 		es: "es-ES",
-		pt: "pt-PT"
+		pt: "pt-PT",
+		sq: "sq-AL",
+		ar: "ar-SA",
+		bs: "bs-BA",
+		tr: "tr-TR",
+		uk: "uk-UA",
+		ru: "ru-RU",
 	};
 
 
@@ -127,6 +139,35 @@
 		}
 
 	};
+
+/* Traductions complémentaires — VoxHelp 3.1 */
+
+	Object.assign(QUICK_PHRASES.yes, {
+		sq: { label: "PO", speech: "Po" },
+		ar: { label: "نعم", speech: "نعم" },
+		bs: { label: "DA", speech: "Da" },
+		tr: { label: "EVET", speech: "Evet" },
+		uk: { label: "ТАК", speech: "Так" },
+		ru: { label: "ДА", speech: "Да" }
+	});
+
+	Object.assign(QUICK_PHRASES.no, {
+		sq: { label: "JO", speech: "Jo" },
+		ar: { label: "لا", speech: "لا" },
+		bs: { label: "NE", speech: "Ne" },
+		tr: { label: "HAYIR", speech: "Hayır" },
+		uk: { label: "НІ", speech: "Ні" },
+		ru: { label: "НЕТ", speech: "Нет" }
+	});
+
+	Object.assign(QUICK_PHRASES.stop, {
+		sq: { label: "NDAL", speech: "Ndaloni, ju lutem" },
+		ar: { label: "توقف", speech: "توقف، من فضلك" },
+		bs: { label: "STOP", speech: "Stanite, molim vas" },
+		tr: { label: "DUR", speech: "Durun, lütfen" },
+		uk: { label: "СТОП", speech: "Зупиніться, будь ласка" },
+		ru: { label: "СТОП", speech: "Остановитесь, пожалуйста" }
+	});
 
 	/* =========================================
 	   ÉCRAN PRINCIPAL — TRADUCTIONS
@@ -261,6 +302,140 @@
 		}
 
 	};
+
+/* =========================================
+   ACCUEIL — NOUVELLES LANGUES 3.1
+   ========================================= */
+
+	Object.assign(HOME_TRANSLATIONS, {
+
+		sq: {
+			title: "Dua t'ju them…",
+			respiration: "FRYMËMARRJA /<br>FYTI",
+			pain: "KAM DHIMBJE",
+			position: "POZICIONIMI",
+			care: "PAREHATI",
+			hygiene: "JETA E PËRDITSHME",
+			environment: "MJEDISI",
+			questions: "PYETJE PËR<br>MJEKUN",
+			careTeam: "EKIPI MJEKËSOR",
+			movement: "LËVIZJA",
+			planning: "PLANIFIKIMI / KOHA",
+			talk: "FAMILJA / MIQTË",
+			emotions: "EMOCIONET",
+			recharge: "MA KARIKONI<br>TELEFONIN",
+			rechargeSpeech: "Ju lutem, ma karikoni telefonin",
+			phrases: "FRAZAT E MIA",
+			voice: "ZËRI",
+			about: "RRETH APLIKACIONIT"
+		},
+
+		ar: {
+			title: "أريد أن أخبركم…",
+			respiration: "التنفس /<br>الحلق",
+			pain: "لدي ألم",
+			position: "تغيير الوضعية",
+			care: "انزعاج",
+			hygiene: "الحياة اليومية",
+			environment: "المحيط",
+			questions: "أسئلة<br>للطبيب",
+			careTeam: "الفريق الطبي",
+			movement: "التنقل",
+			planning: "المواعيد / الوقت",
+			talk: "العائلة / الأصدقاء",
+			emotions: "المشاعر",
+			recharge: "اشحنوا<br>هاتفي",
+			rechargeSpeech: "يرجى شحن هاتفي",
+			phrases: "عباراتي",
+			voice: "الصوت",
+			about: "حول التطبيق"
+		},
+
+		bs: {
+			title: "Želim vam reći…",
+			respiration: "DISANJE /<br>GRLO",
+			pain: "BOLI ME",
+			position: "PROMJENA POLOŽAJA",
+			care: "NELAGODA",
+			hygiene: "SVAKODNEVNE POTREBE",
+			environment: "OKRUŽENJE",
+			questions: "PITANJA<br>ZA DOKTORA",
+			careTeam: "MEDICINSKO OSOBLJE",
+			movement: "KRETANJE",
+			planning: "PLAN / VRIJEME",
+			talk: "PORODICA / PRIJATELJI",
+			emotions: "EMOCIJE",
+			recharge: "NAPUNITE<br>MOJ TELEFON",
+			rechargeSpeech: "Napunite moj telefon, molim vas",
+			phrases: "MOJE FRAZE",
+			voice: "GLAS",
+			about: "O APLIKACIJI"
+		},
+
+		tr: {
+			title: "Size söylemek istiyorum…",
+			respiration: "SOLUNUM /<br>BOĞAZ",
+			pain: "AĞRIM VAR",
+			position: "POZİSYON",
+			care: "RAHATSIZLIK",
+			hygiene: "GÜNLÜK YAŞAM",
+			environment: "ÇEVRE",
+			questions: "DOKTORA<br>SORULAR",
+			careTeam: "SAĞLIK EKİBİ",
+			movement: "HAREKET",
+			planning: "PLAN / ZAMAN",
+			talk: "AİLE / ARKADAŞLAR",
+			emotions: "DUYGULAR",
+			recharge: "TELEFONUMU<br>ŞARJ EDİN",
+			rechargeSpeech: "Lütfen telefonumu şarj edin",
+			phrases: "CÜMLELERİM",
+			voice: "SES",
+			about: "HAKKINDA"
+		},
+
+		uk: {
+			title: "Я хочу вам сказати…",
+			respiration: "ДИХАННЯ /<br>ГОРЛО",
+			pain: "МЕНІ БОЛИТЬ",
+			position: "ПОЛОЖЕННЯ ТІЛА",
+			care: "ДИСКОМФОРТ",
+			hygiene: "ПОВСЯКДЕННЕ ЖИТТЯ",
+			environment: "ОТОЧЕННЯ",
+			questions: "ЗАПИТАННЯ<br>ЛІКАРЮ",
+			careTeam: "МЕДИЧНИЙ ПЕРСОНАЛ",
+			movement: "ПЕРЕСУВАННЯ",
+			planning: "ПЛАНУВАННЯ / ЧАС",
+			talk: "РОДИНА / ДРУЗІ",
+			emotions: "ЕМОЦІЇ",
+			recharge: "ЗАРЯДІТЬ<br>МІЙ ТЕЛЕФОН",
+			rechargeSpeech: "Зарядіть мій телефон, будь ласка",
+			phrases: "МОЇ ФРАЗИ",
+			voice: "ГОЛОС",
+			about: "ПРО ЗАСТОСУНОК"
+		},
+
+		ru: {
+			title: "Я хочу вам сказать…",
+			respiration: "ДЫХАНИЕ /<br>ГОРЛО",
+			pain: "У МЕНЯ БОЛИТ",
+			position: "ПОЛОЖЕНИЕ ТЕЛА",
+			care: "ДИСКОМФОРТ",
+			hygiene: "ПОВСЕДНЕВНАЯ ЖИЗНЬ",
+			environment: "ОКРУЖЕНИЕ",
+			questions: "ВОПРОСЫ<br>ВРАЧУ",
+			careTeam: "МЕДПЕРСОНАЛ",
+			movement: "ПЕРЕДВИЖЕНИЕ",
+			planning: "ПЛАН / ВРЕМЯ",
+			talk: "СЕМЬЯ / ДРУЗЬЯ",
+			emotions: "ЭМОЦИИ",
+			recharge: "ЗАРЯДИТЕ<br>МОЙ ТЕЛЕФОН",
+			rechargeSpeech: "Зарядите мой телефон, пожалуйста",
+			phrases: "МОИ ФРАЗЫ",
+			voice: "ГОЛОС",
+			about: "О ПРИЛОЖЕНИИ"
+		}
+
+	});
 
 	/* =========================================
 	   RESPIRATION — TRADUCTIONS
@@ -585,6 +760,98 @@
 
 	};
 
+/* =========================================
+   RESPIRATION — NOUVELLES LANGUES 3.1
+   ========================================= */
+
+Object.assign(RESPIRATION_TRANSLATIONS, {
+
+    sq: {
+        title: "Frymëmarrja",
+        breathing: { label: "E KAM TË VËSHTIRË<br>TË MARR FRYMË" },
+        suction: { label: "KAM NEVOJË<br>PËR ASPIRIM" },
+        secretions: { label: "SEKRECIONE" },
+        blocked: { label: "DUKET<br>E BLLOKUAR" },
+        tracheostomyPain: { label: "DHIMBJE RRETH<br>TRAKEOSTOMISË" },
+        dryThroat: { label: "FYTI I THATË" },
+        dryMouth: { label: "GOJË E THATË" },
+        better: { label: "NDIHEM MË MIRË" },
+        notBetter: { label: "NUK JAM<br>MË MIRË" },
+        stay: { label: "QËNDRONI<br>ME MUA" }
+    },
+
+    ar: {
+        title: "التنفس",
+        breathing: { label: "أواجه صعوبة<br>في التنفس" },
+        suction: { label: "أحتاج إلى<br>شفط الإفرازات" },
+        secretions: { label: "إفرازات" },
+        blocked: { label: "يبدو<br>مسدودًا" },
+        tracheostomyPain: { label: "ألم حول<br>فتحة القصبة الهوائية" },
+        dryThroat: { label: "جفاف الحلق" },
+        dryMouth: { label: "جفاف الفم" },
+        better: { label: "أشعر بتحسن" },
+        notBetter: { label: "لم أتحسن<br>بعد" },
+        stay: { label: "ابقوا<br>معي" }
+    },
+
+    bs: {
+        title: "Disanje",
+        breathing: { label: "TEŠKO<br>DIŠEM" },
+        suction: { label: "TREBA MI<br>ASPIRACIJA" },
+        secretions: { label: "SEKRET" },
+        blocked: { label: "NEŠTO JE<br>ZAČEPLJENO" },
+        tracheostomyPain: { label: "BOL OKO<br>TRAHEOSTOME" },
+        dryThroat: { label: "SUHO GRLO" },
+        dryMouth: { label: "SUHA USTA" },
+        better: { label: "BOLJE MI JE" },
+        notBetter: { label: "NIJE MI<br>BOLJE" },
+        stay: { label: "OSTANITE<br>SA MNOM" }
+    },
+
+    tr: {
+        title: "Solunum",
+        breathing: { label: "NEFES ALMAKTA<br>ZORLANIYORUM" },
+        suction: { label: "ASPİRASYONA<br>İHTİYACIM VAR" },
+        secretions: { label: "SALGILAR" },
+        blocked: { label: "TIKANMIŞ<br>GİBİ" },
+        tracheostomyPain: { label: "TRAKEOSTOMİ<br>ÇEVRESİNDE AĞRI" },
+        dryThroat: { label: "BOĞAZIM KURU" },
+        dryMouth: { label: "AĞZIM KURU" },
+        better: { label: "DAHA İYİYİM" },
+        notBetter: { label: "HALA İYİ<br>DEĞİLİM" },
+        stay: { label: "LÜTFEN<br>YANIMDA KALIN" }
+    },
+
+    uk: {
+        title: "Дихання",
+        breathing: { label: "МЕНІ ВАЖКО<br>ДИХАТИ" },
+        suction: { label: "МЕНІ ПОТРІБНЕ<br>ВІДСМОКТУВАННЯ" },
+        secretions: { label: "ВИДІЛЕННЯ" },
+        blocked: { label: "НІБИ<br>ЗАКУПОРЕНО" },
+        tracheostomyPain: { label: "БІЛЬ НАВКОЛО<br>ТРАХЕОСТОМИ" },
+        dryThroat: { label: "СУХІСТЬ У ГОРЛІ" },
+        dryMouth: { label: "СУХІСТЬ У РОТІ" },
+        better: { label: "МЕНІ КРАЩЕ" },
+        notBetter: { label: "МЕНІ ВСЕ ЩЕ<br>НЕ КРАЩЕ" },
+        stay: { label: "ЗАЛИШІТЬСЯ<br>ЗІ МНОЮ" }
+    },
+
+    ru: {
+        title: "Дыхание",
+        breathing: { label: "МНЕ ТРУДНО<br>ДЫШАТЬ" },
+        suction: { label: "МНЕ НУЖНО<br>ОТСАСЫВАНИЕ СЛИЗИ" },
+        secretions: { label: "ВЫДЕЛЕНИЯ" },
+        blocked: { label: "КАЖЕТСЯ,<br>ЗАКУПОРЕНО" },
+        tracheostomyPain: { label: "БОЛЬ В ОБЛАСТИ<br>ТРАХЕОСТОМЫ" },
+        dryThroat: { label: "СУХОСТЬ В ГОРЛЕ" },
+        dryMouth: { label: "СУХОСТЬ ВО РТУ" },
+        better: { label: "МНЕ ЛУЧШЕ" },
+        notBetter: { label: "МНЕ ПОКА<br>НЕ ЛУЧШЕ" },
+        stay: { label: "ПОБУДЬТЕ<br>СО МНОЙ" }
+    }
+
+});
+
 	const RESPIRATION_PICTOGRAMS = {
 		breathing: "pictogrammes/respiration.jpg",
 		suction: "pictogrammes/aspirer.jpg",
@@ -649,6 +916,62 @@
 		}
 
 	};
+
+/* =========================================
+   DOULEUR — NOUVELLES LANGUES 3.1
+   ========================================= */
+
+Object.assign(PAIN_TRANSLATIONS, {
+
+    sq: {
+        title: "Dhimbje",
+        where: "Ku ju dhemb?",
+        detail: "Ku saktësisht?",
+        intensity: "Sa e fortë është dhimbja?",
+        changeLocation: "← NDRYSHO VENDIN"
+    },
+
+    ar: {
+        title: "الألم",
+        where: "أين تشعر بالألم؟",
+        detail: "أين بالضبط؟",
+        intensity: "ما شدة الألم؟",
+        changeLocation: "← غيّر موضع الألم"
+    },
+
+    bs: {
+        title: "Bol",
+        where: "Gdje vas boli?",
+        detail: "Gdje tačno?",
+        intensity: "Koliko je jak bol?",
+        changeLocation: "← PROMIJENI MJESTO"
+    },
+
+    tr: {
+        title: "Ağrı",
+        where: "Nereniz ağrıyor?",
+        detail: "Tam olarak neresi?",
+        intensity: "Ağrınız ne kadar şiddetli?",
+        changeLocation: "← BÖLGEYİ DEĞİŞTİR"
+    },
+
+    uk: {
+        title: "Біль",
+        where: "Де у вас болить?",
+        detail: "Де саме?",
+        intensity: "Наскільки сильний біль?",
+        changeLocation: "← ЗМІНИТИ МІСЦЕ"
+    },
+
+    ru: {
+        title: "Боль",
+        where: "Где у вас болит?",
+        detail: "Где именно?",
+        intensity: "Насколько сильная боль?",
+        changeLocation: "← ИЗМЕНИТЬ МЕСТО"
+    }
+
+});
 
 	/* =========================================
 	   DOULEUR — LOCALISATIONS
@@ -997,6 +1320,104 @@
 		}
 
 	};
+
+/* =========================================
+   DOULEUR — LOCALISATIONS — LANGUES 3.1
+   ========================================= */
+
+Object.assign(PAIN_LOCATION_PATIENT_LABELS, {
+
+    sq: {
+        head: "KOKA",
+        neck: "QAFA",
+        chest: "KRAHARORI",
+        back: "SHPINA",
+        abdomen: "BARKU",
+        leftShoulder: "SUPI",
+        leftArm: "KRAHU",
+        leftHand: "DORA",
+        leftHip: "IJA",
+        buttocks: "VITHET",
+        leftLeg: "KËMBA",
+        leftFoot: "SHPUTA"
+    },
+	
+    ar: {
+        head: "الرأس",
+        neck: "الرقبة",
+        chest: "الصدر",
+        back: "الظهر",
+        abdomen: "البطن",
+        leftShoulder: "الكتف",
+        leftArm: "الذراع",
+        leftHand: "اليد",
+        leftHip: "الورك",
+        buttocks: "الأرداف",
+        leftLeg: "الساق",
+        leftFoot: "القدم"
+    },
+
+    bs: {
+        head: "GLAVA",
+        neck: "VRAT",
+        chest: "PRSA",
+        back: "LEĐA",
+        abdomen: "STOMAK",
+        leftShoulder: "RAME",
+        leftArm: "RUKA",
+        leftHand: "ŠAKA",
+        leftHip: "KUK",
+        buttocks: "STRAŽNJICA",
+        leftLeg: "NOGA",
+        leftFoot: "STOPALO"
+    },
+
+    tr: {
+        head: "BAŞ",
+        neck: "BOYUN",
+        chest: "GÖĞÜS",
+        back: "SIRT",
+        abdomen: "KARIN",
+        leftShoulder: "OMUZ",
+        leftArm: "KOL",
+        leftHand: "EL",
+        leftHip: "KALÇA",
+        buttocks: "KALÇALAR",
+        leftLeg: "BACAK",
+        leftFoot: "AYAK"
+    },
+
+    uk: {
+        head: "ГОЛОВА",
+        neck: "ШИЯ",
+        chest: "ГРУДИ",
+        back: "СПИНА",
+        abdomen: "ЖИВІТ",
+        leftShoulder: "ПЛЕЧЕ",
+        leftArm: "РУКА",
+        leftHand: "КИСТЬ",
+        leftHip: "КУЛЬША",
+        buttocks: "СІДНИЦІ",
+        leftLeg: "НОГА",
+        leftFoot: "СТОПА"
+    },
+
+    ru: {
+        head: "ГОЛОВА",
+        neck: "ШЕЯ",
+        chest: "ГРУДЬ",
+        back: "СПИНА",
+        abdomen: "ЖИВОТ",
+        leftShoulder: "ПЛЕЧО",
+        leftArm: "РУКА",
+        leftHand: "КИСТЬ",
+        leftHip: "БЕДРО",
+        buttocks: "ЯГОДИЦЫ",
+        leftLeg: "НОГА",
+        leftFoot: "СТОПА"
+    }
+
+});
 
 	/* =========================================
 	   DOULEUR — SOUS-LOCALISATIONS
@@ -1629,6 +2050,314 @@
 
 	};
 
+/* =========================================
+   DOULEUR — TÊTE — LANGUES 3.1
+   ========================================= */
+
+Object.assign(PAIN_SUBLOCATION_PATIENT_LABELS, {
+
+    sq: {
+        head: {
+            front: "BALLI",
+            backHead: "PJESA E PASME<br>E KOKËS",
+            leftEye: "SYRI",
+            leftEar: "VESHI",
+            jaw: "NOFULLA",
+            wholeHead: "E GJITHË KOKA"
+        }
+    },
+
+    ar: {
+        head: {
+            front: "الجبهة",
+            backHead: "مؤخرة الرأس",
+            leftEye: "العين",
+            leftEar: "الأذن",
+            jaw: "الفك",
+            wholeHead: "الرأس بالكامل"
+        }
+    },
+
+    bs: {
+        head: {
+            front: "ČELO",
+            backHead: "POTILJAK",
+            leftEye: "OKO",
+            leftEar: "UHO",
+            jaw: "VILICA",
+            wholeHead: "CIJELA GLAVA"
+        }
+    },
+
+    tr: {
+        head: {
+            front: "ALIN",
+            backHead: "BAŞIN ARKASI",
+            leftEye: "GÖZ",
+            leftEar: "KULAK",
+            jaw: "ÇENE",
+            wholeHead: "TÜM BAŞ"
+        }
+    },
+
+    uk: {
+        head: {
+            front: "ЛОБ",
+            backHead: "ПОТИЛИЦЯ",
+            leftEye: "ОКО",
+            leftEar: "ВУХО",
+            jaw: "ЩЕЛЕПА",
+            wholeHead: "УСЯ ГОЛОВА"
+        }
+    },
+
+    ru: {
+        head: {
+            front: "ЛОБ",
+            backHead: "ЗАТЫЛОК",
+            leftEye: "ГЛАЗ",
+            leftEar: "УХО",
+            jaw: "ЧЕЛЮСТЬ",
+            wholeHead: "ВСЯ ГОЛОВА"
+        }
+    }
+
+});
+
+/* =========================================
+   DOULEUR — POITRINE — LANGUES 3.1
+   ========================================= */
+
+PAIN_SUBLOCATION_PATIENT_LABELS.sq.chest = {
+    left: "MAJTAS",
+    right: "DJATHTAS",
+    leftRibs: "BRINJËT",
+    center: "NË MES",
+    wholeChest: "I GJITHË KRAHARORI"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ar.chest = {
+    left: "الجهة اليسرى",
+    right: "الجهة اليمنى",
+    leftRibs: "الأضلاع",
+    center: "الوسط",
+    wholeChest: "الصدر بالكامل"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.bs.chest = {
+    left: "LIJEVO",
+    right: "DESNO",
+    leftRibs: "REBRA",
+    center: "SREDINA",
+    wholeChest: "CIJELA PRSA"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.tr.chest = {
+    left: "SOL",
+    right: "SAĞ",
+    leftRibs: "KABURGALAR",
+    center: "ORTA",
+    wholeChest: "TÜM GÖĞÜS"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.uk.chest = {
+    left: "ЛІВОРУЧ",
+    right: "ПРАВОРУЧ",
+    leftRibs: "РЕБРА",
+    center: "ЦЕНТР",
+    wholeChest: "УСЯ ГРУДНА КЛІТКА"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ru.chest = {
+    left: "СЛЕВА",
+    right: "СПРАВА",
+    leftRibs: "РЁБРА",
+    center: "ЦЕНТР",
+    wholeChest: "ВСЯ ГРУДНАЯ КЛЕТКА"
+};
+
+/* =========================================
+   DOULEUR — DOS — LANGUES 3.1
+   ========================================= */
+
+PAIN_SUBLOCATION_PATIENT_LABELS.sq.back = {
+    upper: "SIPËR",
+    middle: "MESI",
+    left: "MAJTAS",
+    right: "DJATHTAS",
+    lower: "POSHTË",
+    wholeBack: "E GJITHË SHPINA"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ar.back = {
+    upper: "أعلى الظهر",
+    middle: "منتصف الظهر",
+    left: "الجهة اليسرى",
+    right: "الجهة اليمنى",
+    lower: "أسفل الظهر",
+    wholeBack: "الظهر بالكامل"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.bs.back = {
+    upper: "GORNJI DIO",
+    middle: "SREDINA",
+    left: "LIJEVO",
+    right: "DESNO",
+    lower: "DONJI DIO",
+    wholeBack: "CIJELA LEĐA"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.tr.back = {
+    upper: "ÜST KISIM",
+    middle: "ORTA",
+    left: "SOL",
+    right: "SAĞ",
+    lower: "ALT KISIM",
+    wholeBack: "TÜM SIRT"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.uk.back = {
+    upper: "ВЕРХ СПИНИ",
+    middle: "СЕРЕДИНА",
+    left: "ЛІВОРУЧ",
+    right: "ПРАВОРУЧ",
+    lower: "НИЗ СПИНИ",
+    wholeBack: "УСЯ СПИНА"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ru.back = {
+    upper: "ВЕРХ СПИНЫ",
+    middle: "СЕРЕДИНА",
+    left: "СЛЕВА",
+    right: "СПРАВА",
+    lower: "НИЗ СПИНЫ",
+    wholeBack: "ВСЯ СПИНА"
+};
+
+/* =========================================
+   DOULEUR — VENTRE — LANGUES 3.1
+   ========================================= */
+
+PAIN_SUBLOCATION_PATIENT_LABELS.sq.abdomen = {
+    upper: "SIPËR",
+    center: "NË MES",
+    left: "MAJTAS",
+    right: "DJATHTAS",
+    lowerAbdomen: "FUNDI I BARKUT",
+    bladder: "FSHIKËZA",
+    genitals: "ORGANET<br>GJENITALE",
+    wholeAbdomen: "I GJITHË BARKU"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ar.abdomen = {
+    upper: "أعلى البطن",
+    center: "وسط البطن",
+    left: "الجهة اليسرى",
+    right: "الجهة اليمنى",
+    lowerAbdomen: "أسفل البطن",
+    bladder: "المثانة",
+    genitals: "الأعضاء التناسلية",
+    wholeAbdomen: "البطن بالكامل"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.bs.abdomen = {
+    upper: "GORNJI DIO",
+    center: "SREDINA",
+    left: "LIJEVO",
+    right: "DESNO",
+    lowerAbdomen: "DONJI DIO STOMAKA",
+    bladder: "MOKRAĆNI MJEHUR",
+    genitals: "GENITALIJE",
+    wholeAbdomen: "CIJELI STOMAK"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.tr.abdomen = {
+    upper: "ÜST KARIN",
+    center: "ORTA",
+    left: "SOL",
+    right: "SAĞ",
+    lowerAbdomen: "ALT KARIN",
+    bladder: "MESANE",
+    genitals: "GENİTAL BÖLGE",
+    wholeAbdomen: "TÜM KARIN"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.uk.abdomen = {
+    upper: "ВЕРХ ЖИВОТА",
+    center: "СЕРЕДИНА",
+    left: "ЛІВОРУЧ",
+    right: "ПРАВОРУЧ",
+    lowerAbdomen: "НИЗ ЖИВОТА",
+    bladder: "СЕЧОВИЙ МІХУР",
+    genitals: "СТАТЕВІ ОРГАНИ",
+    wholeAbdomen: "УВЕСЬ ЖИВІТ"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ru.abdomen = {
+    upper: "ВЕРХ ЖИВОТА",
+    center: "СЕРЕДИНА",
+    left: "СЛЕВА",
+    right: "СПРАВА",
+    lowerAbdomen: "НИЗ ЖИВОТА",
+    bladder: "МОЧЕВОЙ ПУЗЫРЬ",
+    genitals: "ПОЛОВЫЕ ОРГАНЫ",
+    wholeAbdomen: "ВЕСЬ ЖИВОТ"
+};
+
+/* =========================================
+   DOULEUR — FESSES — LANGUES 3.1
+   ========================================= */
+
+PAIN_SUBLOCATION_PATIENT_LABELS.sq.buttocks = {
+    left: "MAJTAS",
+    right: "DJATHTAS",
+    sacrumCoccyx: "KOCKA E KRYQIT<br>/ KOKSIKSI",
+    anus: "ANUSI",
+    both: "TË DYJA VITHET"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ar.buttocks = {
+    left: "الجهة اليسرى",
+    right: "الجهة اليمنى",
+    sacrumCoccyx: "العجز / العصعص",
+    anus: "الشرج",
+    both: "كلتا الأليتين"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.bs.buttocks = {
+    left: "LIJEVO",
+    right: "DESNO",
+    sacrumCoccyx: "KRSTAČA /<br>TRTIČNA KOST",
+    anus: "ANUS",
+    both: "OBJE STRANE"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.tr.buttocks = {
+    left: "SOL KALÇA",
+    right: "SAĞ KALÇA",
+    sacrumCoccyx: "SAKRUM /<br>KUYRUK SOKUMU",
+    anus: "ANÜS",
+    both: "HER İKİ KALÇA"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.uk.buttocks = {
+    left: "ЛІВА",
+    right: "ПРАВА",
+    sacrumCoccyx: "КРИЖІ / КУПРИК",
+    anus: "АНУС",
+    both: "ОБИДВІ СІДНИЦІ"
+};
+
+PAIN_SUBLOCATION_PATIENT_LABELS.ru.buttocks = {
+    left: "ЛЕВАЯ",
+    right: "ПРАВАЯ",
+    sacrumCoccyx: "КРЕСТЕЦ / КОПЧИК",
+    anus: "АНУС",
+    both: "ОБЕ ЯГОДИЦЫ"
+};
+
+
+
 	/* =========================================
 	   POSITION / CONFORT — TRADUCTIONS
 	   ========================================= */
@@ -2176,6 +2905,110 @@
 
 	};
 
+/* =========================================
+   POSITIONNEMENT — LANGUES 3.1
+   ========================================= */
+
+Object.assign(POSITION_TRANSLATIONS, {
+
+    sq: {
+        title: "Pozicionimi",
+        bed: { label: "MË KTHENI<br>NË SHTRAT" },
+        sitUp: { label: "MË NGRINI<br>NË POZICION ULUR" },
+        moveUp: { label: "MË NGRINI<br>MË LART NË SHTRAT" },
+        turnRight: { label: "MË KTHENI" },
+        headUp: { label: "NGRINI<br>KOKËN E SHTRATIT" },
+        headDown: { label: "ULNI<br>KOKËN E SHTRATIT" },
+        legsUp: { label: "MË NGRINI<br>KËMBËT" },
+        legsDown: { label: "MË ULNI<br>KËMBËT" },
+        pillow: { label: "JASTËK" },
+        blanket: { label: "BATANIJE" },
+        positionHurts: { label: "KY POZICION<br>MË SHKAKTON DHIMBJE" },
+        comfortable: { label: "JAM MIRË<br>KËSHTU" }
+    },
+
+    ar: {
+        title: "تغيير الوضعية",
+        bed: { label: "أعيدوني<br>إلى السرير" },
+        sitUp: { label: "ساعدوني<br>على الجلوس" },
+        moveUp: { label: "ارفعوني<br>أعلى السرير" },
+        turnRight: { label: "غيّروا وضعيتي" },
+        headUp: { label: "ارفعوا<br>رأس السرير" },
+        headDown: { label: "اخفضوا<br>رأس السرير" },
+        legsUp: { label: "ارفعوا<br>ساقيّ" },
+        legsDown: { label: "اخفضوا<br>ساقيّ" },
+        pillow: { label: "وسادة" },
+        blanket: { label: "بطانية" },
+        positionHurts: { label: "هذه الوضعية<br>تؤلمني" },
+        comfortable: { label: "أنا مرتاح<br>هكذا" }
+    },
+
+    bs: {
+        title: "Promjena položaja",
+        bed: { label: "VRATITE ME<br>U KREVET" },
+        sitUp: { label: "PODIGNITE ME<br>DA SJEDIM" },
+        moveUp: { label: "POMJERITE ME<br>VIŠE U KREVETU" },
+        turnRight: { label: "OKRENITE ME" },
+        headUp: { label: "PODIGNITE<br>UZGLAVLJE" },
+        headDown: { label: "SPUSTITE<br>UZGLAVLJE" },
+        legsUp: { label: "PODIGNITE<br>MI NOGE" },
+        legsDown: { label: "SPUSTITE<br>MI NOGE" },
+        pillow: { label: "JASTUK" },
+        blanket: { label: "POKRIVAČ" },
+        positionHurts: { label: "OVAJ POLOŽAJ<br>ME BOLI" },
+        comfortable: { label: "OVAKO MI<br>ODGOVARA" }
+    },
+
+    tr: {
+        title: "Pozisyon",
+        bed: { label: "BENİ YATAĞA<br>GERİ YATIRIN" },
+        sitUp: { label: "BENİ<br>DOĞRULTUN" },
+        moveUp: { label: "BENİ YATAKTA<br>YUKARI KAYDIRIN" },
+        turnRight: { label: "BENİ ÇEVİRİN" },
+        headUp: { label: "YATAĞIN BAŞ<br>KISMINI YÜKSELTİN" },
+        headDown: { label: "YATAĞIN BAŞ<br>KISMINI İNDİRİN" },
+        legsUp: { label: "BACAKLARIMI<br>KALDIRIN" },
+        legsDown: { label: "BACAKLARIMI<br>İNDİRİN" },
+        pillow: { label: "YASTIK" },
+        blanket: { label: "BATTANİYE" },
+        positionHurts: { label: "BU POZİSYON<br>CANIMI AĞRITIYOR" },
+        comfortable: { label: "BÖYLE<br>RAHATIM" }
+    },
+
+    uk: {
+        title: "Положення тіла",
+        bed: { label: "ПОВЕРНІТЬ МЕНЕ<br>В ЛІЖКО" },
+        sitUp: { label: "ДОПОМОЖІТЬ МЕНІ<br>СІСТИ" },
+        moveUp: { label: "ПОСУНЬТЕ МЕНЕ<br>ВИЩЕ В ЛІЖКУ" },
+        turnRight: { label: "ПОВЕРНІТЬ МЕНЕ" },
+        headUp: { label: "ПІДНІМІТЬ<br>УЗГОЛІВ'Я" },
+        headDown: { label: "ОПУСТІТЬ<br>УЗГОЛІВ'Я" },
+        legsUp: { label: "ПІДНІМІТЬ<br>МОЇ НОГИ" },
+        legsDown: { label: "ОПУСТІТЬ<br>МОЇ НОГИ" },
+        pillow: { label: "ПОДУШКА" },
+        blanket: { label: "КОВДРА" },
+        positionHurts: { label: "У ЦЬОМУ ПОЛОЖЕННІ<br>МЕНІ БОЛЯЧЕ" },
+        comfortable: { label: "МЕНІ ТАК<br>ЗРУЧНО" }
+    },
+
+    ru: {
+        title: "Положение тела",
+        bed: { label: "ВЕРНИТЕ МЕНЯ<br>В КРОВАТЬ" },
+        sitUp: { label: "ПОМОГИТЕ МНЕ<br>СЕСТЬ" },
+        moveUp: { label: "ПОДВИНЬТЕ МЕНЯ<br>ВЫШЕ В КРОВАТИ" },
+        turnRight: { label: "ПОВЕРНИТЕ МЕНЯ" },
+        headUp: { label: "ПОДНИМИТЕ<br>ИЗГОЛОВЬЕ" },
+        headDown: { label: "ОПУСТИТЕ<br>ИЗГОЛОВЬЕ" },
+        legsUp: { label: "ПОДНИМИТЕ<br>МОИ НОГИ" },
+        legsDown: { label: "ОПУСТИТЕ<br>МОИ НОГИ" },
+        pillow: { label: "ПОДУШКА" },
+        blanket: { label: "ОДЕЯЛО" },
+        positionHurts: { label: "В ЭТОМ ПОЛОЖЕНИИ<br>МНЕ БОЛЬНО" },
+        comfortable: { label: "МНЕ ТАК<br>УДОБНО" }
+    }
+
+});
+
 	const POSITION_PICTOGRAMS = {
 		bed: "pictogrammes/couchez.jpg",
 		sitUp: "pictogrammes/redressez.jpg",
@@ -2627,6 +3460,122 @@
 
 	};
 
+/* =========================================
+   INCONFORT — NOUVELLES LANGUES 3.1
+   ========================================= */
+
+Object.assign(CARE_TRANSLATIONS, {
+
+    sq: {
+        title: "Parehati",
+        help: { label: "KAM NEVOJË<br>PËR NDIHMË" },
+        unwell: { label: "NUK NDIHEM<br>MIRË" },
+        better: { label: "NDIHEM MË MIRË" },
+        privacy: { label: "DUA<br>PRIVATËSI" },
+        constipation: { label: "KAPSLLËK" },
+        gas: { label: "KAM GAZRA" },
+        diarrhea: { label: "DIARRE" },
+        nausea: { label: "TË PËRZIERA" },
+        dizziness: { label: "MARRAMENDJE" },
+        weakness: { label: "JAM PA FUQI" },
+        chills: { label: "TË DRIDHURA" },
+        medicationNotEnough: { label: "ILAÇET<br>NUK PO BËJNË EFEKT" },
+        hot: { label: "KAM NXEHTË" },
+        cold: { label: "KAM FTOHTË" }
+    },
+
+    ar: {
+        title: "الانزعاج",
+        help: { label: "أحتاج إلى مساعدة" },
+        unwell: { label: "لا أشعر<br>أنني بخير" },
+        better: { label: "أشعر بتحسن" },
+        privacy: { label: "أريد بعض<br>الخصوصية" },
+        constipation: { label: "إمساك" },
+        gas: { label: "غازات" },
+        diarrhea: { label: "إسهال" },
+        nausea: { label: "غثيان" },
+        dizziness: { label: "دوخة" },
+        weakness: { label: "أشعر بالضعف" },
+        chills: { label: "قشعريرة" },
+        medicationNotEnough: { label: "الأدوية<br>لا تنفع" },
+        hot: { label: "أشعر بالحر" },
+        cold: { label: "أشعر بالبرد" }
+    },
+
+    bs: {
+        title: "Nelagoda",
+        help: { label: "TREBA MI POMOĆ" },
+        unwell: { label: "NE OSJEĆAM SE<br>DOBRO" },
+        better: { label: "BOLJE MI JE" },
+        privacy: { label: "TREBA MI<br>PRIVATNOST" },
+        constipation: { label: "ZATVOR" },
+        gas: { label: "GASOVI" },
+        diarrhea: { label: "PROLJEV" },
+        nausea: { label: "MUČNINA" },
+        dizziness: { label: "VRTOGLAVICA" },
+        weakness: { label: "SLABOST" },
+        chills: { label: "DRHTAVICA" },
+        medicationNotEnough: { label: "LIJEKOVI<br>NE DJELUJU" },
+        hot: { label: "VRUĆE MI JE" },
+        cold: { label: "HLADNO MI JE" }
+    },
+
+    tr: {
+        title: "Rahatsızlık",
+        help: { label: "YARDIMA<br>İHTİYACIM VAR" },
+        unwell: { label: "KENDİMİ İYİ<br>HİSSETMİYORUM" },
+        better: { label: "DAHA İYİYİM" },
+        privacy: { label: "MAHREMİYET<br>İSTİYORUM" },
+        constipation: { label: "KABIZLIK" },
+        gas: { label: "GAZIM VAR" },
+        diarrhea: { label: "İSHAL" },
+        nausea: { label: "MİDEM BULANIYOR" },
+        dizziness: { label: "BAŞIM DÖNÜYOR" },
+        weakness: { label: "HALSİZİM" },
+        chills: { label: "TİTREME" },
+        medicationNotEnough: { label: "İLAÇLAR<br>ETKİ ETMİYOR" },
+        hot: { label: "SICAKLADIM" },
+        cold: { label: "ÜŞÜYORUM" }
+    },
+
+    uk: {
+        title: "Дискомфорт",
+        help: { label: "ПОТРІБНА<br>ДОПОМОГА" },
+        unwell: { label: "МЕНІ НЕДОБРЕ" },
+        better: { label: "МЕНІ КРАЩЕ" },
+        privacy: { label: "МЕНІ ПОТРІБНА<br>ПРИВАТНІСТЬ" },
+        constipation: { label: "ЗАКРЕП" },
+        gas: { label: "ГАЗИ" },
+        diarrhea: { label: "ДІАРЕЯ" },
+        nausea: { label: "НУДОТА" },
+        dizziness: { label: "ЗАПАМОРОЧЕННЯ" },
+        weakness: { label: "СЛАБКІСТЬ" },
+        chills: { label: "ОЗНОБ" },
+        medicationNotEnough: { label: "ЛІКИ<br>НЕ ДІЮТЬ" },
+        hot: { label: "МЕНІ СПЕКОТНО" },
+        cold: { label: "МЕНІ ХОЛОДНО" }
+    },
+
+    ru: {
+        title: "Дискомфорт",
+        help: { label: "НУЖНА<br>ПОМОЩЬ" },
+        unwell: { label: "МНЕ НЕХОРОШО" },
+        better: { label: "МНЕ ЛУЧШЕ" },
+        privacy: { label: "МНЕ НУЖНО<br>УЕДИНЕНИЕ" },
+        constipation: { label: "ЗАПОР" },
+        gas: { label: "ГАЗЫ" },
+        diarrhea: { label: "ДИАРЕЯ" },
+        nausea: { label: "ТОШНОТА" },
+        dizziness: { label: "ГОЛОВОКРУЖЕНИЕ" },
+        weakness: { label: "СЛАБОСТЬ" },
+        chills: { label: "ОЗНОБ" },
+        medicationNotEnough: { label: "ЛЕКАРСТВА<br>НЕ ПОМОГАЮТ" },
+        hot: { label: "МНЕ ЖАРКО" },
+        cold: { label: "МНЕ ХОЛОДНО" }
+    }
+
+});
+
 	const CARE_TEAM_TRANSLATIONS = {
 
 		fr: {
@@ -2980,6 +3929,104 @@
 
 	};
 
+/* =========================================
+   ÉQUIPE SOIGNANTE — LANGUES 3.1
+   ========================================= */
+
+Object.assign(CARE_TEAM_TRANSLATIONS, {
+
+    sq: {
+        title: "Ekipi i kujdesit",
+        nurse: { label: "INFERMIER /<br>INFERMIERE" },
+        doctor: { label: "MJEK" },
+        physio: { label: "FIZIOTERAPIST" },
+        ergo: { label: "ERGOTERAPIST" },
+        logo: { label: "LOGOPED" },
+        assistant: { label: "NDIHMËS<br>INFERMIER" },
+        dietitian: { label: "DIETOLOG" },
+        neuropsychologist: { label: "NEUROPSIKOLOG" },
+        psychologist: { label: "PSIKOLOG" },
+        socialWorker: { label: "PUNONJËS<br>SOCIAL" },
+        hospitality: { label: "PERSONELI<br>HOTELIER" }
+    },
+
+    ar: {
+        title: "الفريق الطبي",
+        nurse: { label: "ممرّض / ممرّضة" },
+        doctor: { label: "الطبيب" },
+        physio: { label: "أخصائي<br>العلاج الطبيعي" },
+        ergo: { label: "أخصائي<br>العلاج الوظيفي" },
+        logo: { label: "أخصائي<br>النطق" },
+        assistant: { label: "مساعد تمريض" },
+        dietitian: { label: "أخصائي التغذية" },
+        neuropsychologist: { label: "أخصائي<br>علم النفس العصبي" },
+        psychologist: { label: "أخصائي نفسي" },
+        socialWorker: { label: "أخصائي اجتماعي" },
+        hospitality: { label: "موظف<br>الخدمات الفندقية" }
+    },
+
+    bs: {
+        title: "Medicinski tim",
+        nurse: { label: "MEDICINSKA<br>SESTRA" },
+        doctor: { label: "LJEKAR" },
+        physio: { label: "FIZIOTERAPEUT" },
+        ergo: { label: "RADNI TERAPEUT" },
+        logo: { label: "LOGOPED" },
+        assistant: { label: "NJEGOVATELJ" },
+        dietitian: { label: "NUTRICIONISTA" },
+        neuropsychologist: { label: "NEUROPSIHOLOG" },
+        psychologist: { label: "PSIHOLOG" },
+        socialWorker: { label: "SOCIJALNI<br>RADNIK" },
+        hospitality: { label: "BOLNIČKA<br>HOTELSKA SLUŽBA" }
+    },
+
+    tr: {
+        title: "Sağlık ekibi",
+        nurse: { label: "HEMŞİRE" },
+        doctor: { label: "DOKTOR" },
+        physio: { label: "FİZYOTERAPİST" },
+        ergo: { label: "ERGOTERAPİST" },
+        logo: { label: "DİL VE KONUŞMA<br>TERAPİSTİ" },
+        assistant: { label: "BAKIM<br>PERSONELİ" },
+        dietitian: { label: "DİYETİSYEN" },
+        neuropsychologist: { label: "NÖROPSİKOLOG" },
+        psychologist: { label: "PSİKOLOG" },
+        socialWorker: { label: "SOSYAL HİZMET<br>UZMANI" },
+        hospitality: { label: "HASTANE<br>DESTEK PERSONELİ" }
+    },
+
+    uk: {
+        title: "Медична команда",
+        nurse: { label: "МЕДСЕСТРА" },
+        doctor: { label: "ЛІКАР" },
+        physio: { label: "ФІЗІОТЕРАПЕВТ" },
+        ergo: { label: "ЕРГОТЕРАПЕВТ" },
+        logo: { label: "ЛОГОПЕД" },
+        assistant: { label: "МОЛОДША<br>МЕДСЕСТРА" },
+        dietitian: { label: "ДІЄТОЛОГ" },
+        neuropsychologist: { label: "НЕЙРОПСИХОЛОГ" },
+        psychologist: { label: "ПСИХОЛОГ" },
+        socialWorker: { label: "СОЦІАЛЬНИЙ<br>ПРАЦІВНИК" },
+        hospitality: { label: "ГОСПОДАРСЬКА<br>СЛУЖБА" }
+    },
+
+    ru: {
+        title: "Медперсонал",
+        nurse: { label: "МЕДСЕСТРА" },
+        doctor: { label: "ВРАЧ" },
+        physio: { label: "ФИЗИОТЕРАПЕВТ" },
+        ergo: { label: "ЭРГОТЕРАПЕВТ" },
+        logo: { label: "ЛОГОПЕД" },
+        assistant: { label: "ПОМОЩНИК<br>ПО УХОДУ" },
+        dietitian: { label: "ДИЕТОЛОГ" },
+        neuropsychologist: { label: "НЕЙРОПСИХОЛОГ" },
+        psychologist: { label: "ПСИХОЛОГ" },
+        socialWorker: { label: "СОЦИАЛЬНЫЙ<br>РАБОТНИК" },
+        hospitality: { label: "ХОЗЯЙСТВЕННАЯ<br>СЛУЖБА" }
+    }
+
+});
+
 	const CARE_PICTOGRAMS = {
 		help: "pictogrammes/aidezmoi.jpg",
 		unwell: "pictogrammes/senspasbien.jpg",
@@ -3153,6 +4200,62 @@
 		}
 
 	};
+
+/* =========================================
+   DÉPLACEMENTS — LANGUES 3.1
+   ========================================= */
+
+Object.assign(MOVEMENT_TRANSLATIONS, {
+
+    sq: {
+        title: "Lëvizjet",
+        room: { label: "DUA TË SHKOJ<br>NË DHOMËN TIME" },
+        loggia: { label: "DUA TË SHKOJ<br>NË KAFETERI" },
+        outside: { label: "DUA TË DAL<br>JASHTË" },
+        home: { label: "DUA TË KTHEHEM<br>NË SHTËPI" }
+    },
+
+    ar: {
+        title: "التنقل",
+        room: { label: "أريد الذهاب<br>إلى غرفتي" },
+        loggia: { label: "أريد الذهاب<br>إلى الكافتيريا" },
+        outside: { label: "أريد الخروج<br>إلى الخارج" },
+        home: { label: "أريد العودة<br>إلى المنزل" }
+    },
+
+    bs: {
+        title: "Kretanje",
+        room: { label: "ŽELIM U<br>SVOJU SOBU" },
+        loggia: { label: "ŽELIM U<br>KAFETERIJU" },
+        outside: { label: "ŽELIM IZAĆI<br>NAPOLJE" },
+        home: { label: "ŽELIM<br>KUĆI" }
+    },
+
+    tr: {
+        title: "Yer değiştirme",
+        room: { label: "ODAMA GİTMEK<br>İSTİYORUM" },
+        loggia: { label: "KAFETERYAYA GİTMEK<br>İSTİYORUM" },
+        outside: { label: "DIŞARI ÇIKMAK<br>İSTİYORUM" },
+        home: { label: "EVE DÖNMEK<br>İSTİYORUM" }
+    },
+
+    uk: {
+        title: "Пересування",
+        room: { label: "ХОЧУ ДО СВОЄЇ<br>ПАЛАТИ" },
+        loggia: { label: "ХОЧУ ДО<br>КАФЕТЕРІЮ" },
+        outside: { label: "ХОЧУ ВИЙТИ<br>НАДВІР" },
+        home: { label: "ХОЧУ ПОВЕРНУТИСЯ<br>ДОДОМУ" }
+    },
+
+    ru: {
+        title: "Передвижение",
+        room: { label: "ХОЧУ В СВОЮ<br>ПАЛАТУ" },
+        loggia: { label: "ХОЧУ В<br>КАФЕТЕРИЙ" },
+        outside: { label: "ХОЧУ ВЫЙТИ<br>НА УЛИЦУ" },
+        home: { label: "ХОЧУ ВЕРНУТЬСЯ<br>ДОМОЙ" }
+    }
+
+});
 
 	const MOVEMENT_PICTOGRAMS = {
 		room: "pictogrammes/chambre.jpg",
@@ -4066,6 +5169,355 @@
 
 	};
 
+/* =========================================
+   PLANNING / TEMPS — LANGUES 3.1
+   ÉTAPE 1 : MENUS ET COMMANDES
+   ========================================= */
+
+Object.assign(PLANNING_TRANSLATIONS, {
+
+    sq: {
+        title: "Planifikimi / Koha",
+        numbers: "NUMRAT",
+        days: "DITËT E<br>JAVËS",
+        months: "MUAJT",
+        dayParts: "PJESËT E<br>DITËS",
+        date: "DATA",
+        dateDayTitle: "Cila ditë?",
+        dateMonthTitle: "Cili muaj?",
+        dateYearTitle: "Cili vit?",
+        dateClear: "FSHI",
+        dateValidate: "KONFIRMO",
+        dateSpeak: "🔊 THUAJ",
+        numbersTitle: "Numrat",
+        daysTitle: "Ditët e javës",
+        monthsTitle: "Muajt",
+        dayPartsTitle: "Pjesët e ditës",
+        deleteNumber: "⌫ FSHI",
+        clearNumber: "🗑️ FSHI TË GJITHA",
+        speakNumber: "🔊 THUAJ",
+        back: "← KTHEHU",
+        today: { label: "SOT" },
+        tomorrow: { label: "NESËR" },
+        yesterday: { label: "DJE" },
+        morning: { label: "MËNGJES" },
+        noon: { label: "MESDITË" },
+        afternoon: { label: "PASDITE" },
+        evening: { label: "MBRËMJE" }
+    },
+
+    ar: {
+        title: "التخطيط / الوقت",
+        numbers: "الأرقام",
+        days: "أيام<br>الأسبوع",
+        months: "الأشهر",
+        dayParts: "أوقات<br>اليوم",
+        date: "التاريخ",
+        dateDayTitle: "أي يوم؟",
+        dateMonthTitle: "أي شهر؟",
+        dateYearTitle: "أي سنة؟",
+        dateClear: "مسح",
+        dateValidate: "تأكيد",
+        dateSpeak: "🔊 نطق",
+        numbersTitle: "الأرقام",
+        daysTitle: "أيام الأسبوع",
+        monthsTitle: "الأشهر",
+        dayPartsTitle: "أوقات اليوم",
+        deleteNumber: "⌫ مسح",
+        clearNumber: "🗑️ مسح الكل",
+        speakNumber: "🔊 نطق",
+        back: "رجوع",
+        today: { label: "اليوم" },
+        tomorrow: { label: "غدًا" },
+        yesterday: { label: "أمس" },
+        morning: { label: "الصباح" },
+        noon: { label: "الظهر" },
+        afternoon: { label: "بعد الظهر" },
+        evening: { label: "المساء" }
+    },
+
+    bs: {
+        title: "Planiranje / Vrijeme",
+        numbers: "BROJEVI",
+        days: "DANI U<br>SEDMICI",
+        months: "MJESECI",
+        dayParts: "DIJELOVI<br>DANA",
+        date: "DATUM",
+        dateDayTitle: "Koji dan?",
+        dateMonthTitle: "Koji mjesec?",
+        dateYearTitle: "Koja godina?",
+        dateClear: "OBRIŠI",
+        dateValidate: "POTVRDI",
+        dateSpeak: "🔊 IZGOVORI",
+        numbersTitle: "Brojevi",
+        daysTitle: "Dani u sedmici",
+        monthsTitle: "Mjeseci",
+        dayPartsTitle: "Dijelovi dana",
+        deleteNumber: "⌫ OBRIŠI",
+        clearNumber: "🗑️ OBRIŠI SVE",
+        speakNumber: "🔊 IZGOVORI",
+        back: "← NAZAD",
+        today: { label: "DANAS" },
+        tomorrow: { label: "SUTRA" },
+        yesterday: { label: "JUČER" },
+        morning: { label: "JUTRO" },
+        noon: { label: "PODNE" },
+        afternoon: { label: "POSLIJEPODNE" },
+        evening: { label: "VEČER" }
+    },
+
+    tr: {
+        title: "Planlama / Zaman",
+        numbers: "SAYILAR",
+        days: "HAFTANIN<br>GÜNLERİ",
+        months: "AYLAR",
+        dayParts: "GÜNÜN<br>SAATLERİ",
+        date: "TARİH",
+        dateDayTitle: "Hangi gün?",
+        dateMonthTitle: "Hangi ay?",
+        dateYearTitle: "Hangi yıl?",
+        dateClear: "SİL",
+        dateValidate: "ONAYLA",
+        dateSpeak: "🔊 SÖYLE",
+        numbersTitle: "Sayılar",
+        daysTitle: "Haftanın günleri",
+        monthsTitle: "Aylar",
+        dayPartsTitle: "Günün bölümleri",
+        deleteNumber: "⌫ SİL",
+        clearNumber: "🗑️ TÜMÜNÜ SİL",
+        speakNumber: "🔊 SÖYLE",
+        back: "← GERİ",
+        today: { label: "BUGÜN" },
+        tomorrow: { label: "YARIN" },
+        yesterday: { label: "DÜN" },
+        morning: { label: "SABAH" },
+        noon: { label: "ÖĞLE" },
+        afternoon: { label: "ÖĞLEDEN SONRA" },
+        evening: { label: "AKŞAM" }
+    },
+
+    uk: {
+        title: "Планування / Час",
+        numbers: "ЧИСЛА",
+        days: "ДНІ<br>ТИЖНЯ",
+        months: "МІСЯЦІ",
+        dayParts: "ЧАСТИНИ<br>ДОБИ",
+        date: "ДАТА",
+        dateDayTitle: "Який день?",
+        dateMonthTitle: "Який місяць?",
+        dateYearTitle: "Який рік?",
+        dateClear: "ОЧИСТИТИ",
+        dateValidate: "ПІДТВЕРДИТИ",
+        dateSpeak: "🔊 СКАЗАТИ",
+        numbersTitle: "Числа",
+        daysTitle: "Дні тижня",
+        monthsTitle: "Місяці",
+        dayPartsTitle: "Частини доби",
+        deleteNumber: "⌫ ВИДАЛИТИ",
+        clearNumber: "🗑️ ОЧИСТИТИ ВСЕ",
+        speakNumber: "🔊 СКАЗАТИ",
+        back: "← НАЗАД",
+        today: { label: "СЬОГОДНІ" },
+        tomorrow: { label: "ЗАВТРА" },
+        yesterday: { label: "ВЧОРА" },
+        morning: { label: "РАНОК" },
+        noon: { label: "ПОЛУДЕНЬ" },
+        afternoon: { label: "ПІСЛЯ ОБІДУ" },
+        evening: { label: "ВЕЧІР" }
+    },
+
+    ru: {
+        title: "Планирование / Время",
+        numbers: "ЧИСЛА",
+        days: "ДНИ<br>НЕДЕЛИ",
+        months: "МЕСЯЦЫ",
+        dayParts: "ВРЕМЯ<br>СУТОК",
+        date: "ДАТА",
+        dateDayTitle: "Какой день?",
+        dateMonthTitle: "Какой месяц?",
+        dateYearTitle: "Какой год?",
+        dateClear: "ОЧИСТИТЬ",
+        dateValidate: "ПОДТВЕРДИТЬ",
+        dateSpeak: "🔊 ПРОИЗНЕСТИ",
+        numbersTitle: "Числа",
+        daysTitle: "Дни недели",
+        monthsTitle: "Месяцы",
+        dayPartsTitle: "Время суток",
+        deleteNumber: "⌫ УДАЛИТЬ",
+        clearNumber: "🗑️ ОЧИСТИТЬ ВСЁ",
+        speakNumber: "🔊 ПРОИЗНЕСТИ",
+        back: "← НАЗАД",
+        today: { label: "СЕГОДНЯ" },
+        tomorrow: { label: "ЗАВТРА" },
+        yesterday: { label: "ВЧЕРА" },
+        morning: { label: "УТРО" },
+        noon: { label: "ПОЛДЕНЬ" },
+        afternoon: { label: "ПОСЛЕ ОБЕДА" },
+        evening: { label: "ВЕЧЕР" }
+    }
+
+});
+
+/* =========================================
+   PLANNING / TEMPS — LANGUES 3.1
+   ÉTAPE 2 : JOURS DE LA SEMAINE
+   ========================================= */
+
+Object.assign(PLANNING_TRANSLATIONS.sq, {
+    monday:    { label: "E HËNË" },
+    tuesday:   { label: "E MARTË" },
+    wednesday: { label: "E MËRKURË" },
+    thursday:  { label: "E ENJTE" },
+    friday:    { label: "E PREMTE" },
+    saturday:  { label: "E SHTUNË" },
+    sunday:    { label: "E DIEL" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.ar, {
+    monday:    { label: "الاثنين" },
+    tuesday:   { label: "الثلاثاء" },
+    wednesday: { label: "الأربعاء" },
+    thursday:  { label: "الخميس" },
+    friday:    { label: "الجمعة" },
+    saturday:  { label: "السبت" },
+    sunday:    { label: "الأحد" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.bs, {
+    monday:    { label: "PONEDJELJAK" },
+    tuesday:   { label: "UTORAK" },
+    wednesday: { label: "SRIJEDA" },
+    thursday:  { label: "ČETVRTAK" },
+    friday:    { label: "PETAK" },
+    saturday:  { label: "SUBOTA" },
+    sunday:    { label: "NEDJELJA" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.tr, {
+    monday:    { label: "PAZARTESİ" },
+    tuesday:   { label: "SALI" },
+    wednesday: { label: "ÇARŞAMBA" },
+    thursday:  { label: "PERŞEMBE" },
+    friday:    { label: "CUMA" },
+    saturday:  { label: "CUMARTESİ" },
+    sunday:    { label: "PAZAR" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.uk, {
+    monday:    { label: "ПОНЕДІЛОК" },
+    tuesday:   { label: "ВІВТОРОК" },
+    wednesday: { label: "СЕРЕДА" },
+    thursday:  { label: "ЧЕТВЕР" },
+    friday:    { label: "П'ЯТНИЦЯ" },
+    saturday:  { label: "СУБОТА" },
+    sunday:    { label: "НЕДІЛЯ" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.ru, {
+    monday:    { label: "ПОНЕДЕЛЬНИК" },
+    tuesday:   { label: "ВТОРНИК" },
+    wednesday: { label: "СРЕДА" },
+    thursday:  { label: "ЧЕТВЕРГ" },
+    friday:    { label: "ПЯТНИЦА" },
+    saturday:  { label: "СУББОТА" },
+    sunday:    { label: "ВОСКРЕСЕНЬЕ" }
+});
+
+/* =========================================
+   PLANNING / TEMPS — LANGUES 3.1
+   ÉTAPE 3 : MOIS DE L'ANNÉE
+   ========================================= */
+
+Object.assign(PLANNING_TRANSLATIONS.sq, {
+    january:   { label: "JANAR" },
+    february:  { label: "SHKURT" },
+    march:     { label: "MARS" },
+    april:     { label: "PRILL" },
+    may:       { label: "MAJ" },
+    june:      { label: "QERSHOR" },
+    july:      { label: "KORRIK" },
+    august:    { label: "GUSHT" },
+    september: { label: "SHTATOR" },
+    october:   { label: "TETOR" },
+    november:  { label: "NËNTOR" },
+    december:  { label: "DHJETOR" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.ar, {
+    january:   { label: "يناير" },
+    february:  { label: "فبراير" },
+    march:     { label: "مارس" },
+    april:     { label: "أبريل" },
+    may:       { label: "مايو" },
+    june:      { label: "يونيو" },
+    july:      { label: "يوليو" },
+    august:    { label: "أغسطس" },
+    september: { label: "سبتمبر" },
+    october:   { label: "أكتوبر" },
+    november:  { label: "نوفمبر" },
+    december:  { label: "ديسمبر" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.bs, {
+    january:   { label: "JANUAR" },
+    february:  { label: "FEBRUAR" },
+    march:     { label: "MART" },
+    april:     { label: "APRIL" },
+    may:       { label: "MAJ" },
+    june:      { label: "JUNI" },
+    july:      { label: "JULI" },
+    august:    { label: "AUGUST" },
+    september: { label: "SEPTEMBAR" },
+    october:   { label: "OKTOBAR" },
+    november:  { label: "NOVEMBAR" },
+    december:  { label: "DECEMBAR" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.tr, {
+    january:   { label: "OCAK" },
+    february:  { label: "ŞUBAT" },
+    march:     { label: "MART" },
+    april:     { label: "NİSAN" },
+    may:       { label: "MAYIS" },
+    june:      { label: "HAZİRAN" },
+    july:      { label: "TEMMUZ" },
+    august:    { label: "AĞUSTOS" },
+    september: { label: "EYLÜL" },
+    october:   { label: "EKİM" },
+    november:  { label: "KASIM" },
+    december:  { label: "ARALIK" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.uk, {
+    january:   { label: "СІЧЕНЬ" },
+    february:  { label: "ЛЮТИЙ" },
+    march:     { label: "БЕРЕЗЕНЬ" },
+    april:     { label: "КВІТЕНЬ" },
+    may:       { label: "ТРАВЕНЬ" },
+    june:      { label: "ЧЕРВЕНЬ" },
+    july:      { label: "ЛИПЕНЬ" },
+    august:    { label: "СЕРПЕНЬ" },
+    september: { label: "ВЕРЕСЕНЬ" },
+    october:   { label: "ЖОВТЕНЬ" },
+    november:  { label: "ЛИСТОПАД" },
+    december:  { label: "ГРУДЕНЬ" }
+});
+
+Object.assign(PLANNING_TRANSLATIONS.ru, {
+    january:   { label: "ЯНВАРЬ" },
+    february:  { label: "ФЕВРАЛЬ" },
+    march:     { label: "МАРТ" },
+    april:     { label: "АПРЕЛЬ" },
+    may:       { label: "МАЙ" },
+    june:      { label: "ИЮНЬ" },
+    july:      { label: "ИЮЛЬ" },
+    august:    { label: "АВГУСТ" },
+    september: { label: "СЕНТЯБРЬ" },
+    october:   { label: "ОКТЯБРЬ" },
+    november:  { label: "НОЯБРЬ" },
+    december:  { label: "ДЕКАБРЬ" }
+});
+
 	const HYGIENE_TRANSLATIONS = {
 
 		fr: {
@@ -4587,6 +6039,140 @@
 
 	};
 
+/* =========================================
+   VIE QUOTIDIENNE — LANGUES 3.1
+   ========================================= */
+
+Object.assign(HYGIENE_TRANSLATIONS, {
+
+    sq: {
+        title: "Jeta e përditshme",
+        change: { label: "KAM NEVOJË<br>TË MË NDËRRONI" },
+        urinate: { label: "DUHET TË<br>URINOJ" },
+        stool: { label: "DUHET TË<br>DEFEKOJ" },
+        hungry: { label: "KAM URI" },
+        thirsty: { label: "KAM ETJE" },
+        shower: { label: "DUA TË BËJ<br>DUSH" },
+        teeth: { label: "DUA TË LAJ<br>DHËMBËT" },
+        face: { label: "DUA TË LAJ<br>FYTYRËN" },
+        shave: { label: "DUA TË RRUHEM" },
+        comb: { label: "DUA TË<br>KRIH FLOKËT" },
+        glasses: { label: "SYZET" },
+        hearingAid: { label: "APARATI<br>I DËGJIMIT" },
+        dentures: { label: "PROTEZA<br>E DHËMBËVE" },
+        tshirt: { label: "BLUZË" },
+        pants: { label: "PANTALLONA" },
+        sweater: { label: "TRIKO" },
+        shoes: { label: "KËPUCË" }
+    },
+
+    ar: {
+        title: "الحياة اليومية",
+        change: { label: "أحتاج إلى<br>تغيير الحفاض" },
+        urinate: { label: "أحتاج إلى<br>التبول" },
+        stool: { label: "أحتاج إلى<br>التبرز" },
+        hungry: { label: "أنا جائع" },
+        thirsty: { label: "أنا عطشان" },
+        shower: { label: "أريد الاستحمام" },
+        teeth: { label: "أريد تنظيف<br>أسناني" },
+        face: { label: "أريد غسل<br>وجهي" },
+        shave: { label: "أريد الحلاقة" },
+        comb: { label: "أريد تمشيط<br>شعري" },
+        glasses: { label: "نظارتي" },
+        hearingAid: { label: "سماعتي الطبية" },
+        dentures: { label: "طقم الأسنان" },
+        tshirt: { label: "قميص" },
+        pants: { label: "بنطال" },
+        sweater: { label: "سترة صوفية" },
+        shoes: { label: "حذائي" }
+    },
+
+    bs: {
+        title: "Svakodnevne potrebe",
+        change: { label: "TREBA MI<br>PROMJENA PELENE" },
+        urinate: { label: "MORAM MOKRITI" },
+        stool: { label: "MORAM NA<br>VELIKU NUŽDU" },
+        hungry: { label: "GLADAN SAM" },
+        thirsty: { label: "ŽEDAN SAM" },
+        shower: { label: "ŽELIM SE<br>ISTUŠIRATI" },
+        teeth: { label: "OPRATI ZUBE" },
+        face: { label: "UMITI LICE" },
+        shave: { label: "OBRIJATI SE" },
+        comb: { label: "POČEŠLJATI SE" },
+        glasses: { label: "NAOČALE" },
+        hearingAid: { label: "SLUŠNI APARAT" },
+        dentures: { label: "ZUBNA PROTEZA" },
+        tshirt: { label: "MAJICA" },
+        pants: { label: "HLAČE" },
+        sweater: { label: "DŽEMPER" },
+        shoes: { label: "CIPELE" }
+    },
+
+    tr: {
+        title: "Günlük yaşam",
+        change: { label: "ALTIMI<br>DEĞİŞTİRİN" },
+        urinate: { label: "İDRAR YAPMAM<br>GEREKİYOR" },
+        stool: { label: "BÜYÜK TUVALETE<br>ÇIKMAM GEREKİYOR" },
+        hungry: { label: "ACIKTIM" },
+        thirsty: { label: "SUSADIM" },
+        shower: { label: "DUŞ ALMAK<br>İSTİYORUM" },
+        teeth: { label: "DİŞLERİMİ<br>FIRÇALAMAK" },
+        face: { label: "YÜZÜMÜ<br>YIKAMAK" },
+        shave: { label: "TIRAŞ OLMAK" },
+        comb: { label: "SAÇLARIMI<br>TARAMAK" },
+        glasses: { label: "GÖZLÜĞÜM" },
+        hearingAid: { label: "İŞİTME CİHAZIM" },
+        dentures: { label: "TAKMA DİŞLERİM" },
+        tshirt: { label: "TİŞÖRT" },
+        pants: { label: "PANTOLON" },
+        sweater: { label: "KAZAK" },
+        shoes: { label: "AYAKKABI" }
+    },
+
+    uk: {
+        title: "Повсякденне життя",
+        change: { label: "МЕНІ ПОТРІБНО<br>ЗМІНИТИ ПІДГУЗОК" },
+        urinate: { label: "МЕНІ ТРЕБА<br>ПОМОЧИТИСЯ" },
+        stool: { label: "МЕНІ ТРЕБА<br>В ТУАЛЕТ ПО-ВЕЛИКОМУ" },
+        hungry: { label: "Я ХОЧУ ЇСТИ" },
+        thirsty: { label: "Я ХОЧУ ПИТИ" },
+        shower: { label: "ХОЧУ ПРИЙНЯТИ<br>ДУШ" },
+        teeth: { label: "ПОЧИСТИТИ<br>ЗУБИ" },
+        face: { label: "ВМИТИ<br>ОБЛИЧЧЯ" },
+        shave: { label: "ПОГОЛИТИСЯ" },
+        comb: { label: "РОЗЧЕСАТИ<br>ВОЛОССЯ" },
+        glasses: { label: "ОКУЛЯРИ" },
+        hearingAid: { label: "СЛУХОВИЙ<br>АПАРАТ" },
+        dentures: { label: "ЗУБНИЙ ПРОТЕЗ" },
+        tshirt: { label: "ФУТБОЛКА" },
+        pants: { label: "ШТАНИ" },
+        sweater: { label: "СВЕТР" },
+        shoes: { label: "ВЗУТТЯ" }
+    },
+
+    ru: {
+        title: "Повседневная жизнь",
+        change: { label: "МНЕ НУЖНО<br>СМЕНИТЬ ПОДГУЗНИК" },
+        urinate: { label: "МНЕ НУЖНО<br>ПОМОЧИТЬСЯ" },
+        stool: { label: "МНЕ НУЖНО<br>В ТУАЛЕТ ПО-БОЛЬШОМУ" },
+        hungry: { label: "Я ХОЧУ ЕСТЬ" },
+        thirsty: { label: "Я ХОЧУ ПИТЬ" },
+        shower: { label: "ХОЧУ ПРИНЯТЬ<br>ДУШ" },
+        teeth: { label: "ПОЧИСТИТЬ<br>ЗУБЫ" },
+        face: { label: "УМЫТЬ<br>ЛИЦО" },
+        shave: { label: "ПОБРИТЬСЯ" },
+        comb: { label: "ПРИЧЕСАТЬСЯ" },
+        glasses: { label: "ОЧКИ" },
+        hearingAid: { label: "СЛУХОВОЙ<br>АППАРАТ" },
+        dentures: { label: "ЗУБНОЙ ПРОТЕЗ" },
+        tshirt: { label: "ФУТБОЛКА" },
+        pants: { label: "БРЮКИ" },
+        sweater: { label: "СВИТЕР" },
+        shoes: { label: "ОБУВЬ" }
+    }
+
+});
+
 	const HYGIENE_PICTOGRAMS = {
 		change: "pictogrammes/changezmoi.jpg",
 		urinate: "pictogrammes/uriner.jpg",
@@ -5013,6 +6599,116 @@
 		}
 
 	};
+
+/* =========================================
+   ÉMOTIONS — NOUVELLES LANGUES 3.1
+   ========================================= */
+
+Object.assign(EMOTION_TRANSLATIONS, {
+
+    sq: {
+        title: "Emocionet",
+        afraid: { label: "KAM FRIKË" },
+        sad: { label: "JAM I/E<br>TRISHTUAR" },
+        angry: { label: "JAM I/E<br>ZEMËRUAR" },
+        fedUp: { label: "NUK DUROJ MË" },
+        discouraged: { label: "JAM I/E<br>DEKURAJUAR" },
+        lonely: { label: "NDIHEM VETËM" },
+        tired: { label: "JAM I/E LODHUR" },
+        bored: { label: "PO MËRZITEM" },
+        happy: { label: "JAM I/E LUMTUR" },
+        better: { label: "NDIHEM MË MIRË" },
+        stay: { label: "QËNDRONI<br>ME MUA" },
+        alone: { label: "DUA TË JEM<br>VETËM" },
+        noTalk: { label: "NUK DUA<br>TË FLAS" }
+    },
+
+    ar: {
+        title: "المشاعر",
+        afraid: { label: "أشعر بالخوف" },
+        sad: { label: "أشعر بالحزن" },
+        angry: { label: "أشعر بالغضب" },
+        fedUp: { label: "لقد سئمت" },
+        discouraged: { label: "أشعر بالإحباط" },
+        lonely: { label: "أشعر بالوحدة" },
+        tired: { label: "أشعر بالتعب" },
+        bored: { label: "أشعر بالملل" },
+        happy: { label: "أشعر بالسعادة" },
+        better: { label: "أشعر بتحسن" },
+        stay: { label: "ابقوا معي" },
+        alone: { label: "أريد أن أبقى<br>وحدي" },
+        noTalk: { label: "لا أريد<br>التحدث" }
+    },
+
+    bs: {
+        title: "Emocije",
+        afraid: { label: "STRAH ME JE" },
+        sad: { label: "TUŽAN/TUŽNA<br>SAM" },
+        angry: { label: "LJUT/LJUTA<br>SAM" },
+        fedUp: { label: "DOSTA MI JE" },
+        discouraged: { label: "OBESHRABREN/A<br>SAM" },
+        lonely: { label: "OSJEĆAM SE<br>USAMLJENO" },
+        tired: { label: "UMORAN/UMORNA<br>SAM" },
+        bored: { label: "DOSADNO MI JE" },
+        happy: { label: "SRETAN/SRETNA<br>SAM" },
+        better: { label: "BOLJE MI JE" },
+        stay: { label: "OSTANITE<br>SA MNOM" },
+        alone: { label: "ŽELIM BITI<br>SAM/SAMA" },
+        noTalk: { label: "NE ŽELIM<br>RAZGOVARATI" }
+    },
+
+    tr: {
+        title: "Duygular",
+        afraid: { label: "KORKUYORUM" },
+        sad: { label: "ÜZGÜNÜM" },
+        angry: { label: "SİNİRLİYİM" },
+        fedUp: { label: "ARTIK<br>DAYANAMIYORUM" },
+        discouraged: { label: "MORALİM BOZUK" },
+        lonely: { label: "YALNIZ<br>HİSSEDİYORUM" },
+        tired: { label: "YORGUNUM" },
+        bored: { label: "CANIM SIKILIYOR" },
+        happy: { label: "MUTLUYUM" },
+        better: { label: "DAHA İYİ<br>HİSSEDİYORUM" },
+        stay: { label: "YANIMDA KALIN" },
+        alone: { label: "YALNIZ KALMAK<br>İSTİYORUM" },
+        noTalk: { label: "KONUŞMAK<br>İSTEMİYORUM" }
+    },
+
+    uk: {
+        title: "Емоції",
+        afraid: { label: "МЕНІ СТРАШНО" },
+        sad: { label: "МЕНІ СУМНО" },
+        angry: { label: "Я ЗЛЮСЯ" },
+        fedUp: { label: "МЕНІ ВСЕ<br>НАБРИДЛО" },
+        discouraged: { label: "Я ВІДЧУВАЮ<br>ЗНЕВІРУ" },
+        lonely: { label: "МЕНІ САМОТНЬО" },
+        tired: { label: "Я ВІДЧУВАЮ<br>ВТОМУ" },
+        bored: { label: "МЕНІ НУДНО" },
+        happy: { label: "Я РАДІЮ" },
+        better: { label: "МЕНІ КРАЩЕ" },
+        stay: { label: "ПОБУДЬТЕ<br>ЗІ МНОЮ" },
+        alone: { label: "ХОЧУ ПОБУТИ<br>НА САМОТІ" },
+        noTalk: { label: "НЕ ХОЧУ<br>РОЗМОВЛЯТИ" }
+    },
+
+    ru: {
+        title: "Эмоции",
+        afraid: { label: "МНЕ СТРАШНО" },
+        sad: { label: "МНЕ ГРУСТНО" },
+        angry: { label: "Я ЗЛЮСЬ" },
+        fedUp: { label: "МНЕ ВСЁ НАДОЕЛО" },
+        discouraged: { label: "Я ПРИУНЫЛ(А)" },
+        lonely: { label: "МНЕ ОДИНОКО" },
+        tired: { label: "Я УСТАЛ(А)" },
+        bored: { label: "МНЕ СКУЧНО" },
+        happy: { label: "Я РАДУЮСЬ" },
+        better: { label: "МНЕ ЛУЧШЕ" },
+        stay: { label: "ПОБУДЬТЕ<br>СО МНОЙ" },
+        alone: { label: "ХОЧУ ПОБЫТЬ<br>ОДИН/ОДНА" },
+        noTalk: { label: "НЕ ХОЧУ<br>РАЗГОВАРИВАТЬ" }
+    }
+
+});
 
 	const EMOTION_PICTOGRAMS = {
 		afraid: "pictogrammes/peur.jpg",
@@ -5633,6 +7329,158 @@
 
 	};
 
+/* =========================================
+   QUESTIONS MÉDECIN — LANGUES 3.1
+   ========================================= */
+
+Object.assign(QUESTIONS_TRANSLATIONS, {
+
+    sq: {
+        title: "Pyetje për mjekun",
+        whatHappened: { label: "ÇFARË MË<br>KA NDODHUR?" },
+        injuries: { label: "CILAT JANË<br>DËMTIMET E MIA?" },
+        improving: { label: "A PO<br>PËRMIRËSOHEM?" },
+        concern: { label: "ÇFARË JU<br>SHQETËSON ENDE?" },
+        nextGoal: { label: "CILAT JANË<br>OBJEKTIVAT E MIA?" },
+        exams: { label: "ÇFARË EKZAMINIMESH<br>DO TË KEM?" },
+        resultsWhen: { label: "KUR DO T'I MARR<br>REZULTATET?" },
+        resultsMeaning: { label: "ÇFARË TREGOJNË<br>REZULTATET?" },
+        speakWhen: { label: "KUR DO TË MUND<br>TË FLAS PËRSËRI?" },
+        speakNormally: { label: "A DO TË FLAS<br>NORMALISHT?" },
+        tracheostomyHowLong: { label: "SA KOHË DO TA MBAJ<br>TRAKEOSTOMINË?" },
+        eatWhen: { label: "KUR DO TË MUND<br>TË HA?" },
+        standWhen: { label: "KUR DO TË MUND<br>TË NGIHEM?" },
+        walkWhen: { label: "KUR DO TË MUND<br>TË EC?" },
+        rehabilitation: { label: "A DO TË MË DUHET<br>REHABILITIM?" },
+        leaveICU: { label: "KUR DO TË DAL NGA<br>KUJDESI INTENSIV?" },
+        leaveHospital: { label: "KUR DO TË DAL<br>NGA SPITALI?" },
+        goHome: { label: "KUR MUND TË<br>KTHEHEM NË SHTËPI?" },
+        improveBeforeHome: { label: "ÇFARË DUHET ENDE<br>TË PËRMIRËSOHET?" },
+        explainNext: { label: "MË SHPJEGONI<br>ÇFARË VIJON" }
+    },
+
+    ar: {
+        title: "أسئلة للطبيب",
+        whatHappened: { label: "ماذا حدث لي؟" },
+        injuries: { label: "ما هي إصاباتي؟" },
+        improving: { label: "هل تتحسن حالتي؟" },
+        concern: { label: "ما الذي لا يزال<br>يقلقكم؟" },
+        nextGoal: { label: "ما هي أهداف<br>علاجي؟" },
+        exams: { label: "ما الفحوصات<br>التي سأخضع لها؟" },
+        resultsWhen: { label: "متى سأحصل<br>على النتائج؟" },
+        resultsMeaning: { label: "ماذا تظهر<br>النتائج؟" },
+        speakWhen: { label: "متى سأتمكن<br>من الكلام مجددًا؟" },
+        speakNormally: { label: "هل سأتمكن من<br>الكلام بشكل طبيعي؟" },
+        tracheostomyHowLong: { label: "كم من الوقت سأحتاج<br>إلى فغر القصبة الهوائية؟" },
+        eatWhen: { label: "متى سأتمكن<br>من الأكل؟" },
+        standWhen: { label: "متى سأتمكن<br>من النهوض؟" },
+        walkWhen: { label: "متى سأتمكن<br>من المشي؟" },
+        rehabilitation: { label: "هل سأحتاج إلى<br>إعادة التأهيل؟" },
+        leaveICU: { label: "متى سأغادر<br>العناية المركزة؟" },
+        leaveHospital: { label: "متى سأغادر<br>المستشفى؟" },
+        goHome: { label: "متى يمكنني<br>العودة إلى المنزل؟" },
+        improveBeforeHome: { label: "ما الذي يجب<br>أن يتحسن بعد؟" },
+        explainNext: { label: "اشرحوا لي<br>ما سيحدث لاحقًا" }
+    },
+
+    bs: {
+        title: "Pitanja za doktora",
+        whatHappened: { label: "ŠTA MI SE<br>DOGODILO?" },
+        injuries: { label: "KOJE SU MOJE<br>POVREDE?" },
+        improving: { label: "DA LI SE MOJE<br>STANJE POBOLJŠAVA?" },
+        concern: { label: "ŠTA VAS JOŠ<br>BRINE?" },
+        nextGoal: { label: "KOJI SU MOJI<br>CILJEVI?" },
+        exams: { label: "KOJE PREGLEDE<br>ĆU IMATI?" },
+        resultsWhen: { label: "KADA ĆU DOBITI<br>REZULTATE?" },
+        resultsMeaning: { label: "ŠTA POKAZUJU<br>NALAZI?" },
+        speakWhen: { label: "KADA ĆU OPET<br>MOĆI GOVORITI?" },
+        speakNormally: { label: "HOĆU LI MOĆI<br>NORMALNO GOVORITI?" },
+        tracheostomyHowLong: { label: "KOLIKO DUGO ĆU<br>IMATI TRAHEOSTOMU?" },
+        eatWhen: { label: "KADA ĆU MOĆI<br>JESTI?" },
+        standWhen: { label: "KADA ĆU MOĆI<br>USTATI?" },
+        walkWhen: { label: "KADA ĆU MOĆI<br>HODATI?" },
+        rehabilitation: { label: "TREBA LI MI<br>REHABILITACIJA?" },
+        leaveICU: { label: "KADA ĆU IZAĆI<br>SA INTENZIVNE NJEGE?" },
+        leaveHospital: { label: "KADA ĆU IZAĆI<br>IZ BOLNICE?" },
+        goHome: { label: "KADA MOGU<br>KUĆI?" },
+        improveBeforeHome: { label: "ŠTA SE JOŠ MORA<br>POBOLJŠATI?" },
+        explainNext: { label: "OBJASNITE MI<br>ŠTA SLIJEDI" }
+    },
+
+    tr: {
+        title: "Doktora sorular",
+        whatHappened: { label: "BANA NE OLDU?" },
+        injuries: { label: "YARALANMALARIM<br>NELER?" },
+        improving: { label: "DURUMUM<br>İYİLEŞİYOR MU?" },
+        concern: { label: "SİZİ HÂLÂ NE<br>ENDİŞELENDİRİYOR?" },
+        nextGoal: { label: "HEDEFLERİM<br>NELER?" },
+        exams: { label: "HANGİ TETKİKLER<br>YAPILACAK?" },
+        resultsWhen: { label: "SONUÇLARI NE ZAMAN<br>ALACAĞIM?" },
+        resultsMeaning: { label: "SONUÇLAR<br>NE GÖSTERİYOR?" },
+        speakWhen: { label: "NE ZAMAN YENİDEN<br>KONUŞABİLİRİM?" },
+        speakNormally: { label: "NORMAL<br>KONUŞABİLECEK MİYİM?" },
+        tracheostomyHowLong: { label: "TRAKEOSTOMİ NE KADAR<br>SÜRE KALACAK?" },
+        eatWhen: { label: "NE ZAMAN<br>YİYEBİLİRİM?" },
+        standWhen: { label: "NE ZAMAN AYAĞA<br>KALKABİLİRİM?" },
+        walkWhen: { label: "NE ZAMAN<br>YÜRÜYEBİLİRİM?" },
+        rehabilitation: { label: "REHABİLİTASYON<br>GEREKECEK Mİ?" },
+        leaveICU: { label: "YOĞUN BAKIMDAN<br>NE ZAMAN ÇIKACAĞIM?" },
+        leaveHospital: { label: "HASTANEDEN NE ZAMAN<br>ÇIKACAĞIM?" },
+        goHome: { label: "EVE NE ZAMAN<br>DÖNEBİLİRİM?" },
+        improveBeforeHome: { label: "EVE DÖNMEDEN ÖNCE<br>NE DÜZELMELİ?" },
+        explainNext: { label: "SONRA NE OLACAĞINI<br>AÇIKLAYIN" }
+    },
+
+    uk: {
+        title: "Запитання лікарю",
+        whatHappened: { label: "ЩО ЗІ МНОЮ<br>СТАЛОСЯ?" },
+        injuries: { label: "ЯКІ У МЕНЕ<br>ТРАВМИ?" },
+        improving: { label: "ЧИ ПОКРАЩУЄТЬСЯ<br>МІЙ СТАН?" },
+        concern: { label: "ЩО ВАС ІЩЕ<br>НЕПОКОЇТЬ?" },
+        nextGoal: { label: "ЯКІ МОЇ<br>ЦІЛІ?" },
+        exams: { label: "ЯКІ ОБСТЕЖЕННЯ<br>МЕНІ ПРОВЕДУТЬ?" },
+        resultsWhen: { label: "КОЛИ БУДУТЬ<br>РЕЗУЛЬТАТИ?" },
+        resultsMeaning: { label: "ЩО ПОКАЗУЮТЬ<br>РЕЗУЛЬТАТИ?" },
+        speakWhen: { label: "КОЛИ Я ЗМОЖУ<br>ЗНОВУ ГОВОРИТИ?" },
+        speakNormally: { label: "ЧИ ЗМОЖУ Я<br>НОРМАЛЬНО ГОВОРИТИ?" },
+        tracheostomyHowLong: { label: "ЯК ДОВГО МЕНІ БУДЕ<br>ПОТРІБНА ТРАХЕОСТОМА?" },
+        eatWhen: { label: "КОЛИ Я ЗМОЖУ<br>ЇСТИ?" },
+        standWhen: { label: "КОЛИ Я ЗМОЖУ<br>ВСТАТИ?" },
+        walkWhen: { label: "КОЛИ Я ЗМОЖУ<br>ХОДИТИ?" },
+        rehabilitation: { label: "ЧИ ПОТРІБНА МЕНІ<br>РЕАБІЛІТАЦІЯ?" },
+        leaveICU: { label: "КОЛИ Я ЗМОЖУ ВИЙТИ<br>З РЕАНІМАЦІЇ?" },
+        leaveHospital: { label: "КОЛИ МЕНЕ<br>ВИПИШУТЬ?" },
+        goHome: { label: "КОЛИ Я ЗМОЖУ<br>ПОВЕРНУТИСЯ ДОДОМУ?" },
+        improveBeforeHome: { label: "ЩО ЩЕ МАЄ<br>ПОКРАЩИТИСЯ?" },
+        explainNext: { label: "ПОЯСНІТЬ, ЩО<br>БУДЕ ДАЛІ" }
+    },
+
+    ru: {
+        title: "Вопросы врачу",
+        whatHappened: { label: "ЧТО СО МНОЙ<br>СЛУЧИЛОСЬ?" },
+        injuries: { label: "КАКИЕ У МЕНЯ<br>ТРАВМЫ?" },
+        improving: { label: "УЛУЧШАЕТСЯ ЛИ<br>МОЁ СОСТОЯНИЕ?" },
+        concern: { label: "ЧТО ВАС ЕЩЁ<br>БЕСПОКОИТ?" },
+        nextGoal: { label: "КАКИЕ У МЕНЯ<br>ЦЕЛИ?" },
+        exams: { label: "КАКИЕ ОБСЛЕДОВАНИЯ<br>МНЕ ПРЕДСТОЯТ?" },
+        resultsWhen: { label: "КОГДА БУДУТ<br>РЕЗУЛЬТАТЫ?" },
+        resultsMeaning: { label: "ЧТО ПОКАЗЫВАЮТ<br>РЕЗУЛЬТАТЫ?" },
+        speakWhen: { label: "КОГДА Я СМОГУ<br>СНОВА ГОВОРИТЬ?" },
+        speakNormally: { label: "СМОГУ ЛИ Я<br>НОРМАЛЬНО ГОВОРИТЬ?" },
+        tracheostomyHowLong: { label: "КАК ДОЛГО МНЕ БУДЕТ<br>НУЖНА ТРАХЕОСТОМА?" },
+        eatWhen: { label: "КОГДА Я СМОГУ<br>ЕСТЬ?" },
+        standWhen: { label: "КОГДА Я СМОГУ<br>ВСТАТЬ?" },
+        walkWhen: { label: "КОГДА Я СМОГУ<br>ХОДИТЬ?" },
+        rehabilitation: { label: "НУЖНА ЛИ МНЕ<br>РЕАБИЛИТАЦИЯ?" },
+        leaveICU: { label: "КОГДА Я СМОГУ ПОКИНУТЬ<br>РЕАНИМАЦИЮ?" },
+        leaveHospital: { label: "КОГДА МЕНЯ<br>ВЫПИШУТ?" },
+        goHome: { label: "КОГДА Я СМОГУ<br>ВЕРНУТЬСЯ ДОМОЙ?" },
+        improveBeforeHome: { label: "ЧТО ЕЩЁ ДОЛЖНО<br>УЛУЧШИТЬСЯ?" },
+        explainNext: { label: "ОБЪЯСНИТЕ, ЧТО<br>БУДЕТ ДАЛЬШЕ" }
+    }
+
+});
+
 	/* =========================================
 	   MA CHAMBRE / ENVIRONNEMENT — TRADUCTIONS
 	   ========================================= */
@@ -6068,6 +7916,122 @@
 		}
 
 	};
+
+/* =========================================
+   ENVIRONNEMENT — LANGUES 3.1
+   ========================================= */
+
+Object.assign(ENVIRONMENT_TRANSLATIONS, {
+
+    sq: {
+        title: "Mjedisi",
+        closeDoor: { label: "MBYLLNI<br>DERËN" },
+        openDoor: { label: "HAPNI<br>DERËN" },
+        closeCurtains: { label: "MBYLLNI<br>PERDET" },
+        openCurtains: { label: "HAPNI<br>PERDET" },
+        lightOn: { label: "NDIZNI<br>DRITËN" },
+        lightOff: { label: "FIKNI<br>DRITËN" },
+        noise: { label: "SHUMË<br>ZHURMË" },
+        openWindow: { label: "HAPNI<br>DRITAREN" },
+        closeWindow: { label: "MBYLLNI<br>DRITAREN" },
+        television: { label: "TELEVIZOR" },
+        music: { label: "MUZIKË" },
+        phone: { label: "DUA<br>TELEFONIN TIM" },
+        rechargePhone: { label: "KARIKONI<br>TELEFONIN TIM" },
+        sleep: { label: "DUA<br>TË FLE" }
+    },
+
+    ar: {
+        title: "المحيط",
+        closeDoor: { label: "أغلقوا<br>الباب" },
+        openDoor: { label: "افتحوا<br>الباب" },
+        closeCurtains: { label: "أغلقوا<br>الستائر" },
+        openCurtains: { label: "افتحوا<br>الستائر" },
+        lightOn: { label: "شغّلوا<br>الضوء" },
+        lightOff: { label: "أطفئوا<br>الضوء" },
+        noise: { label: "هناك ضجيج<br>كثير" },
+        openWindow: { label: "افتحوا<br>النافذة" },
+        closeWindow: { label: "أغلقوا<br>النافذة" },
+        television: { label: "التلفاز" },
+        music: { label: "الموسيقى" },
+        phone: { label: "أريد<br>هاتفي" },
+        rechargePhone: { label: "اشحنوا<br>هاتفي" },
+        sleep: { label: "أريد<br>النوم" }
+    },
+
+    bs: {
+        title: "Okruženje",
+        closeDoor: { label: "ZATVORITE<br>VRATA" },
+        openDoor: { label: "OTVORITE<br>VRATA" },
+        closeCurtains: { label: "ZATVORITE<br>ZAVJESE" },
+        openCurtains: { label: "OTVORITE<br>ZAVJESE" },
+        lightOn: { label: "UPALITE<br>SVJETLO" },
+        lightOff: { label: "UGASITE<br>SVJETLO" },
+        noise: { label: "PREVIŠE<br>BUKE" },
+        openWindow: { label: "OTVORITE<br>PROZOR" },
+        closeWindow: { label: "ZATVORITE<br>PROZOR" },
+        television: { label: "TELEVIZIJA" },
+        music: { label: "MUZIKA" },
+        phone: { label: "ŽELIM SVOJ<br>TELEFON" },
+        rechargePhone: { label: "NAPUNITE<br>MOJ TELEFON" },
+        sleep: { label: "ŽELIM<br>SPAVATI" }
+    },
+
+    tr: {
+        title: "Çevre",
+        closeDoor: { label: "KAPIYI<br>KAPATIN" },
+        openDoor: { label: "KAPIYI<br>AÇIN" },
+        closeCurtains: { label: "PERDELERİ<br>KAPATIN" },
+        openCurtains: { label: "PERDELERİ<br>AÇIN" },
+        lightOn: { label: "IŞIĞI<br>AÇIN" },
+        lightOff: { label: "IŞIĞI<br>KAPATIN" },
+        noise: { label: "ÇOK<br>GÜRÜLTÜ VAR" },
+        openWindow: { label: "PENCEREYİ<br>AÇIN" },
+        closeWindow: { label: "PENCEREYİ<br>KAPATIN" },
+        television: { label: "TELEVİZYON" },
+        music: { label: "MÜZİK" },
+        phone: { label: "TELEFONUMU<br>İSTİYORUM" },
+        rechargePhone: { label: "TELEFONUMU<br>ŞARJ EDİN" },
+        sleep: { label: "UYUMAK<br>İSTİYORUM" }
+    },
+
+    uk: {
+        title: "Оточення",
+        closeDoor: { label: "ЗАЧИНІТЬ<br>ДВЕРІ" },
+        openDoor: { label: "ВІДЧИНІТЬ<br>ДВЕРІ" },
+        closeCurtains: { label: "ЗАКРИЙТЕ<br>ШТОРИ" },
+        openCurtains: { label: "ВІДКРИЙТЕ<br>ШТОРИ" },
+        lightOn: { label: "УВІМКНІТЬ<br>СВІТЛО" },
+        lightOff: { label: "ВИМКНІТЬ<br>СВІТЛО" },
+        noise: { label: "ЗАНАДТО<br>ШУМНО" },
+        openWindow: { label: "ВІДЧИНІТЬ<br>ВІКНО" },
+        closeWindow: { label: "ЗАЧИНІТЬ<br>ВІКНО" },
+        television: { label: "ТЕЛЕВІЗОР" },
+        music: { label: "МУЗИКА" },
+        phone: { label: "ХОЧУ СВІЙ<br>ТЕЛЕФОН" },
+        rechargePhone: { label: "ЗАРЯДІТЬ<br>МІЙ ТЕЛЕФОН" },
+        sleep: { label: "ХОЧУ<br>СПАТИ" }
+    },
+
+    ru: {
+        title: "Окружение",
+        closeDoor: { label: "ЗАКРОЙТЕ<br>ДВЕРЬ" },
+        openDoor: { label: "ОТКРОЙТЕ<br>ДВЕРЬ" },
+        closeCurtains: { label: "ЗАКРОЙТЕ<br>ШТОРЫ" },
+        openCurtains: { label: "ОТКРОЙТЕ<br>ШТОРЫ" },
+        lightOn: { label: "ВКЛЮЧИТЕ<br>СВЕТ" },
+        lightOff: { label: "ВЫКЛЮЧИТЕ<br>СВЕТ" },
+        noise: { label: "СЛИШКОМ<br>ШУМНО" },
+        openWindow: { label: "ОТКРОЙТЕ<br>ОКНО" },
+        closeWindow: { label: "ЗАКРОЙТЕ<br>ОКНО" },
+        television: { label: "ТЕЛЕВИЗОР" },
+        music: { label: "МУЗЫКА" },
+        phone: { label: "ХОЧУ СВОЙ<br>ТЕЛЕФОН" },
+        rechargePhone: { label: "ЗАРЯДИТЕ<br>МОЙ ТЕЛЕФОН" },
+        sleep: { label: "ХОЧУ<br>СПАТЬ" }
+    }
+
+});
 
 	const ENVIRONMENT_PICTOGRAMS = {
 		closeDoor: "pictogrammes/porte-fermer.jpg",
@@ -6633,6 +8597,146 @@
 
 	};
 
+/* =========================================
+   FAMILLE / AMIS — LANGUES 3.1
+   ========================================= */
+
+Object.assign(TALK_TRANSLATIONS, {
+
+    sq: {
+        title: "Familja / Miqtë",
+        hello: { label: "PËRSHËNDETJE" },
+        seeYou: { label: "SHIHEMI SË SHPEJTI" },
+        happyToSee: { label: "GËZOHEM QË<br>TË SHOH" },
+        missedYou: { label: "MË KE MUNGUAR" },
+        loveYou: { label: "TË DUA" },
+        thankYou: { label: "FALEMINDERIT" },
+        sorry: { label: "MË FAL" },
+        dontWorry: { label: "MOS U SHQETËSO" },
+        stayLonger: { label: "RRI EDHE<br>PAK" },
+        tellMe: { label: "MË TREGO" },
+        gettingBetter: { label: "PO NDIHEM<br>MË MIRË" },
+        doingWell: { label: "JAM MIRË" },
+        tiredButOkay: { label: "JAM I/E LODHUR,<br>POR JAM MIRË" },
+        dontKnow: { label: "NUK E DI" },
+        asYouWant: { label: "SI TË DUASH" },
+        maybe: { label: "NDOSHTA" },
+        changeSubject: { label: "TA NDRYSHOJMË<br>TEMËN" },
+        continue: { label: "VAZHDO" }
+    },
+
+    ar: {
+        title: "العائلة / الأصدقاء",
+        hello: { label: "مرحبًا" },
+        seeYou: { label: "إلى اللقاء قريبًا" },
+        happyToSee: { label: "يسعدني رؤيتك" },
+        missedYou: { label: "اشتقت إليك" },
+        loveYou: { label: "أحبك" },
+        thankYou: { label: "شكرًا" },
+        sorry: { label: "أعتذر" },
+        dontWorry: { label: "لا داعي للقلق" },
+        stayLonger: { label: "ابقَ معي<br>قليلًا" },
+        tellMe: { label: "أخبرني" },
+        gettingBetter: { label: "أشعر بتحسن" },
+        doingWell: { label: "أنا بخير" },
+        tiredButOkay: { label: "أشعر بالتعب<br>لكنني بخير" },
+        dontKnow: { label: "لا أعرف" },
+        asYouWant: { label: "كما تريد" },
+        maybe: { label: "ربما" },
+        changeSubject: { label: "لنغيّر الموضوع" },
+        continue: { label: "تابع" }
+    },
+
+    bs: {
+        title: "Porodica / Prijatelji",
+        hello: { label: "ZDRAVO" },
+        seeYou: { label: "VIDIMO SE USKORO" },
+        happyToSee: { label: "DRAGO MI JE<br>ŠTO TE VIDIM" },
+        missedYou: { label: "NEDOSTAJAO/LA<br>SI MI" },
+        loveYou: { label: "VOLIM TE" },
+        thankYou: { label: "HVALA" },
+        sorry: { label: "ŽAO MI JE" },
+        dontWorry: { label: "NE BRINI" },
+        stayLonger: { label: "OSTANI JOŠ<br>MALO" },
+        tellMe: { label: "PRIČAJ MI" },
+        gettingBetter: { label: "BOLJE MI JE" },
+        doingWell: { label: "DOBRO SAM" },
+        tiredButOkay: { label: "UMORAN/UMORNA SAM,<br>ALI DOBRO SAM" },
+        dontKnow: { label: "NE ZNAM" },
+        asYouWant: { label: "KAKO ŽELIŠ" },
+        maybe: { label: "MOŽDA" },
+        changeSubject: { label: "PROMIJENIMO<br>TEMU" },
+        continue: { label: "NASTAVI" }
+    },
+
+    tr: {
+        title: "Aile / Arkadaşlar",
+        hello: { label: "MERHABA" },
+        seeYou: { label: "GÖRÜŞÜRÜZ" },
+        happyToSee: { label: "SENİ GÖRDÜĞÜME<br>SEVİNDİM" },
+        missedYou: { label: "SENİ ÖZLEDİM" },
+        loveYou: { label: "SENİ SEVİYORUM" },
+        thankYou: { label: "TEŞEKKÜR EDERİM" },
+        sorry: { label: "ÖZÜR DİLERİM" },
+        dontWorry: { label: "ENDİŞELENME" },
+        stayLonger: { label: "BİRAZ DAHA<br>KAL" },
+        tellMe: { label: "BANA ANLAT" },
+        gettingBetter: { label: "DAHA İYİYİM" },
+        doingWell: { label: "İYİYİM" },
+        tiredButOkay: { label: "YORGUNUM AMA<br>İYİYİM" },
+        dontKnow: { label: "BİLMİYORUM" },
+        asYouWant: { label: "NASIL İSTERSEN" },
+        maybe: { label: "BELKİ" },
+        changeSubject: { label: "KONUYU<br>DEĞİŞTİRELİM" },
+        continue: { label: "DEVAM ET" }
+    },
+
+    uk: {
+        title: "Родина / Друзі",
+        hello: { label: "ПРИВІТ" },
+        seeYou: { label: "ДО СКОРОЇ ЗУСТРІЧІ" },
+        happyToSee: { label: "РАДІЮ ТЕБЕ<br>БАЧИТИ" },
+        missedYou: { label: "Я ЗА ТОБОЮ<br>СУМУВАВ/СУМУВАЛА" },
+        loveYou: { label: "Я ТЕБЕ ЛЮБЛЮ" },
+        thankYou: { label: "ДЯКУЮ" },
+        sorry: { label: "ВИБАЧ" },
+        dontWorry: { label: "НЕ ХВИЛЮЙСЯ" },
+        stayLonger: { label: "ПОБУДЬ ЗІ МНОЮ<br>ЩЕ ТРОХИ" },
+        tellMe: { label: "РОЗКАЖИ МЕНІ" },
+        gettingBetter: { label: "МЕНІ КРАЩЕ" },
+        doingWell: { label: "У МЕНЕ ВСЕ ДОБРЕ" },
+        tiredButOkay: { label: "ВІДЧУВАЮ ВТОМУ,<br>АЛЕ ВСЕ ДОБРЕ" },
+        dontKnow: { label: "НЕ ЗНАЮ" },
+        asYouWant: { label: "ЯК ХОЧЕШ" },
+        maybe: { label: "МОЖЛИВО" },
+        changeSubject: { label: "ЗМІНІМО<br>ТЕМУ" },
+        continue: { label: "ПРОДОВЖУЙ" }
+    },
+
+    ru: {
+        title: "Семья / Друзья",
+        hello: { label: "ПРИВЕТ" },
+        seeYou: { label: "ДО СКОРОГО" },
+        happyToSee: { label: "КАК ХОРОШО<br>ТЕБЯ ВИДЕТЬ" },
+        missedYou: { label: "МНЕ ТЕБЯ<br>НЕ ХВАТАЛО" },
+        loveYou: { label: "Я ТЕБЯ ЛЮБЛЮ" },
+        thankYou: { label: "СПАСИБО" },
+        sorry: { label: "ПРОСТИ" },
+        dontWorry: { label: "НЕ ВОЛНУЙСЯ" },
+        stayLonger: { label: "ПОБУДЬ СО МНОЙ<br>ЕЩЁ НЕМНОГО" },
+        tellMe: { label: "РАССКАЖИ МНЕ" },
+        gettingBetter: { label: "МНЕ ЛУЧШЕ" },
+        doingWell: { label: "У МЕНЯ ВСЁ ХОРОШО" },
+        tiredButOkay: { label: "ЧУВСТВУЮ УСТАЛОСТЬ,<br>НО ВСЁ ХОРОШО" },
+        dontKnow: { label: "НЕ ЗНАЮ" },
+        asYouWant: { label: "КАК ХОЧЕШЬ" },
+        maybe: { label: "МОЖЕТ БЫТЬ" },
+        changeSubject: { label: "ДАВАЙ СМЕНИМ<br>ТЕМУ" },
+        continue: { label: "ПРОДОЛЖАЙ" }
+    }
+
+});
+
 	/* =========================================
 	   MES PHRASES — TRADUCTIONS
 	   ========================================= */
@@ -7151,6 +9255,344 @@
 		}
 
 	};
+
+/* =========================================
+   MES PHRASES — LANGUES 3.1
+   ========================================= */
+
+Object.assign(WRITE_TRANSLATIONS, {
+
+    sq: {
+        title: "Frazat e mia",
+        starters: {
+            wouldLike: {
+                label: "DO TË DOJA…",
+                text: "Do të doja "
+            },
+            need: {
+                label: "KAM NEVOJË PËR…",
+                text: "Kam nevojë për "
+            },
+            want: {
+                label: "DUA…",
+                text: "Dua "
+            },
+            dontWant: {
+                label: "NUK DUA…",
+                text: "Nuk dua "
+            },
+            canYou: {
+                label: "A MUND TË…",
+                text: "A mund të "
+            },
+            helpMe: {
+                label: "MË NDIHMONI TË…",
+                text: "Më ndihmoni të "
+            },
+            when: {
+                label: "KUR…?",
+                text: "Kur "
+            },
+            why: {
+                label: "PSE…?",
+                text: "Pse "
+            },
+            isIt: {
+                label: "A ËSHTË…?",
+                text: "A është "
+            },
+            think: {
+                label: "MENDOJ SE…",
+                text: "Mendoj se "
+            }
+        },
+        placeholder: "Shkruani këtu atë që dëshironi të thoni...",
+        clear: "🗑️ FSHI",
+        speak: "🔊 THUAJ",
+        save: "⭐ RUAJ",
+        personalTitle: "Frazat e mia personale",
+        noFavorites: "Ende nuk ka fraza personale.",
+        duplicateFavorite: "Kjo frazë është ruajtur tashmë.",
+        favoriteAdded: "Fraza u ruajt.",
+        deleteConfirm: "Ta fshij këtë frazë?"
+    },
+
+    ar: {
+        title: "عباراتي",
+        starters: {
+            wouldLike: {
+                label: "أودّ…",
+                text: "أودّ "
+            },
+            need: {
+                label: "أحتاج إلى…",
+                text: "أحتاج إلى "
+            },
+            want: {
+                label: "أريد…",
+                text: "أريد "
+            },
+            dontWant: {
+                label: "لا أريد…",
+                text: "لا أريد "
+            },
+            canYou: {
+                label: "هل يمكنكم…؟",
+                text: "هل يمكنكم "
+            },
+            helpMe: {
+                label: "ساعدوني على…",
+                text: "ساعدوني على "
+            },
+            when: {
+                label: "متى…؟",
+                text: "متى "
+            },
+            why: {
+                label: "لماذا…؟",
+                text: "لماذا "
+            },
+            isIt: {
+                label: "هل…؟",
+                text: "هل "
+            },
+            think: {
+                label: "أعتقد أن…",
+                text: "أعتقد أن "
+            }
+        },
+        placeholder: "اكتب هنا ما تريد قوله...",
+        clear: "🗑️ مسح",
+        speak: "🔊 نطق",
+        save: "⭐ حفظ",
+        personalTitle: "عباراتي الشخصية",
+        noFavorites: "لا توجد عبارات شخصية حتى الآن.",
+        duplicateFavorite: "هذه العبارة محفوظة بالفعل.",
+        favoriteAdded: "تم حفظ العبارة.",
+        deleteConfirm: "هل تريد حذف هذه العبارة؟"
+    },
+
+    bs: {
+        title: "Moje rečenice",
+        starters: {
+            wouldLike: {
+                label: "ŽELIO/ŽELJELA BIH…",
+                text: "Želio/željela bih "
+            },
+            need: {
+                label: "TREBA MI…",
+                text: "Treba mi "
+            },
+            want: {
+                label: "ŽELIM…",
+                text: "Želim "
+            },
+            dontWant: {
+                label: "NE ŽELIM…",
+                text: "Ne želim "
+            },
+            canYou: {
+                label: "MOŽETE LI…",
+                text: "Možete li "
+            },
+            helpMe: {
+                label: "POMOZITE MI DA…",
+                text: "Pomozite mi da "
+            },
+            when: {
+                label: "KADA…?",
+                text: "Kada "
+            },
+            why: {
+                label: "ZAŠTO…?",
+                text: "Zašto "
+            },
+            isIt: {
+                label: "DA LI JE…?",
+                text: "Da li je "
+            },
+            think: {
+                label: "MISLIM DA…",
+                text: "Mislim da "
+            }
+        },
+        placeholder: "Ovdje napišite šta želite reći...",
+        clear: "🗑️ OBRIŠI",
+        speak: "🔊 IZGOVORI",
+        save: "⭐ SAČUVAJ",
+        personalTitle: "Moje lične rečenice",
+        noFavorites: "Još nema ličnih rečenica.",
+        duplicateFavorite: "Ova rečenica je već sačuvana.",
+        favoriteAdded: "Rečenica je sačuvana.",
+        deleteConfirm: "Obrisati ovu rečenicu?"
+    },
+
+    tr: {
+        title: "Cümlelerim",
+        starters: {
+            wouldLike: {
+                label: "RİCAM…",
+                text: "Ricam: "
+            },
+            need: {
+                label: "İHTİYACIM…",
+                text: "İhtiyacım: "
+            },
+            want: {
+                label: "İSTEDİĞİM…",
+                text: "İstediğim: "
+            },
+            dontWant: {
+                label: "İSTEMEDİĞİM…",
+                text: "İstemediğim: "
+            },
+            canYou: {
+                label: "YAPABİLİR MİSİNİZ…?",
+                text: "Yapabilir misiniz? "
+            },
+            helpMe: {
+                label: "BANA YARDIM EDİN…",
+                text: "Bana yardım edin: "
+            },
+            when: {
+                label: "NE ZAMAN…?",
+                text: "Ne zaman "
+            },
+            why: {
+                label: "NEDEN…?",
+                text: "Neden "
+            },
+            isIt: {
+                label: "ACABA…?",
+                text: "Acaba "
+            },
+            think: {
+                label: "BENCE…",
+                text: "Bence "
+            }
+        },
+        placeholder: "Söylemek istediğinizi buraya yazın...",
+        clear: "🗑️ SİL",
+        speak: "🔊 SÖYLE",
+        save: "⭐ KAYDET",
+        personalTitle: "Kişisel cümlelerim",
+        noFavorites: "Henüz kişisel cümle yok.",
+        duplicateFavorite: "Bu cümle zaten kaydedilmiş.",
+        favoriteAdded: "Cümle kaydedildi.",
+        deleteConfirm: "Bu cümle silinsin mi?"
+    },
+
+    uk: {
+        title: "Мої фрази",
+        starters: {
+            wouldLike: {
+                label: "Я ХОТІВ/ХОТІЛА Б…",
+                text: "Я хотів/хотіла б "
+            },
+            need: {
+                label: "МЕНІ ПОТРІБНО…",
+                text: "Мені потрібно "
+            },
+            want: {
+                label: "Я ХОЧУ…",
+                text: "Я хочу "
+            },
+            dontWant: {
+                label: "Я НЕ ХОЧУ…",
+                text: "Я не хочу "
+            },
+            canYou: {
+                label: "ЧИ МОЖЕТЕ ВИ…?",
+                text: "Чи можете ви "
+            },
+            helpMe: {
+                label: "ДОПОМОЖІТЬ МЕНІ…",
+                text: "Допоможіть мені "
+            },
+            when: {
+                label: "КОЛИ…?",
+                text: "Коли "
+            },
+            why: {
+                label: "ЧОМУ…?",
+                text: "Чому "
+            },
+            isIt: {
+                label: "ЧИ ЦЕ…?",
+                text: "Чи це "
+            },
+            think: {
+                label: "Я ДУМАЮ, ЩО…",
+                text: "Я думаю, що "
+            }
+        },
+        placeholder: "Напишіть тут те, що хочете сказати...",
+        clear: "🗑️ ОЧИСТИТИ",
+        speak: "🔊 СКАЗАТИ",
+        save: "⭐ ЗБЕРЕГТИ",
+        personalTitle: "Мої особисті фрази",
+        noFavorites: "Поки що немає збережених фраз.",
+        duplicateFavorite: "Цю фразу вже збережено.",
+        favoriteAdded: "Фразу збережено.",
+        deleteConfirm: "Видалити цю фразу?"
+    },
+
+    ru: {
+        title: "Мои фразы",
+        starters: {
+            wouldLike: {
+                label: "Я ХОТЕЛ/ХОТЕЛА БЫ…",
+                text: "Я хотел/хотела бы "
+            },
+            need: {
+                label: "МНЕ НУЖНО…",
+                text: "Мне нужно "
+            },
+            want: {
+                label: "Я ХОЧУ…",
+                text: "Я хочу "
+            },
+            dontWant: {
+                label: "Я НЕ ХОЧУ…",
+                text: "Я не хочу "
+            },
+            canYou: {
+                label: "МОЖЕТЕ ЛИ ВЫ…?",
+                text: "Можете ли вы "
+            },
+            helpMe: {
+                label: "ПОМОГИТЕ МНЕ…",
+                text: "Помогите мне "
+            },
+            when: {
+                label: "КОГДА…?",
+                text: "Когда "
+            },
+            why: {
+                label: "ПОЧЕМУ…?",
+                text: "Почему "
+            },
+            isIt: {
+                label: "ЭТО…?",
+                text: "Это "
+            },
+            think: {
+                label: "Я ДУМАЮ, ЧТО…",
+                text: "Я думаю, что "
+            }
+        },
+        placeholder: "Напишите здесь то, что хотите сказать...",
+        clear: "🗑️ ОЧИСТИТЬ",
+        speak: "🔊 ПРОИЗНЕСТИ",
+        save: "⭐ СОХРАНИТЬ",
+        personalTitle: "Мои личные фразы",
+        noFavorites: "Пока нет сохранённых фраз.",
+        duplicateFavorite: "Эта фраза уже сохранена.",
+        favoriteAdded: "Фраза сохранена.",
+        deleteConfirm: "Удалить эту фразу?"
+    }
+
+});
 
 	function updateWriteLanguage() {
 
@@ -9950,7 +12392,13 @@ if (buttonMode === "image") {
 		de: "Deutsch",
 		it: "Italiano",
 		es: "Español",
-		pt: "Português"
+		pt: "Português",
+		sq: "Albanais",
+		ar: "Arabe",
+		bs: "Balkan",
+		tr: "Turc",
+		uk: "Ukrainien",
+		ru: "Russe"
 	};
 
 	const MISSING_VOICE_TRANSLATIONS = {
@@ -11481,6 +13929,15 @@ if (buttonMode === "image") {
 			}
 		);
 
+		const patientLanguageSelect =
+			document.getElementById(
+				"patientLanguageSelect"
+			);
+
+		if (patientLanguageSelect) {
+			patientLanguageSelect.value =
+				patientLanguage;
+		}
 
 		caregiverButtons.forEach(
 			function(button) {
@@ -13042,60 +15499,49 @@ if (buttonMode === "image") {
 		renderCustomFavorites();
 	}
 
-	async function updateAppVersion() {
+async function updateAppVersion() {
 
-		const versionElement =
-			document.getElementById("appVersion");
+    const versionElement =
+        document.getElementById("appVersion");
 
-		if (!versionElement) {
-			return;
-		}
+    if (!versionElement) {
+        return;
+    }
 
+    versionElement.textContent =
+        "(v" + APP_VERSION + ")";
 
-		try {
+    try {
 
-			const response =
-				await fetch(
-					"./sw.js",
-					{
-						cache: "no-store"
-					}
-				);
+        const cacheNames =
+            await caches.keys();
 
+        const prefix =
+            "voxhelp" +
+            APP_VERSION.replace(/\./g, "") +
+            "-c";
 
-			if (!response.ok) {
-				return;
-			}
+        const cacheName =
+            cacheNames.find(function(name) {
+                return name.startsWith(prefix);
+            });
 
+        if (cacheName) {
 
-			const swText =
-				await response.text();
+            versionElement.textContent =
+                "(v" + APP_VERSION +
+                "/c" +
+                cacheName.slice(prefix.length) +
+                ")";
+        }
 
+    }
+    catch (error) {
 
-			const match =
-				swText.match(
-					/voxhelp21-c(\d+)/
-				);
-
-
-			if (!match) {
-				return;
-			}
-
-
-			versionElement.textContent =
-				"(v" + APP_VERSION +
-				"/c" + match[1] + ")";
-
-		}
-		catch (error) {
-
-			console.warn(
-				"Impossible de lire la version :",
-				error
-			);
-		}
-	}
+        versionElement.textContent =
+            "(v" + APP_VERSION + ")";
+    }
+}
 
 	document.addEventListener(
 		"DOMContentLoaded",

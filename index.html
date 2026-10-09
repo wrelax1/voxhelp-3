@@ -2110,59 +2110,25 @@
             pour les boutons des écrans.
         </p>
 
-        <div class="language-choice">
-
-            <button
-                data-patient-language="fr"
-                onclick="choosePatientLanguage('fr')"
-            >
-                🇫🇷<br>
-                FRANÇAIS
-            </button>
-
-            <button
-                data-patient-language="en"
-                onclick="choosePatientLanguage('en')"
-            >
-                🇬🇧<br>
-                ENGLISH
-            </button>
-
-            <button
-                data-patient-language="de"
-                onclick="choosePatientLanguage('de')"
-            >
-                🇩🇪<br>
-                DEUTSCH
-            </button>
-
-            <button
-                data-patient-language="it"
-                onclick="choosePatientLanguage('it')"
-            >
-                🇮🇹<br>
-                ITALIANO
-            </button>
-			
-			<button
-				data-patient-language="es"
-				onclick="choosePatientLanguage('es')"
-			>
-				🇪🇸<br>
-				ESPAÑOL
-			</button>
-
-			<button
-				data-patient-language="pt"
-				onclick="choosePatientLanguage('pt')"
-			>
-				🇵🇹<br>
-				PORTUGUÊS
-			</button>
-
-        </div>
+		<select id="patientLanguageSelect" class="patient-language-select"
+				aria-label="Langue du patient" onchange="choosePatientLanguage(this.value)">
+			<option value="sq">🇦🇱 ALBANAIS</option>
+			<option value="ar">🇸🇦 ARABE</option>
+			<option value="bs">🇧🇦 BALKAN</option>
+			<option value="de">🇩🇪 DEUTSCH</option>
+			<option value="en">🇬🇧 ENGLISH</option>
+			<option value="es">🇪🇸 ESPAÑOL</option>
+			<option value="fr" selected>🇫🇷 FRANÇAIS</option>
+			<option value="it">🇮🇹 ITALIANO</option>
+			<option value="pt">🇵🇹 PORTUGUÊS</option>
+			<option value="ru">🇷🇺 RUSSE</option>
+			<option value="tr">🇹🇷 TURC</option>
+			<option value="uk">🇺🇦 UKRAINIEN</option>
+		</select>
 
     </div>
+
+
 
 	<div class="language-setting">
 
