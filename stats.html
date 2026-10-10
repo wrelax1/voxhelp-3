@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>VoxHelp - Statistiques</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #202124;
+        }
+
+        .stats {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 40px;
+            text-align: center;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .number {
+            margin: 30px 0 10px;
+            font-size: 72px;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 22px;
+        }
+
+        .update {
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="stats">
+
+        <h1>VoxHelp</h1>
+
+        <div
+            id="installCount"
+            class="number"
+        >
+            …
+        </div>
+
+        <div class="label">
+            installations détectées
+        </div>
+
+        <div
+            id="updateTime"
+            class="update"
+        ></div>
+
+    </div>
+
+<script>
+
+fetch(
+    'https://counterapi.com/api/wrelax1.github.io/install/voxhelp-2-1?readOnly=true'
+)
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+
+    document.getElementById('installCount').textContent =
+        data.value ?? 0;
+
+    document.getElementById('updateTime').textContent =
+        'Consulté le ' +
+        new Date().toLocaleString('fr-CH');
+
+})
+.catch(function () {
+
+    document.getElementById('installCount').textContent = '—';
+
+    document.getElementById('updateTime').textContent =
+        'Compteur momentanément indisponible';
+
+});
+
+</script>
+
+</body>
+</html>
