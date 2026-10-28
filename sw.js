@@ -1,4 +1,4 @@
-const CACHE_NAME = "voxhelp31-c2";
+const CACHE_NAME = "voxhelp31-c3";
 
 const FILES_TO_CACHE = [
     "./",

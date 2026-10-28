@@ -2455,37 +2455,55 @@
 	<script src="app.js?v=3.0.1"></script>
 
 <script>
+
 (function () {
 
     const isInstalled =
         window.matchMedia('(display-mode: standalone)').matches ||
         window.navigator.standalone === true;
 
-    const installKey = 'voxhelp-install-counted-v2.1';
+    const isProduction =
+        location.origin === 'https://wrelax1.github.io' &&
+        location.pathname.startsWith('/voxhelp-3/');
 
-    if (
-        isInstalled &&
-        localStorage.getItem(installKey) !== '1'
-    ) {
+    if (!isInstalled || !isProduction) return;
 
-        fetch(
-            'https://counterapi.com/api/wrelax1.github.io/install/voxhelp-2-1'
-        )
-        .then(function (response) {
+    const installKey = 'voxhelp-install-counted-v3';
+    const idKey = 'voxhelp-install-id-v3';
 
-            if (response.ok) {
-                localStorage.setItem(installKey, '1');
-            }
+    if (localStorage.getItem(installKey) === '1') return;
 
-        })
-        .catch(function () {
-            // VoxHelp continue à fonctionner normalement
-            // même si le compteur est indisponible.
-        });
+    let installationId = localStorage.getItem(idKey);
 
+    if (!installationId) {
+        installationId = crypto.randomUUID();
+        localStorage.setItem(idKey, installationId);
     }
 
+    fetch('https://voxhelp-stats.wwinfried.workers.dev/install', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            installation_id: installationId
+        })
+    })
+    .then(function (response) {
+        if (!response.ok) throw new Error('Erreur compteur');
+        return response.json();
+    })
+    .then(function (data) {
+        if (data.success === true) {
+            localStorage.setItem(installKey, '1');
+        }
+    })
+    .catch(function () {
+        // Ne pas perturber VoxHelp en cas d'erreur réseau.
+    });
+
 })();
+
 </script>
 
 <!-- ======================================= -->
