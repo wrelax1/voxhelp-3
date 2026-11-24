@@ -1,4 +1,4 @@
-	const APP_VERSION = "3.1";
+	const APP_VERSION = "3.2";
 
 	const LANGUAGE_STORAGE_KEYS = {
 		patient: "maVoixPatientLanguage",
@@ -177,16 +177,16 @@
 
 		fr: {
 			title: "Je veux vous dire…",
-			respiration: "RESPIRATION /<br>GORGE",
+			respiration: "RESPIRATION",
 			pain: "J'AI MAL",
 			position: "POSITIONNEMENT",
 			care: "INCONFORT",
-			hygiene: "VIE QUOTIDIENNE",
-			environment: "ENVIRONNEMENT",
+			hygiene: "BESOINS QUOTIDIENS",
+			environment: "AUTOUR DE MOI",
 			questions: "QUESTIONS<br>MÉDECIN",
-			careTeam: "ÉQUIPE SOIGNANTE",
+			careTeam: "ÉQUIPE SOINS",
 			movement: "DÉPLACEMENTS",
-			planning: "PLANNING / TEMPS",
+			planning: "TEMPS",
 			talk: "FAMILLE / AMIS",
 			emotions: "ÉMOTIONS",
 			recharge: "RECHARGEZ<br>MON TÉLÉPHONE",
@@ -198,16 +198,16 @@
 
 		en: {
 			title: "I want to tell you…",
-			respiration: "BREATHING /<br>THROAT",
+			respiration: "BREATHING",
 			pain: "I'M IN PAIN",
 			position: "POSITIONING",
 			care: "DISCOMFORT",
-			hygiene: "DAILY LIVING",
-			environment: "ENVIRONMENT",
+			hygiene: "DAILY NEEDS",
+			environment: "AROUND ME",
 			questions: "QUESTIONS<br>FOR THE DOCTOR",
 			careTeam: "CARE TEAM",
 			movement: "GETTING AROUND",
-			planning: "PLANNING / TIME",
+			planning: "TIME",
 			talk: "FAMILY / FRIENDS",
 			emotions: "EMOTIONS",
 			recharge: "CHARGE<br>MY PHONE",
@@ -219,16 +219,16 @@
 
 		de: {
 			title: "Ich möchte Ihnen sagen…",
-			respiration: "ATMUNG /<br>HALS",
+			respiration: "ATMUNG",
 			pain: "ICH HABE SCHMERZEN",
 			position: "POSITIONIERUNG",
 			care: "BESCHWERDEN",
-			hygiene: "ALLTAG",
-			environment: "UMGEBUNG",
+			hygiene: "ALLTAGSBEDÜRFNISSE",
+			environment: "UM MICH HERUM",
 			questions: "FRAGEN AN<br>DEN ARZT",
 			careTeam: "BEHANDLUNGSTEAM",
 			movement: "MOBILITÄT",
-			planning: "PLANUNG / ZEIT",
+			planning: "ZEIT",
 			talk: "FAMILIE / FREUNDE",
 			emotions: "GEFÜHLE",
 			recharge: "BITTE MEIN<br>HANDY LADEN",
@@ -240,16 +240,16 @@
 
 		it: {
 			title: "Vorrei dirle…",
-			respiration: "RESPIRAZIONE /<br>GOLA",
+			respiration: "RESPIRAZIONE",
 			pain: "HO DOLORE",
 			position: "POSIZIONAMENTO",
 			care: "DISAGIO",
-			hygiene: "VITA QUOTIDIANA",
-			environment: "AMBIENTE",
+			hygiene: "BISOGNI QUOTIDIANI",
+			environment: "INTORNO A ME",
 			questions: "DOMANDE<br>AL MEDICO",
 			careTeam: "TEAM CURANTE",
 			movement: "SPOSTAMENTI",
-			planning: "PIANIFICAZIONE / TEMPO",
+			planning: "TEMPO",
 			talk: "FAMIGLIA / AMICI",
 			emotions: "EMOZIONI",
 			recharge: "CARICATE<br>IL MIO TELEFONO",
@@ -261,16 +261,16 @@
 
 		es: {
 			title: "Quiero decirle…",
-			respiration: "RESPIRACIÓN /<br>GARGANTA",
+			respiration: "RESPIRACIÓN",
 			pain: "TENGO DOLOR",
 			position: "POSICIONAMIENTO",
 			care: "MALESTAR",
-			hygiene: "VIDA DIARIA",
-			environment: "ENTORNO",
+			hygiene: "NECESIDADES COTIDIANAS",
+			environment: "A MI ALREDEDOR",
 			questions: "PREGUNTAS<br>AL MÉDICO",
 			careTeam: "EQUIPO ASISTENCIAL",
 			movement: "DESPLAZAMIENTOS",
-			planning: "PLANIFICACIÓN / TIEMPO",
+			planning: "TIEMPO",
 			talk: "FAMILIA / AMIGOS",
 			emotions: "EMOCIONES",
 			recharge: "CARGUE<br>MI TELÉFONO",
@@ -282,16 +282,16 @@
 
 		pt: {
 			title: "Quero dizer-lhe…",
-			respiration: "RESPIRAÇÃO /<br>GARGANTA",
+			respiration: "RESPIRAÇÃO",
 			pain: "TENHO DOR",
 			position: "POSICIONAMENTO",
 			care: "DESCONFORTO",
-			hygiene: "VIDA QUOTIDIANA",
-			environment: "AMBIENTE",
+			hygiene: "NECESSIDADES DIÁRIAS",
+			environment: "À MINHA VOLTA",
 			questions: "PERGUNTAS<br>AO MÉDICO",
 			careTeam: "EQUIPA DE CUIDADOS",
 			movement: "DESLOCAÇÕES",
-			planning: "PLANEAMENTO / TEMPO",
+			planning: "TEMPO",
 			talk: "FAMÍLIA / AMIGOS",
 			emotions: "EMOÇÕES",
 			recharge: "CARREGUE<br>O MEU TELEFONE",
@@ -311,16 +311,16 @@
 
 		sq: {
 			title: "Dua t'ju them…",
-			respiration: "FRYMËMARRJA /<br>FYTI",
+			respiration: "FRYMËMARRJA",
 			pain: "KAM DHIMBJE",
 			position: "POZICIONIMI",
 			care: "PAREHATI",
-			hygiene: "JETA E PËRDITSHME",
-			environment: "MJEDISI",
+			hygiene: "NEVOJAT E PËRDITSHME",
+			environment: "RRETH MEJE",
 			questions: "PYETJE PËR<br>MJEKUN",
 			careTeam: "EKIPI MJEKËSOR",
 			movement: "LËVIZJA",
-			planning: "PLANIFIKIMI / KOHA",
+			planning: "KOHA",
 			talk: "FAMILJA / MIQTË",
 			emotions: "EMOCIONET",
 			recharge: "MA KARIKONI<br>TELEFONIN",
@@ -332,16 +332,16 @@
 
 		ar: {
 			title: "أريد أن أخبركم…",
-			respiration: "التنفس /<br>الحلق",
+			respiration: "التنفس",
 			pain: "لدي ألم",
 			position: "تغيير الوضعية",
 			care: "انزعاج",
-			hygiene: "الحياة اليومية",
-			environment: "المحيط",
+			hygiene: "الاحتياجات اليومية",
+			environment: "ما حولي",
 			questions: "أسئلة<br>للطبيب",
 			careTeam: "الفريق الطبي",
 			movement: "التنقل",
-			planning: "المواعيد / الوقت",
+			planning: "الوقت",
 			talk: "العائلة / الأصدقاء",
 			emotions: "المشاعر",
 			recharge: "اشحنوا<br>هاتفي",
@@ -353,16 +353,16 @@
 
 		bs: {
 			title: "Želim vam reći…",
-			respiration: "DISANJE /<br>GRLO",
+			respiration: "DISANJE",
 			pain: "BOLI ME",
 			position: "PROMJENA POLOŽAJA",
 			care: "NELAGODA",
 			hygiene: "SVAKODNEVNE POTREBE",
-			environment: "OKRUŽENJE",
+			environment: "OKO MENE",
 			questions: "PITANJA<br>ZA DOKTORA",
 			careTeam: "MEDICINSKO OSOBLJE",
 			movement: "KRETANJE",
-			planning: "PLAN / VRIJEME",
+			planning: "VRIJEME",
 			talk: "PORODICA / PRIJATELJI",
 			emotions: "EMOCIJE",
 			recharge: "NAPUNITE<br>MOJ TELEFON",
@@ -374,16 +374,16 @@
 
 		tr: {
 			title: "Size söylemek istiyorum…",
-			respiration: "SOLUNUM /<br>BOĞAZ",
+			respiration: "SOLUNUM",
 			pain: "AĞRIM VAR",
 			position: "POZİSYON",
 			care: "RAHATSIZLIK",
-			hygiene: "GÜNLÜK YAŞAM",
-			environment: "ÇEVRE",
+			hygiene: "GÜNLÜK İHTİYAÇLAR",
+			environment: "ETRAFIMDA",
 			questions: "DOKTORA<br>SORULAR",
 			careTeam: "SAĞLIK EKİBİ",
 			movement: "HAREKET",
-			planning: "PLAN / ZAMAN",
+			planning: "ZAMAN",
 			talk: "AİLE / ARKADAŞLAR",
 			emotions: "DUYGULAR",
 			recharge: "TELEFONUMU<br>ŞARJ EDİN",
@@ -395,16 +395,16 @@
 
 		uk: {
 			title: "Я хочу вам сказати…",
-			respiration: "ДИХАННЯ /<br>ГОРЛО",
+			respiration: "ДИХАННЯ",
 			pain: "МЕНІ БОЛИТЬ",
 			position: "ПОЛОЖЕННЯ ТІЛА",
 			care: "ДИСКОМФОРТ",
-			hygiene: "ПОВСЯКДЕННЕ ЖИТТЯ",
-			environment: "ОТОЧЕННЯ",
+			hygiene: "ЩОДЕННІ ПОТРЕБИ",
+			environment: "НАВКОЛО МЕНЕ",
 			questions: "ЗАПИТАННЯ<br>ЛІКАРЮ",
 			careTeam: "МЕДИЧНИЙ ПЕРСОНАЛ",
 			movement: "ПЕРЕСУВАННЯ",
-			planning: "ПЛАНУВАННЯ / ЧАС",
+			planning: "ЧАС",
 			talk: "РОДИНА / ДРУЗІ",
 			emotions: "ЕМОЦІЇ",
 			recharge: "ЗАРЯДІТЬ<br>МІЙ ТЕЛЕФОН",
@@ -416,16 +416,16 @@
 
 		ru: {
 			title: "Я хочу вам сказать…",
-			respiration: "ДЫХАНИЕ /<br>ГОРЛО",
+			respiration: "ДЫХАНИЕ",
 			pain: "У МЕНЯ БОЛИТ",
 			position: "ПОЛОЖЕНИЕ ТЕЛА",
 			care: "ДИСКОМФОРТ",
-			hygiene: "ПОВСЕДНЕВНАЯ ЖИЗНЬ",
-			environment: "ОКРУЖЕНИЕ",
+			hygiene: "ЕЖЕДНЕВНЫЕ ПОТРЕБНОСТИ",
+			environment: "ВОКРУГ МЕНЯ",
 			questions: "ВОПРОСЫ<br>ВРАЧУ",
 			careTeam: "МЕДПЕРСОНАЛ",
 			movement: "ПЕРЕДВИЖЕНИЕ",
-			planning: "ПЛАН / ВРЕМЯ",
+			planning: "ВРЕМЯ",
 			talk: "СЕМЬЯ / ДРУЗЬЯ",
 			emotions: "ЭМОЦИИ",
 			recharge: "ЗАРЯДИТЕ<br>МОЙ ТЕЛЕФОН",
@@ -2369,8 +2369,13 @@ PAIN_SUBLOCATION_PATIENT_LABELS.ru.buttocks = {
 			title: "Positionnement",
 
 			bed: {
-				label: "COUCHEZ-MOI",
-				speech: "Remettez-moi dans le lit, s’il vous plaît"
+				label: "ALLER AU LIT",
+				speech: "Aidez-moi à aller au lit, s’il vous plaît"
+			},
+
+			chair: {
+				label: "ALLER AU FAUTEUIL",
+				speech: "Aidez-moi à aller au fauteuil, s’il vous plaît"
 			},
 
 			moveUp: {
@@ -3007,7 +3012,67 @@ Object.assign(POSITION_TRANSLATIONS, {
         comfortable: { label: "МНЕ ТАК<br>УДОБНО" }
     }
 
+
 });
+
+	// =========================================
+	// ALLER AU FAUTEUIL — TRADUCTIONS
+	// =========================================
+
+	Object.entries({
+
+		en: {
+			label: "TO THE WHEELCHAIR",
+			speech: "Please help me into the wheelchair"
+		},
+
+		de: {
+			label: "IN DEN ROLLSTUHL",
+			speech: "Bitte helfen Sie mir in den Rollstuhl"
+		},
+
+		it: {
+			label: "ALLA SEDIA A ROTELLE",
+			speech: "Mi aiuti a passare sulla sedia a rotelle, per favore"
+		},
+
+		es: {
+			label: "A LA SILLA DE RUEDAS"
+		},
+
+		pt: {
+			label: "PARA A CADEIRA DE RODAS"
+		},
+
+		sq: {
+			label: "NË KARRIGEN ME RROTA"
+		},
+
+		ar: {
+			label: "إلى الكرسي المتحرك"
+		},
+
+		bs: {
+			label: "U INVALIDSKA KOLICA"
+		},
+
+		tr: {
+			label: "TEKERLEKLİ SANDALYEYE"
+		},
+
+		uk: {
+			label: "У КРІСЛО КОЛІСНЕ"
+		},
+
+		ru: {
+			label: "В ИНВАЛИДНОЕ КРЕСЛО"
+		}
+
+	}).forEach(function(entry) {
+
+		POSITION_TRANSLATIONS[entry[0]].chair = entry[1];
+
+	});
 
 	const POSITION_PICTOGRAMS = {
 		bed: "pictogrammes/couchez.jpg",
@@ -5522,22 +5587,22 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 
 		fr: {
 
-			title: "Vie quotidienne",
+			title: "Besoins quotidiens",
 
 			change: {
-				label: "BESOIN<br>D'ÊTRE CHANGÉ",
+				label: "ÊTRE CHANGÉ",
 				speech: "Besoin d’être changé"
 			},
 
 			urinate: {
-				label: "BESOIN<br>D'URINER",
+				label: "URINER",
 				speech: "Besoin d’uriner"
 			},
 
 			stool: {
-				label: "BESOIN D'ALLER<br>À LA SELLE",
+				label: "ALLER À<br>LA SELLE",
 				speech: "Besoin d’aller à la selle"
-			},
+			},	
 
 			hungry: {
 				label: "J'AI FAIM",
@@ -5550,8 +5615,8 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 			},
 
 			shower: {
-				label: "PRENDRE<br>UNE DOUCHE",
-				speech: "Je voudrais prendre une douche"
+				label: "LAVER MON<br>CORPS",
+				speech: "Je voudrais laver mon corps"
 			},
 
 			teeth: {
@@ -5642,8 +5707,8 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 			},
 
 			shower: {
-				label: "TAKE A<br>SHOWER",
-				speech: "I would like to take a shower"
+				label: "WASH MY<br>BODY",
+				speech: "I would like to wash my body"
 			},
 
 			teeth: {
@@ -5734,8 +5799,8 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 			},
 
 			shower: {
-				label: "DUSCHEN",
-				speech: "Ich möchte duschen"
+				label: "MEINEN KÖRPER<br>WASCHEN",
+				speech: "Ich möchte meinen Körper waschen"
 			},
 
 			teeth: {
@@ -5826,8 +5891,8 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 			},
 
 			shower: {
-				label: "FARE UNA<br>DOCCIA",
-				speech: "Vorrei fare una doccia"
+				label: "LAVARE IL<br>MIO CORPO",
+				speech: "Vorrei lavare il mio corpo"
 			},
 
 			teeth: {
@@ -5913,7 +5978,7 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 			},
 
 			shower: {
-				label: "DARME UNA<br>DUCHA"
+				label: "LAVARME<br>EL CUERPO"
 			},
 
 			teeth: {
@@ -5988,7 +6053,7 @@ Object.assign(PLANNING_TRANSLATIONS.ru, {
 			},
 
 			shower: {
-				label: "TOMAR<br>BANHO"
+				label: "LAVAR O<br>MEU CORPO"
 			},
 
 			teeth: {
@@ -6052,7 +6117,7 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         stool: { label: "DUHET TË<br>DEFEKOJ" },
         hungry: { label: "KAM URI" },
         thirsty: { label: "KAM ETJE" },
-        shower: { label: "DUA TË BËJ<br>DUSH" },
+        shower: { label: "TË LAJ<br>TRUPIN" },
         teeth: { label: "DUA TË LAJ<br>DHËMBËT" },
         face: { label: "DUA TË LAJ<br>FYTYRËN" },
         shave: { label: "DUA TË RRUHEM" },
@@ -6073,7 +6138,7 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         stool: { label: "أحتاج إلى<br>التبرز" },
         hungry: { label: "أنا جائع" },
         thirsty: { label: "أنا عطشان" },
-        shower: { label: "أريد الاستحمام" },
+        shower: { label: "غسل جسمي" },
         teeth: { label: "أريد تنظيف<br>أسناني" },
         face: { label: "أريد غسل<br>وجهي" },
         shave: { label: "أريد الحلاقة" },
@@ -6094,7 +6159,7 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         stool: { label: "MORAM NA<br>VELIKU NUŽDU" },
         hungry: { label: "GLADAN SAM" },
         thirsty: { label: "ŽEDAN SAM" },
-        shower: { label: "ŽELIM SE<br>ISTUŠIRATI" },
+        shower: { label: "OPRATI<br>TIJELO" },
         teeth: { label: "OPRATI ZUBE" },
         face: { label: "UMITI LICE" },
         shave: { label: "OBRIJATI SE" },
@@ -6115,7 +6180,7 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         stool: { label: "BÜYÜK TUVALETE<br>ÇIKMAM GEREKİYOR" },
         hungry: { label: "ACIKTIM" },
         thirsty: { label: "SUSADIM" },
-        shower: { label: "DUŞ ALMAK<br>İSTİYORUM" },
+        shower: { label: "VÜCUDUMU<br>YIKAMAK" },
         teeth: { label: "DİŞLERİMİ<br>FIRÇALAMAK" },
         face: { label: "YÜZÜMÜ<br>YIKAMAK" },
         shave: { label: "TIRAŞ OLMAK" },
@@ -6136,7 +6201,7 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         stool: { label: "МЕНІ ТРЕБА<br>В ТУАЛЕТ ПО-ВЕЛИКОМУ" },
         hungry: { label: "Я ХОЧУ ЇСТИ" },
         thirsty: { label: "Я ХОЧУ ПИТИ" },
-        shower: { label: "ХОЧУ ПРИЙНЯТИ<br>ДУШ" },
+        shower: { label: "ПОМИТИ<br>ТІЛО" },
         teeth: { label: "ПОЧИСТИТИ<br>ЗУБИ" },
         face: { label: "ВМИТИ<br>ОБЛИЧЧЯ" },
         shave: { label: "ПОГОЛИТИСЯ" },
@@ -6157,7 +6222,7 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         stool: { label: "МНЕ НУЖНО<br>В ТУАЛЕТ ПО-БОЛЬШОМУ" },
         hungry: { label: "Я ХОЧУ ЕСТЬ" },
         thirsty: { label: "Я ХОЧУ ПИТЬ" },
-        shower: { label: "ХОЧУ ПРИНЯТЬ<br>ДУШ" },
+        shower: { label: "ВЫМЫТЬ<br>ТЕЛО" },
         teeth: { label: "ПОЧИСТИТЬ<br>ЗУБЫ" },
         face: { label: "УМЫТЬ<br>ЛИЦО" },
         shave: { label: "ПОБРИТЬСЯ" },
@@ -6170,6 +6235,71 @@ Object.assign(HYGIENE_TRANSLATIONS, {
         sweater: { label: "СВИТЕР" },
         shoes: { label: "ОБУВЬ" }
     }
+
+
+});
+
+// =========================================
+// MANTEAU — TRADUCTIONS
+// =========================================
+
+Object.entries({
+
+	fr: {
+		label: "MANTEAU",
+		speech: "Je voudrais mon manteau"
+	},
+
+	en: {
+		label: "COAT",
+		speech: "I would like my coat"
+	},
+
+	de: {
+		label: "MANTEL",
+		speech: "Ich möchte meinen Mantel"
+	},
+
+	it: {
+		label: "CAPPOTTO",
+		speech: "Vorrei il mio cappotto"
+	},
+
+	es: {
+		label: "ABRIGO"
+	},
+
+	pt: {
+		label: "CASACO"
+	},
+
+	sq: {
+		label: "PALLTO"
+	},
+
+	ar: {
+		label: "معطف"
+	},
+
+	bs: {
+		label: "KAPUT"
+	},
+
+	tr: {
+		label: "PALTO"
+	},
+
+	uk: {
+		label: "ПАЛЬТО"
+	},
+
+	ru: {
+		label: "ПАЛЬТО"
+	}
+
+}).forEach(function(entry) {
+
+	HYGIENE_TRANSLATIONS[entry[0]].coat = entry[1];
 
 });
 
@@ -7489,7 +7619,7 @@ Object.assign(QUESTIONS_TRANSLATIONS, {
 
 		fr: {
 
-			title: "Environnement",
+			title: "Autour de moi",
 
 			closeDoor: {
 				label: "FERMEZ<br>LA PORTE",
@@ -11362,7 +11492,11 @@ Object.assign(WRITE_TRANSLATIONS, {
 				translation.sweater.label,
 
 			hygieneShoesButton:
-				translation.shoes.label
+				translation.shoes.label,
+
+			hygieneCoatButton:
+				translation.coat.label
+
 		};
 
 		Object.entries(elements).forEach(
@@ -11432,7 +11566,11 @@ Object.assign(WRITE_TRANSLATIONS, {
 					HYGIENE_PICTOGRAMS.sweater,
 
 				hygieneShoesButton:
-					HYGIENE_PICTOGRAMS.shoes
+					HYGIENE_PICTOGRAMS.shoes,
+
+				hygieneCoatButton:
+					"pictogrammes/manteau.jpg"
+
 			};
 
 			Object.entries(pictogramElements).forEach(
@@ -11676,6 +11814,9 @@ Object.assign(WRITE_TRANSLATIONS, {
 			positionBedButton:
 				translation.bed.label,
 
+			positionChairButton:
+				translation.chair.label,
+
 			positionMoveUpButton:
 				translation.moveUp.label,
 
@@ -11729,6 +11870,7 @@ Object.assign(WRITE_TRANSLATIONS, {
 
 			const pictogramElements = {
 				positionBedButton: POSITION_PICTOGRAMS.bed,
+				positionChairButton: "pictogrammes/chaise.jpg",
 				positionSitUpButton: POSITION_PICTOGRAMS.sitUp,
 				positionMoveUpButton: POSITION_PICTOGRAMS.moveUp,
 				positionTurnRightButton: POSITION_PICTOGRAMS.turnRight,

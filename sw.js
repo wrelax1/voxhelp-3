@@ -1,4 +1,4 @@
-const CACHE_NAME = "voxhelp31-c3";
+const CACHE_NAME = "voxhelp32-c1";
 
 const FILES_TO_CACHE = [
     "./",
@@ -15,8 +15,8 @@ const FILES_TO_CACHE = [
     "./pictogrammes/tracheodouleur.jpg",
     "./pictogrammes/boucheseche.jpg",
     "./pictogrammes/respiremieux.jpg",
-
     "./pictogrammes/couchez.jpg",
+    "./pictogrammes/chaise.jpg",
     "./pictogrammes/redressez.jpg",
     "./pictogrammes/montez.jpg",
     "./pictogrammes/tournez.jpg",
@@ -28,7 +28,6 @@ const FILES_TO_CACHE = [
     "./pictogrammes/couverture.jpg",
     "./pictogrammes/position-mal.jpg",
     "./pictogrammes/position-ok.jpg",
-
     "./pictogrammes/aidezmoi.jpg",
     "./pictogrammes/senspasbien.jpg",
     "./pictogrammes/cavamieux.jpg",
@@ -43,12 +42,10 @@ const FILES_TO_CACHE = [
     "./pictogrammes/medicpasok.jpg",
     "./pictogrammes/chaud.jpg",
     "./pictogrammes/froid.jpg",
-
     "./pictogrammes/chambre.jpg",
     "./pictogrammes/cafeteria.jpg",
     "./pictogrammes/dehors.jpg",
     "./pictogrammes/maison.jpg",
-
     "./pictogrammes/changezmoi.jpg",
     "./pictogrammes/uriner.jpg",
     "./pictogrammes/selle.jpg",
@@ -66,7 +63,7 @@ const FILES_TO_CACHE = [
     "./pictogrammes/pantalons.jpg",
     "./pictogrammes/pullover.jpg",
     "./pictogrammes/chaussures.jpg",
-
+	"./pictogrammes/manteau.jpg",
     "./pictogrammes/porte-fermer.jpg",
     "./pictogrammes/porte-ouvrir.jpg",
     "./pictogrammes/rideaux-fermer.jpg",
@@ -81,7 +78,6 @@ const FILES_TO_CACHE = [
     "./pictogrammes/telephone.jpg",
     "./pictogrammes/chargez.jpg",
     "./pictogrammes/dormir.jpg",
-
     "./pictogrammes/peur.jpg",
     "./pictogrammes/triste.jpg",
     "./pictogrammes/colère.jpg",
@@ -95,7 +91,6 @@ const FILES_TO_CACHE = [
     "./pictogrammes/restez.jpg",
     "./pictogrammes/partez.jpg",
     "./pictogrammes/pasparler.jpg",
-
     "./pictogrammes/mal-tête.jpg",
     "./pictogrammes/mal-cou.jpg",
     "./pictogrammes/mal-poitrine.jpg",
@@ -108,27 +103,23 @@ const FILES_TO_CACHE = [
     "./pictogrammes/ma-cul.jpg",
     "./pictogrammes/mal-jambe.jpg",
     "./pictogrammes/mal-pied.jpg",
-
     "./pictogrammes/mal-front.jpg",
     "./pictogrammes/mal-nuque.jpg",
     "./pictogrammes/mal-oeil.jpg",
     "./pictogrammes/mal-oreille.jpg",
     "./pictogrammes/mal-machoire.jpg",
     "./pictogrammes/mal-toute-tete.jpg",
-
     "./pictogrammes/mal-poitrine-gauche.jpg",
     "./pictogrammes/mal-poitrine-droite.jpg",
     "./pictogrammes/mal-cotes.jpg",
     "./pictogrammes/mal-poitrine-centre.jpg",
     "./pictogrammes/mal-poitrine-toute.jpg",
-
     "./pictogrammes/mal-dos-haut.jpg",
     "./pictogrammes/mal-dos-centre.jpg",
     "./pictogrammes/mal-dos-gauche.jpg",
     "./pictogrammes/mal-dos-droite.jpg",
     "./pictogrammes/mal-dos-bas.jpg",
     "./pictogrammes/mal-dos-tout.jpg",
-
     "./pictogrammes/mal-ventre-haut.jpg",
     "./pictogrammes/mal-ventre-centre.jpg",
     "./pictogrammes/mal-ventre-gauche.jpg",
@@ -137,7 +128,6 @@ const FILES_TO_CACHE = [
     "./pictogrammes/mal-ventre-vessie.jpg",
     "./pictogrammes/mal-ventre-genital.jpg",
     "./pictogrammes/mal-ventre-tout.jpg",
-
     "./pictogrammes/fesse-gauche.jpg",
     "./pictogrammes/fesse-droite.jpg",
     "./pictogrammes/sacrum.jpg",

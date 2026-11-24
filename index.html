@@ -34,7 +34,7 @@
 	
 	<meta
 		name="apple-mobile-web-app-title"
-		content="VoxHelp 3.0"
+		content="VoxHelp 3.2"
 	>
 
 	<meta
@@ -106,13 +106,6 @@
 			
 		<div class="buttons">
 
-			<button onclick="showScreen('respirationScreen')">
-				🫁<br>
-				<span id="homeRespirationButton">
-					RESPIRATION / GORGE
-				</span>
-			</button>
-
 			<button onclick="showScreen('painScreen')">
 				😣<br>
 				<span id="homePainButton">
@@ -127,39 +120,38 @@
 				</span>
 			</button>
 
-			<button onclick="showScreen('careScreen')">
-				👩‍⚕️<br>
-				<span id="homeCareButton">
-					INCONFORT
+			<button onclick="showScreen('emotionScreen')">
+				❤️<br>
+				<span id="homeEmotionButton">
+					ÉMOTIONS
 				</span>
 			</button>
 
 			<button onclick="showScreen('hygieneScreen')">
 				🚻<br>
 				<span id="homeHygieneButton">
-					VIE QUOTIDIENNE
+					BESOINS QUOTIDIENS
+				</span>
+			</button>
+
+			<button onclick="showScreen('careScreen')">
+				😬<br>
+				<span id="homeCareButton">
+					INCONFORT
+				</span>
+			</button>
+			
+			<button onclick="showScreen('respirationScreen')">
+				🫁<br>
+				<span id="homeRespirationButton">
+					RESPIRATION
 				</span>
 			</button>
 
 			<button onclick="showScreen('environmentScreen')">
-				🏠<br>
+				🫧<br>
 				<span id="homeEnvironmentButton">
-					ENVIRONNEMENT
-				</span>
-			</button>
-
-			<button onclick="showScreen('questionsScreen')">
-				❓<br>
-				<span id="homeQuestionsButton">
-					QUESTIONS<br>
-					MÉDECIN
-				</span>
-			</button>
-
-			<button onclick="showScreen('careTeamScreen')">
-				🩺<br>
-				<span id="homeCareTeamButton">
-					ÉQUIPE SOIGNANTE
+					AUTOUR DE MOI
 				</span>
 			</button>
 
@@ -173,10 +165,16 @@
 			<button onclick="showScreen('planningScreen')">
 				🗓️<br>
 				<span id="homePlanningButton">
-					PLANNING / TEMPS
+					TEMPS
 				</span>
 			</button>
 
+			<button onclick="showScreen('careTeamScreen')">
+				🩺<br>
+				<span id="homeCareTeamButton">
+					ÉQUIPE SOINS
+				</span>
+			</button>
 
 			<button onclick="showScreen('talkScreen')">
 				👥<br>
@@ -184,11 +182,12 @@
 					FAMILLE / AMIS
 				</span>
 			</button>
-
-			<button onclick="showScreen('emotionScreen')">
-				❤️<br>
-				<span id="homeEmotionButton">
-					ÉMOTIONS
+			
+			<button onclick="showScreen('questionsScreen')">
+				❓<br>
+				<span id="homeQuestionsButton">
+					QUESTIONS<br>
+					MÉDECIN
 				</span>
 			</button>
 
@@ -462,15 +461,15 @@
 
     <div class="phrase-buttons">
 
-        <button onclick="speakPositionPhrase('bed')">
-            <span id="positionBedButton">
-                COUCHEZ-MOI
-            </span>
-        </button>
+		<button onclick="speakPositionPhrase('bed')">
+			<span id="positionBedButton">
+				ALLER AU LIT
+			</span>
+		</button>
 
-        <button onclick="speakPositionPhrase('sitUp')">
-            <span id="positionSitUpButton">
-                REDRESSEZ-MOI
+        <button onclick="speakPositionPhrase('chair')">
+            <span id="positionChairButton">
+                ALLER AU FAUTEUIL
             </span>
         </button>
 
@@ -566,32 +565,30 @@
 
     <div class="phrase-buttons">
 
-        <button onclick="speakCarePhrase('help')">
-            <span id="careHelpButton">
-                BESOIN D'AIDE
+        <button onclick="speakCarePhrase('hot')">
+            <span id="careHotButton">
+                J'AI CHAUD
             </span>
         </button>
 
-        <button onclick="speakCarePhrase('unwell')">
-            <span id="careUnwellButton">
-                JE NE ME SENS<br>
-                PAS BIEN
+        <button onclick="speakCarePhrase('cold')">
+            <span id="careColdButton">
+                J'AI FROID
             </span>
         </button>
 
-        <button onclick="speakCarePhrase('better')">
-            <span id="careBetterButton">
-                ÇA VA MIEUX
+        <button onclick="speakCarePhrase('weakness')">
+            <span id="careWeaknessButton">
+                FAIBLE
             </span>
         </button>
 
-        <button onclick="speakCarePhrase('privacy')">
-            <span id="carePrivacyButton">
-                JE VEUX<br>
-                DE L'INTIMITÉ
+        <button onclick="speakCarePhrase('nausea')">
+            <span id="careNauseaButton">
+                NAUSÉES
             </span>
         </button>
-
+		
         <button onclick="speakCarePhrase('constipation')">
             <span id="careConstipationButton">
                 CONSTIPÉ
@@ -610,9 +607,9 @@
             </span>
         </button>
 
-        <button onclick="speakCarePhrase('nausea')">
-            <span id="careNauseaButton">
-                NAUSÉES
+        <button onclick="speakCarePhrase('chills')">
+            <span id="careChillsButton">
+                FRISSONS
             </span>
         </button>
 
@@ -622,36 +619,14 @@
             </span>
         </button>
 
-        <button onclick="speakCarePhrase('weakness')">
-            <span id="careWeaknessButton">
-                FAIBLE
+        <button onclick="speakCarePhrase('privacy')">
+            <span id="carePrivacyButton">
+                JE VEUX<br>
+                DE L'INTIMITÉ
             </span>
         </button>
 
-        <button onclick="speakCarePhrase('chills')">
-            <span id="careChillsButton">
-                FRISSONS
-            </span>
-        </button>
 
-        <button onclick="speakCarePhrase('medicationNotEnough')">
-            <span id="careMedicationNotEnoughButton">
-                MÉDICAMENTS<br>
-                PAS EFFICACES
-            </span>
-        </button>
-
-        <button onclick="speakCarePhrase('hot')">
-            <span id="careHotButton">
-                J'AI CHAUD
-            </span>
-        </button>
-
-        <button onclick="speakCarePhrase('cold')">
-            <span id="careColdButton">
-                J'AI FROID
-            </span>
-        </button>
 
     </div>
 
@@ -674,31 +649,36 @@
     </button>
 
     <h1 id="hygieneTitle">
-        Vie quotidienne
+        Besoins quotidiens
     </h1>
 
     <div class="phrase-buttons">
 
-        <button onclick="speakHygienePhrase('change')">
-            <span id="hygieneChangeButton">
-                BESOIN<br>
-                D'ÊTRE CHANGÉ
-            </span>
-        </button>
+		<button onclick="speakHygienePhrase('urinate')">
+			<span id="hygieneUrinateButton">
+				URINER
+			</span>
+		</button>
 
-        <button onclick="speakHygienePhrase('urinate')">
-            <span id="hygieneUrinateButton">
-                BESOIN<br>
-                D'URINER
-            </span>
-        </button>
+		<button onclick="speakHygienePhrase('stool')">
+			<span id="hygieneStoolButton">
+				ALLER À<br>
+				LA SELLE
+			</span>
+		</button>
 
-        <button onclick="speakHygienePhrase('stool')">
-            <span id="hygieneStoolButton">
-                BESOIN D'ALLER<br>
-                À LA SELLE
-            </span>
-        </button>
+		<button onclick="speakHygienePhrase('change')">
+			<span id="hygieneChangeButton">
+				ÊTRE CHANGÉ
+			</span>
+		</button>
+
+		<button onclick="speakHygienePhrase('shower')">
+			<span id="hygieneShowerButton">
+				LAVER MON<br>
+				CORPS
+			</span>
+		</button>
 
         <button onclick="speakHygienePhrase('hungry')">
             <span id="hygieneHungryButton">
@@ -709,13 +689,6 @@
         <button onclick="speakHygienePhrase('thirsty')">
             <span id="hygieneThirstyButton">
                 J'AI SOIF
-            </span>
-        </button>
-
-        <button onclick="speakHygienePhrase('shower')">
-            <span id="hygieneShowerButton">
-                PRENDRE<br>
-                UNE DOUCHE
             </span>
         </button>
 
@@ -751,16 +724,16 @@
             </span>
         </button>
 
+        <button onclick="speakHygienePhrase('dentures')">
+            <span id="hygieneDenturesButton">
+                DENTIER
+            </span>
+        </button>
+
         <button onclick="speakHygienePhrase('hearingAid')">
             <span id="hygieneHearingAidButton">
                 APPAREIL<br>
                 AUDITIF
-            </span>
-        </button>
-
-        <button onclick="speakHygienePhrase('dentures')">
-            <span id="hygieneDenturesButton">
-                DENTIER
             </span>
         </button>
 
@@ -785,6 +758,12 @@
         <button onclick="speakHygienePhrase('shoes')">
             <span id="hygieneShoesButton">
                 CHAUSSURES
+            </span>
+        </button>
+
+        <button onclick="speakHygienePhrase('coat')">
+            <span id="hygieneCoatButton">
+                MANTEAU
             </span>
         </button>
 
@@ -814,9 +793,10 @@
 
     <div class="phrase-buttons">
 
-        <button onclick="speakEmotionPhrase('afraid')">
-            <span id="emotionAfraidButton">
-                J'AI PEUR
+        <button onclick="speakEmotionPhrase('happy')">
+            <span id="emotionHappyButton">
+                JE SUIS<br>
+                CONTENT
             </span>
         </button>
 
@@ -834,10 +814,23 @@
             </span>
         </button>
 
-        <button onclick="speakEmotionPhrase('fedUp')">
-            <span id="emotionFedUpButton">
-                J'EN AI<br>
-                MARRE
+        <button onclick="speakEmotionPhrase('afraid')">
+            <span id="emotionAfraidButton">
+                J'AI PEUR
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('tired')">
+            <span id="emotionTiredButton">
+                JE SUIS<br>
+                FATIGUÉ
+            </span>
+        </button>
+
+        <button onclick="speakEmotionPhrase('better')">
+            <span id="emotionBetterButton">
+                JE ME SENS<br>
+                MIEUX
             </span>
         </button>
 
@@ -855,30 +848,11 @@
             </span>
         </button>
 
-        <button onclick="speakEmotionPhrase('tired')">
-            <span id="emotionTiredButton">
-                JE SUIS<br>
-                FATIGUÉ
-            </span>
-        </button>
 
-        <button onclick="speakEmotionPhrase('bored')">
-            <span id="emotionBoredButton">
-                JE M'ENNUIE
-            </span>
-        </button>
-
-        <button onclick="speakEmotionPhrase('happy')">
-            <span id="emotionHappyButton">
-                JE SUIS<br>
-                CONTENT
-            </span>
-        </button>
-
-        <button onclick="speakEmotionPhrase('better')">
-            <span id="emotionBetterButton">
-                JE ME SENS<br>
-                MIEUX
+        <button onclick="speakEmotionPhrase('noTalk')">
+            <span id="emotionNoTalkButton">
+                PAS ENVIE<br>
+                DE PARLER
             </span>
         </button>
 
@@ -886,20 +860,6 @@
             <span id="emotionStayButton">
                 RESTEZ<br>
                 AVEC MOI
-            </span>
-        </button>
-
-        <button onclick="speakEmotionPhrase('alone')">
-            <span id="emotionAloneButton">
-                JE VEUX<br>
-                ÊTRE SEUL
-            </span>
-        </button>
-
-        <button onclick="speakEmotionPhrase('noTalk')">
-            <span id="emotionNoTalkButton">
-                PAS ENVIE<br>
-                DE PARLER
             </span>
         </button>
 
@@ -1041,38 +1001,10 @@
     </button>
 
     <h1 id="environmentTitle">
-        Environnement
+        Autour de moi
     </h1>
 
     <div class="phrase-buttons">
-
-        <button onclick="speakEnvironmentPhrase('closeDoor')">
-            <span id="environmentCloseDoorButton">
-                FERMEZ<br>
-                LA PORTE
-            </span>
-        </button>
-
-        <button onclick="speakEnvironmentPhrase('openDoor')">
-            <span id="environmentOpenDoorButton">
-                OUVREZ<br>
-                LA PORTE
-            </span>
-        </button>
-
-        <button onclick="speakEnvironmentPhrase('closeCurtains')">
-            <span id="environmentCloseCurtainsButton">
-                FERMEZ<br>
-                LES RIDEAUX
-            </span>
-        </button>
-
-        <button onclick="speakEnvironmentPhrase('openCurtains')">
-            <span id="environmentOpenCurtainsButton">
-                OUVREZ<br>
-                LES RIDEAUX
-            </span>
-        </button>
 
         <button onclick="speakEnvironmentPhrase('lightOn')">
             <span id="environmentLightOnButton">
@@ -1088,10 +1020,31 @@
             </span>
         </button>
 
-        <button onclick="speakEnvironmentPhrase('noise')">
-            <span id="environmentNoiseButton">
-                TROP<br>
-                DE BRUIT
+        <button onclick="speakEnvironmentPhrase('openCurtains')">
+            <span id="environmentOpenCurtainsButton">
+                OUVREZ<br>
+                LES RIDEAUX
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('closeCurtains')">
+            <span id="environmentCloseCurtainsButton">
+                FERMEZ<br>
+                LES RIDEAUX
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('openDoor')">
+            <span id="environmentOpenDoorButton">
+                OUVREZ<br>
+                LA PORTE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('closeDoor')">
+            <span id="environmentCloseDoorButton">
+                FERMEZ<br>
+                LA PORTE
             </span>
         </button>
 
@@ -1132,6 +1085,13 @@
             <span id="environmentRechargePhoneButton">
                 RECHARGER MON<br>
                 TÉLÉPHONE
+            </span>
+        </button>
+
+        <button onclick="speakEnvironmentPhrase('noise')">
+            <span id="environmentNoiseButton">
+                TROP<br>
+                DE BRUIT
             </span>
         </button>
 
@@ -2452,7 +2412,7 @@
 
 </main>
 
-	<script src="app.js?v=3.0.1"></script>
+	<script src="app.js?v=3.2-c1"></script>
 
 <script>
 
