@@ -190,7 +190,80 @@
             class="update"
         ></div>
 
+
+        <div class="counter-box">
+
+            <div class="label">
+                Utilisation de VoxHelp
+            </div>
+
+            <div id="active7dCount" class="number">
+                —
+            </div>
+
+            <div class="note">
+                Appareils actifs sur 7 jours
+            </div>
+
+            <div id="active30dCount" class="number"
+                 style="margin-top: 28px;">
+                —
+            </div>
+
+            <div class="note">
+                Appareils actifs sur 30 jours
+            </div>
+
+        </div>
+
+
+        <div class="counter-box">
+            <div class="label">
+                Répartition des utilisateurs
+            </div>
+
+            <div class="note" style="margin-top: 24px;">
+                <strong>Pays</strong>
+            </div>
+            <div id="countriesStats" class="note">
+                —
+            </div>
+
+            <div class="note" style="margin-top: 24px;">
+                <strong>Langues</strong>
+            </div>
+            <div id="languagesStats" class="note">
+                —
+            </div>
+
+            <div class="note" style="margin-top: 24px;">
+                <strong>Types d'appareils</strong>
+            </div>
+            <div id="deviceTypesStats" class="note">
+                —
+            </div>
+        </div>
+
+
+        <div class="counter-box">
+            <div class="label">
+                Activité des 30 derniers jours
+            </div>
+
+            <div id="activityChart"
+                 style="margin-top: 24px;">
+                —
+            </div>
+
+            <div class="note">
+                Nombre d'appareils actifs par jour
+            </div>
+        </div>
+
         <div class="actions">
+
+
+
             <a
                 class="button"
                 href="https://wrelax1.github.io/voxhelp-3/"
@@ -228,7 +301,174 @@ fetch(
 
 });
 
+
+/* STATISTIQUES D'UTILISATION VOXHELP */
+
+fetch('https://voxhelp-stats.wwinfried.workers.dev/activity-summary')
+.then(function (response) {
+    if (!response.ok) {
+        throw new Error('Statistiques indisponibles');
+    }
+    return response.json();
+})
+.then(function (data) {
+    document.getElementById('active7dCount').textContent =
+        Number.isInteger(data.active_7d) && data.active_7d >= 0
+            ? data.active_7d
+            : '—';
+
+    document.getElementById('active30dCount').textContent =
+        Number.isInteger(data.active_30d) && data.active_30d >= 0
+            ? data.active_30d
+            : '—';
+})
+.catch(function () {
+    document.getElementById('active7dCount').textContent = '—';
+    document.getElementById('active30dCount').textContent = '—';
+});
+
+
+/* RÉPARTITIONS DES UTILISATEURS VOXHELP */
+
+fetch('https://voxhelp-stats.wwinfried.workers.dev/activity-summary')
+.then(function(response) {
+    if (!response.ok) {
+        throw new Error('Statistiques indisponibles');
+    }
+    return response.json();
+})
+.then(function(data) {
+
+    function displayDistribution(elementId, items, key) {
+        const element = document.getElementById(elementId);
+        if (!element) return;
+
+        if (!Array.isArray(items) || items.length === 0) {
+            element.textContent =
+                'Aucunes données disponibles';
+            return;
+        }
+
+        const deviceNames = {
+            mobile: 'Téléphone',
+            tablet: 'Tablette',
+            desktop: 'Ordinateur',
+            unknown: 'Autre'
+        };
+
+        element.textContent = items.map(function(item) {
+            let label = String(item[key] ?? 'Inconnu');
+
+            if (key === 'type') {
+                label = deviceNames[label] || label;
+            }
+
+            return label + ' : ' + item.devices;
+        }).join(' | ');
+    }
+
+    displayDistribution('countriesStats', data.countries, 'country');
+    displayDistribution('languagesStats', data.languages, 'language');
+
+    displayDistribution('deviceTypesStats', data.device_types, 'type');
+
+    // GRAPHIQUE — ACTIVITÉ DES 30 DERNIERS JOURS
+    const chart = document.getElementById('activityChart');
+
+    if (chart) {
+        const dailyData = Array.isArray(data.daily)
+            ? data.daily
+            : [];
+
+        const counts = new Map(
+            dailyData.map(function(item) {
+                return [item.day, Number(item.devices) || 0];
+            })
+        );
+
+        const now = new Date();
+        const todayUTC = Date.UTC(
+            now.getUTCFullYear(),
+            now.getUTCMonth(),
+            now.getUTCDate()
+        );
+
+        const days = Array.from({ length: 30 }, function(_, i) {
+            return new Date(
+                todayUTC - (29 - i) * 86400000
+            ).toISOString().slice(0, 10);
+        });
+
+        const maximum = Math.max(
+            1,
+            ...days.map(function(day) {
+                return counts.get(day) || 0;
+            })
+        );
+
+        const bars = document.createElement('div');
+        bars.style.cssText =
+            'display:flex;align-items:flex-end;gap:3px;' +
+            'height:130px;border-bottom:1px solid #c9d3e0;';
+
+        days.forEach(function(day) {
+            const value = counts.get(day) || 0;
+
+            const column = document.createElement('div');
+            column.style.cssText =
+                'flex:1;min-width:0;height:100%;' +
+                'display:flex;align-items:flex-end;';
+
+            const bar = document.createElement('div');
+            const height = value > 0
+                ? Math.max(4, value / maximum * 100)
+                : 0;
+
+            bar.style.cssText =
+                'width:100%;height:' + height + '%;' +
+                'background:#1f3f8f;' +
+                'border-radius:2px 2px 0 0;';
+
+            bar.title =
+                day + ' : ' + value + ' appareil(s) actif(s)';
+
+            column.appendChild(bar);
+            bars.appendChild(column);
+        });
+
+        const axis = document.createElement('div');
+        axis.style.cssText =
+            'display:flex;justify-content:space-between;' +
+            'margin-top:8px;font-size:12px;color:#5f6368;';
+
+        const firstDate = document.createElement('span');
+        firstDate.textContent =
+            days[0].slice(8) + '/' + days[0].slice(5, 7);
+
+        const lastDate = document.createElement('span');
+        lastDate.textContent =
+            days[29].slice(8) + '/' + days[29].slice(5, 7);
+
+        axis.appendChild(firstDate);
+        axis.appendChild(lastDate);
+
+        chart.replaceChildren(bars, axis);
+    }
+
+
+})
+.catch(function() {
+    ['countriesStats', 'languagesStats', 'deviceTypesStats']
+        .forEach(function(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = 'Statistiques indisponibles';
+            }
+        });
+});
+
 </script>
+
 
 </body>
 </html>
