@@ -15673,7 +15673,7 @@ async function updateAppVersion() {
             versionElement.textContent =
                 "(v" + APP_VERSION +
                 "/c" +
-                cacheName.slice(prefix.length) +
+                cacheName.slice(prefix.length).split("-")[0] +
                 ")";
         }
 
