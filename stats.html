@@ -367,7 +367,38 @@ fetch('https://voxhelp-stats.wwinfried.workers.dev/activity-summary')
         }).join(' | ');
     }
 
+
     displayDistribution('countriesStats', data.countries, 'country');
+
+    // VILLES DES APPAREILS ACTIFS
+    const countriesElement = document.getElementById('countriesStats');
+
+    if (countriesElement) {
+        let citiesElement = document.getElementById('citiesStats');
+
+        if (!citiesElement) {
+            citiesElement = document.createElement('div');
+            citiesElement.id = 'citiesStats';
+            citiesElement.className = 'note';
+            citiesElement.style.marginTop = '18px';
+            countriesElement.after(citiesElement);
+        }
+
+        const cities = Array.isArray(data.cities) ? data.cities : [];
+
+        const cityText = cities.length
+            ? cities.map(function(item) {
+                const name = item.city === 'unknown'
+                    ? 'Ville inconnue'
+                    : String(item.city);
+
+                return name + ' (' + item.country + ') : ' + item.devices;
+            }).join(' | ')
+            : 'Aucune donnée disponible';
+
+        citiesElement.textContent = 'Villes : ' + cityText;
+    }
+
     displayDistribution('languagesStats', data.languages, 'language');
 
     displayDistribution('deviceTypesStats', data.device_types, 'type');
@@ -452,7 +483,31 @@ fetch('https://voxhelp-stats.wwinfried.workers.dev/activity-summary')
         axis.appendChild(firstDate);
         axis.appendChild(lastDate);
 
+
+        // Afficher la valeur au-dessus de chaque barre non nulle.
+        bars.style.height = '152px';
+        bars.style.paddingTop = '22px';
+
+        days.forEach(function(day, index) {
+            const value = counts.get(day) || 0;
+            if (value === 0) return;
+
+            const column = bars.children[index];
+            column.style.position = 'relative';
+
+            const countLabel = document.createElement('span');
+            countLabel.textContent = String(value);
+            countLabel.style.cssText =
+                'position:absolute;left:50%;transform:translateX(-50%);' +
+                'bottom:calc(' + Math.max(4, value / maximum * 100) +
+                '% + 4px);font-size:11px;font-weight:bold;' +
+                'color:#1f3f8f;white-space:nowrap;';
+
+            column.appendChild(countLabel);
+        });
+
         chart.replaceChildren(bars, axis);
+
     }
 
 
